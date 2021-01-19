@@ -1,6 +1,9 @@
 ---
 layout: post
-title: first post
+title: "first post" 
+date: 2021-01-20
+category: "" 
+excerpt: ""
 ---
 
 # first post
