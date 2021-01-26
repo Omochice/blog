@@ -10,8 +10,8 @@ excerpt: ""
 ```yaml
 name: Fortran CI
 
-on: 
-  push: 
+on:
+  push:
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
 
       - name: apply fprettify
         run: fprettify -i 2 -r src/
-      
+
       - name: commit formatted file
         run: |
           git config user.name = "github-actions"
@@ -44,13 +44,13 @@ fortranのformatterの[fprettify](https://github.com/pseewald/fprettify)はpip�
 pipでfprettfyを入れ、`-r(--recursive)`オプションで`src`以下のfortranファイルを上書きフォーマットする。
 
 `git add -u`で追跡ファイルのうち、変更があったものをステージングする。
+
 > ここの部分、変更ファイルがないとエラーを吐きそうなので`--allow-empty`とかしたほうがいいかもしれない
 
 github actionsの変数で見ているブランチが入る`steps.extract_branch.outputs.BRANCH_NAME`があるみたいなのでそれを使ってpushする。
+
 > ここの`origin`の設定をしていないけど大丈夫なのか(動いているから多分大丈夫なんだと思う)
-
-
 
 ## 参考
 
-[python codeの自動整形をするアクションを作ってみた - Qiita](https://qiita.com/utom/items/d6b17776f8e966985b01)
+[python code の自動整形をするアクションを作ってみた - Qiita](https://qiita.com/utom/items/d6b17776f8e966985b01)

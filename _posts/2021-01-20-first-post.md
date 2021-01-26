@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "first post" 
+title: "first post"
 date: 2021-01-20
-category: "" 
+category: ""
 excerpt: ""
 ---
 
@@ -14,6 +14,5 @@ excerpt: ""
 
 ## TODO
 
-* mongoDBの学習
-* Azureの学習
-
+- mongoDBの学習
+- Azureの学習

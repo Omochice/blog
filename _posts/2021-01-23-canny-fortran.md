@@ -12,13 +12,13 @@ excerpt: ""
 1. 検出したエッジの向きを考慮して細線化
 1. しきい値で2値化
 
-らしい
+らしい。
 
 gaussian filter, sobel filterはフィルタをかけるだけなので比較的簡単。
 
 githubで`canny edge detection langages:fortran`で調べたがヒットはなかった。
 
-エッジの方向検出がいまいち納得できてない
+エッジの方向検出がいまいち納得できてない。
 
 ```fortran
 if ((way >= -1*PI/8 .and. way < PI/8) .or. (way < -7*PI/8 .or. way >= 7*PI/8)) then
@@ -38,7 +38,6 @@ end if
 逆にすると変な感じになったのでこれでいいんだと思う。
 `atan2`がそもそもにエッジの法線ではないのか？
 
-
 ## しきい値
 
 ヒステリシスしきい値とかいうらしい
@@ -50,10 +49,4 @@ end if
 調べたら実装してた人がいたのでありがたくコードを借りる。
 ~~hashmapもなかったしformulaのtranslationには必要ないってことなのか~~
 
-
-
-
-
 ~~pythonとかでopencv叩いたほうが絶対早い~~
-
-

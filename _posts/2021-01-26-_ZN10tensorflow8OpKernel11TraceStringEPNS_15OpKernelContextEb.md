@@ -10,33 +10,36 @@ excerpt: ""
 いつも使っているtensorflowのコードを動かそうとしたら次のエラーが出た。
 
 ```console
-2021-01-26 17:19:08.615052: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0             
-Traceback (most recent call last):                                                                                                                            
-  File "<string>", line 1, in <module>                                                                                                                        
+2021-01-26 17:19:08.615052: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
   File "/home/mochi-svr/.local/share/virtualenvs/machine-genome-classification-2aiVrJsB/lib/python3.8/site-packages/tensorflow/__init__.py", line 435, in <mod
-ule>                                                                                                                                                          
-   _ll.load_library(_main_dir)                                                                                                                               
+ule>
+   _ll.load_library(_main_dir)
   File "/home/mochi-svr/.local/share/virtualenvs/machine-genome-classification-2aiVrJsB/lib/python3.8/site-packages/tensorflow/python/framework/load_library.p
-y", line 153, in load_library                                                                                                                                 
-    py_tf.TF_LoadLibrary(lib)                                                                                                                                 
+y", line 153, in load_library
+    py_tf.TF_LoadLibrary(lib)
 tensorflow.python.framework.errors_impl.NotFoundError: /home/mochi-svr/.local/lib/python3.8/site-packages/tensorflow/core/kernels/libtfkernel_sobol_op.so: und
-efined symbol: _ZN10tensorflow8OpKernel11TraceStringEPNS_15OpKernelContextEb   
+efined symbol: _ZN10tensorflow8OpKernel11TraceStringEPNS_15OpKernelContextEb
 ```
 
 そもそもコードの1行目でエラーを吐いている。
+
 ```python
 import tensorflow as tf
 ```
 
-調べるとこんなことが書いてあった
-> According to github it looks like a problem only with version 2.3.0, but not 2.4.0. 
-[python 3.x - undefined symbol: _ZN10tensorflow8OpKernel11TraceStringEPNS_15OpKernelContextEb - Stack Overflow](https://stackoverflow.com/questions/65405705/undefined-symbol-zn10tensorflow8opkernel11tracestringepns-15opkernelcontexteb)
+調べるとこんなことが書いてあった。
+
+> According to github it looks like a problem only with version 2.3.0, but not 2.4.0.
+> [python 3.x - undefined symbol: \_ZN10tensorflow8OpKernel11TraceStringEPNS_15OpKernelContextEb - Stack Overflow](https://stackoverflow.com/questions/65405705/undefined-symbol-zn10tensorflow8opkernel11tracestringepns-15opkernelcontexteb)
 
 2.3.0で起こるエラーで2.4.0だと起こらないらしい。
 
 なので2.4.0にバージョンを上げる。
 
-プロジェクトには`pipenv`を使っているので
+プロジェクトには`pipenv`を使っているので。
+
 ```console
 $ pipenv install -U tensorflow==2.4.0
 $ pipenv run pip freeze | grep tensor
@@ -49,9 +52,9 @@ tensorflow-hub==0.11.0
 
 仮想環境下のtensorflowが2.4.0になった。
 
-| Version | Python version | Compiler | Build tools | cuDNN | CUDA |
-| -       |  -             | -        | -           | -     |  -   |
-| tensorflow-2.4.0  |  3.6-3.8 | GCC 7.3.1 | Bazel 3.1.0  | 8.0  |11.0|
+| Version          | Python version | Compiler  | Build tools | cuDNN | CUDA |
+| ---------------- | -------------- | --------- | ----------- | ----- | ---- |
+| tensorflow-2.4.0 | 3.6-3.8        | GCC 7.3.1 | Bazel 3.1.0 | 8.0   | 11.0 |
 
 と[Build from source  |  TensorFlow](https://www.tensorflow.org/install/source#gpu_support_2)にあるのでそれぞれ対応したものを入れる。
 もとのドライバ関連をすべて`# apt --purge remove`し、新しく入れる。
@@ -62,13 +65,10 @@ cudaについては対応するページに記載されたコードをコピペ�
 
 ## 何が原因だったか
 
-*仮想環境だけでなく、ホスト環境に入っているtensorflowも2.4.0に上げないとだめだった*
+_仮想環境だけでなく、ホスト環境に入っている tensorflow も 2.4.0 に上げないとだめだった_
 
 なんでかはよくわからないけどホストに2.3.0が残っているとエラーがでる。
 
 元のコードは`pipenv run python -m ~~~`で実行しているので見てるのは仮想環境のpythonのはず。
 
 よくわからないけどとりあえず動いたのでヨシとする。
-
-
-

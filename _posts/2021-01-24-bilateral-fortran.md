@@ -5,10 +5,9 @@ category: "fortran"
 excerpt: ""
 ---
 
+# Fortran でバイラテラルフィルタをつくる
 
-# Fortranでバイラテラルフィルタをつくる
-
-cannyに続いてbirateral filterを作った
+cannyに続いてbirateral filterを作った。
 
 ```fortran
   subroutine bilateral(img, output, sigma)
@@ -58,15 +57,18 @@ cannyに続いてbirateral filterを作った
 注目画素を含む周囲25画素だったり9画素だったりに対してガウス分布に基づく重みを乗じた和を新しい値とするのがガウシアンフィルタ。
 それだとエッジが薄れるから、注目画素と近い輝度のものは重視(~1)し、輝度が違うものはあまり寄与しないように(~0)にする重み加えるのがバイラテラルフィルタ。
 
-注目画素(今回は5*5)なので`3~width-2`までに対して周辺25画素を
+注目画素(今回は5\*5)なので`3~width-2`までに対して周辺25画素を。
+
 ```fortran
 window = img(h - 2:h + 2, w - 2:w + 2)
 ```
+
 で取ってる。
 中央との差を`tmp_array`に入れて、差に応じたガウス分布の重みに置換する。
 その重みをもとのフィルタに乗じてフィルタリングをする。
 
 毎画素ごとにガウス分布を求めるのは冗長みたいなので予め0~255の範囲のガウス分布を求めておく。
+
 ```fortran
 gaussian_dist = (/(exp(-(real(i)/255)**2/(2*sigma**2)), i=0, 255)/)
 ```
@@ -77,5 +79,3 @@ gaussian_dist = (/(exp(-(real(i)/255)**2/(2*sigma**2)), i=0, 255)/)
 ![filtered image](/gh-pages/images/bilateralLenna.png)
 
 コードが間違えてなければ多分エッジが残った形でノイズが消えてるんだと思う。
-
-
