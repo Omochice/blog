@@ -27,9 +27,10 @@ for arg; do
 done
 ```
 
-これでコメントなしのP1~P3の画像ができる
+これでコメントなしのP1~P3の画像ができる。
 
-P3だとこんな感じのテキストデータになる
+P3だとこんな感じのテキストデータになる。
+
 ```text
 P3
 3 2
@@ -38,14 +39,14 @@ P3
 100 100 100 200 200 200 255 255 255
 ```
 
-* 1行目がフォーマット
-* 2行目がwidth, height
-* 3行目が画素値の最大(P1だと2で固定なので省略される)
-* 以降画素値がRGBの順で並ぶ
+- 1行目がフォーマット
+- 2行目がwidth, height
+- 3行目が画素値の最大(P1だと2で固定なので省略される)
+- 以降画素値がRGBの順で並ぶ
 
 ## 入力
 
-読み取って3次元配列を返すfunctionをfortranで書く
+読み取って3次元配列を返すfunctionをfortranで書く。
 
 ```fortran
 function load_pnm(filename) result(img_array)
@@ -115,7 +116,7 @@ pythonなら`raise FormatError`とかするんだけどfortranでエラー処理
 1. pnm画像として出力
 2. `display`コマンドで表示
 
-### pnm画像として出力
+### pnm 画像として出力
 
 入力時と逆のことをやる。
 
@@ -179,7 +180,6 @@ pythonなら`" ".join(map(str, (width, height)))`とかで書くんだけどfort
 fortranにはmatplotlibみたいに簡単に可視化できるものがなさそうなのでおとなしく`display`を使う。
 `display`がない環境はそもそもに`convert`がないはずなのでここまで来る前にエラーに遭うはず。
 
-
 ```fortran
 subroutine display_img(img, maximum_value)
   !!! Display array img.
@@ -221,15 +221,13 @@ program test_load_pnm
 end program test_load_pnm
 ```
 
-
 ## 要改善点
 
-* メモリの順序を意識しないで書いたから効率が良くない
-* いちいち`display_img`に数値を渡すのがめんどくさい
-  * デフォルト値を設定したい
-* テストを書きたい
-  * fortranのテストよくわからん
-* そもそも`Imageクラス`を作ってしまって`Image.show()`とかの方が簡単なのでは？
+- メモリの順序を意識しないで書いたから効率が良くない
+- いちいち`display_img`に数値を渡すのがめんどくさい
+  - デフォルト値を設定したい
+- テストを書きたい
+  - fortranのテストよくわからん
+- そもそも`Imageクラス`を作ってしまって`Image.show()`とかの方が簡単なのでは？
 
-　
 
