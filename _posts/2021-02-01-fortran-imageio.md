@@ -229,5 +229,3 @@ end program test_load_pnm
 - テストを書きたい
   - fortranのテストよくわからん
 - そもそも`Imageクラス`を作ってしまって`Image.show()`とかの方が簡単なのでは？
-
-
