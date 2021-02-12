@@ -3,6 +3,7 @@ layout: post
 title: "Fortranで階調補正をする"
 category: "fortran"
 excerpt: ""
+math: true
 ---
 
 # {{ page.title }}
@@ -13,7 +14,7 @@ excerpt: ""
 具体的には次の式を各画素に適用する。
 
 $$
-V_{after} = \mathrm{min}(V_{max}, \mathrm{max}(0, \frac{V_{before} - V_{min}}{V_{max} - V_{min}} \times V_{mam}))
+V_{after} = \mathrm{min}(V_{max}, \mathrm{max}(0, \frac{V_{before} - V_{min}}{V_{max} - V_{min}} \times V_{max}))
 $$
 
 fortranのpure functionで書くと次のようになる。
