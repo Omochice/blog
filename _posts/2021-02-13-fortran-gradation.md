@@ -11,6 +11,7 @@ excerpt: ""
 
 画像中の輝度値の分布に偏りがある(画像全体が暗いetc)ときに輝度値の分布を補正することで見やすくする。
 具体的には次の式を各画素に適用する。
+
 $$
 V_{after} = \mathrm{min}(V_{max}, \mathrm{max}(0, \frac{V_{before} - V_{min}}{V_{max} - V_{min}} \times V_{mam}))
 $$
@@ -25,17 +26,18 @@ pure function linear_translation(img, maximum) result(translated)
   integer, intent(in) :: maximum
   integer, allocatable :: translated(:, :, :), lut(:)
   integer :: i, v_max, v_min
-  
+
   v_min = minval(img)
   v_max = maxval(img)
 
   allocate (lut(0:maximum))
   do i=0, maximum
       lut(i) = min(maximum, max(0, int(real(i) - v_min) / (v_max - v_min) * maximum))
-  end do 
+  end do
   translated = lut(img)
 end function linear_translation
 ```
+
 画素毎に計算をするのはコスト的にアレなので先に`look up table(lut)`を作っておくことで楽をする。
 
 fortranだとわざわざループしてlutを適用しなくても`translated = lut(img)`で各画素ごとによしなにしてくれるが、可読性がちょっと気になる。
@@ -44,7 +46,7 @@ fortranだとわざわざループしてlutを適用しなくても`translated =
 
 結果以下のようになった。
 
-```fortran 
+```fortran
 pure function linear_translation(img, maximum_value, low_threshold, high_threshold) result(translated)
   implicit none
   integer, intent(in) :: img(:, :, :)
