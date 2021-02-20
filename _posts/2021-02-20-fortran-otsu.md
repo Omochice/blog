@@ -3,6 +3,7 @@ layout: post
 title: "fortranで大津の2値化を書く"
 category: "fortran"
 excerpt: ""
+math: true
 ---
 
 # {{ page.title }}
