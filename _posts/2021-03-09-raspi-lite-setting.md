@@ -11,12 +11,13 @@ excerpt: ""
 
 いろいろ調べるのが面倒だったのでまとめる。
 
-## OSのインストール
+## OS のインストール
 
 OSは[https://www.raspberrypi.org/software/operating-systems/](https://www.raspberrypi.org/software/operating-systems/)からRaspberry Pi OS Liteをインストールした。
 
 ハッシュ値の確認は次のコマンドで行う。
-```console 
+
+```console
 $ sha256sum <ダウンロードしたzipファイル>
 ```
 
@@ -38,9 +39,9 @@ $ sudo raspi-config
 
 ある程度の設定はこれでできる。
 
-＞localisation options > Keyborad > Genetic 104 key > Other > Japaneseで設定した。
+＞ localisation options > Keyborad > Genetic 104 key > Other > Japaneseで設定した。
 
-### 無線LANへの接続
+### 無線 LAN への接続
 
 `$ sudo iwlist wlan0 scan | grep ESSID`でAPのSSIDがでるので使っているAPがあるか確認する。
 
@@ -57,11 +58,11 @@ network={
 再起動すれば自動でAPに接続するようになる。
 （多分再起動しなくても`# systemctl restart`とかすれば動きそう）
 
-### sshの有効化
+### ssh の有効化
 
 これも`rapi-config`から設定できる。
 
-＞interface options > SSH
+＞ interface options > SSH
 
 ### アドレスの固定化
 
@@ -79,9 +80,10 @@ DNSはgoogleの8.8.8.8とかでいい。
 ### ユーザ名とパスワードの変更
 
 元の`pi`を`pi`でログインした状態で変更することはできないので、変更するためのユーザを作る。
+
 ```console
 $ sudo usermod -M tmp
-$ sudo gpasswd -a tmp sudo 
+$ sudo gpasswd -a tmp sudo
 $ sudo passwd tmp
 ```
 
@@ -113,7 +115,5 @@ Default    lecture=never
 ```
 
 Defaultの後の空白は`\t`で設定されていたので合わせた。
-
-
 
 とりあえずこれでSSHで開発できる（`scp`で開発したのを持っていける）ので後はカメラの入荷を待つだけだ。
