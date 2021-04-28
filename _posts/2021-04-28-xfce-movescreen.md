@@ -15,5 +15,3 @@ xfceではタイル表示は標準で搭載されているが、モニタ間の�
 [GitHub - calandoa/movescreen: Linux script to move windows across screens](https://github.com/calandoa/movescreen)
 
 pythonでの実装なのでGolang等でワンバイナリになってるものがほしいなあ。
-
-
