@@ -21,7 +21,7 @@ excerpt: ""
 
 最終的にこのようにつなぎたかった。
 
-![モニタの並べ方](https://gyazo.com/53ef3504a73b9f6b0b6ffd777bc30cb1)
+![モニタの並べ方](https://i.gyazo.com/53ef3504a73b9f6b0b6ffd777bc30cb1.png)
 
 まず、問題の切り分けをした。
 
