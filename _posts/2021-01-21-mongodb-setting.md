@@ -118,7 +118,7 @@ $ mongo
 $ mongo -u admin -authenticationDatabase admin
 ```
 
-~~connection refusedで詰まってたけどrebootしたらうまくいった。多分プロセスがうまくstartしてなかったんだと思う~~
+~~connection refused で詰まってたけど reboot したらうまくいった。多分プロセスがうまく start してなかったんだと思う~~
 
 新しいcolletionをつくって読み書きできるユーザをつくる。
 
