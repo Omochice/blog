@@ -18,7 +18,7 @@ excerpt: ""
 みたいな話をよく聞くので`fish`でも同じようなことができないかと思って調べたら`zsh`にはプラグインとしてあるみたい。
 
 Qiitaに[fishshell で Enter 押したときに ls と git status を表示する - Qiita](https://qiita.com/marcy_o/items/d51773cdd110d77cfdd8)がある。
-<c-j>にバインドしているが、コマンドの実行のイベントで空なら分岐の方式にしたかったので調べてみた。
+この記事では`<c-j>`にバインドしているが、コマンドの実行のイベントで空なら分岐の方式にしたかったので調べてみた。
 
 - [function - create a function — fish-shell 3.2.2 documentation](https://fishshell.com/docs/current/cmds/function.html)
 
