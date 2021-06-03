@@ -9,14 +9,14 @@ excerpt: ""
 
 先日、vim.jpで[auto-pairs のプラグインでハマった部分の解決策を教えてもらった](https://vim-jp.org/slacklog/CLKR04BEF/2021/05/#ts-1621244693.416300)。
 
-そのときに[lexima.vim]()を勧めてもらったので試していたが、キーバインド周りで詰まったのでまとめておく。
+そのときに[lexima.vim](https://github.com/cohama/lexima.vim)を勧めてもらったので試していたが、キーバインド周りで詰まったのでまとめておく。
 
 ## 何が起きたか
 
 - asyncompleteの補完表示中のキーバインドが意図した挙動をしない。
 - 上記の問題が時折起こる（毎回起こるわけではない）
 
-私は[dein.vim]()の`hook_add`でキーバインドを以下のように設定している。
+私は[dein.vim](https://github.com/Shougo/dein.vim)の`hook_add`でキーバインドを以下のように設定している。
 
 ```vim
 hook_add = """
