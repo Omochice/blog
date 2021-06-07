@@ -8,8 +8,7 @@ excerpt: ""
 # {{ page.title }}
 
 作った。
-
-[Omochice/emptyls-fish: if hit enter with empty buffer, exec ls.](https://github.com/Omochice/emptyls-fish)
+[![Omochice/emptyls-fish - GitHub](https://gh-card.dev/repos/Omochice/emptyls-fish.svg)](https://github.com/Omochice/emptyls-fish)
 
 ## 顛末
 
