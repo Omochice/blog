@@ -37,7 +37,7 @@ excerpt: ""
 
 eDPをoffにしたりするとDP2-1もつながったりしたが、いまいち再現性がないので別の方策を探すことにした。
 
-**xrandr 3 monitors**と検索するとこの記事が一番上に来る（DackDackGoの場合）
+**xrandr 3 monitors**と検索するとこの記事が一番上に来る（DackDackGoの場合）。
 [xrandr three monitors](https://unix.stackexchange.com/questions/315871/xrandr-three-monitors)
 
 この記事にはこう書かれている。
@@ -46,7 +46,7 @@ eDPをoffにしたりするとDP2-1もつながったりしたが、いまいち
 
 どうやらxorg.confでもマルチディスプレイの設定ができるらしい。
 
-arch wikiにも同様のことが書かれている。
+arch Wikiにも同様のことが書かれている。
 
 [マルチディスプレイ - ArchWiki](https://wiki.archlinux.jp/index.php/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4)
 

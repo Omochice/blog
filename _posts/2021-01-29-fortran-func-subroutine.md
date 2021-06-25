@@ -9,7 +9,7 @@ excerpt: ""
 
 覚えがきで記しておく。
 
-pythonで言うところの`list.append()`みたいな感じで引数自身が返り値の性質を持つときはsubroutineで書く方が多分それっぽくなる。
+Pythonで言うところの`list.append()`みたいな感じで引数自身が返り値の性質を持つときはsubroutineで書く方が多分それっぽくなる。
 
 ```fortran
 subroutine foo(a)

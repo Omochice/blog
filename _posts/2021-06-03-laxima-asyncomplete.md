@@ -50,7 +50,7 @@ let g:asyncomplete_auto_popup = 1
 
 - 何がトリガになっているか
   - `<CR>`にバインドされているものは`lexima`と`asyncomplete`だけ
-- どういう状況で起こるのか
+- どのような状況で起こるのか
   - `dein.toml`の`hook_add`に`echo`を仕込んで読み込み順序を確認した
 
 これらをやったところ、どうやら`asyncomplete -> lexima`の順に読み込むと補完のバインドがおかしくなることがわかった。

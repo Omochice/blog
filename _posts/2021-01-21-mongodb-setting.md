@@ -37,7 +37,7 @@ exception: connect failed
 exiting with code 1
 ```
 
-とりあえずarchwiki(日本語)を見るとトラブルシューティングがあるのでやってみる。
+とりあえずarchWiki(日本語)を見るとトラブルシューティングがあるのでやってみる。
 
 - データベースへのパスの設定
 

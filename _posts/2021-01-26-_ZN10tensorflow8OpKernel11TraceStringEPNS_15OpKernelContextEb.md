@@ -58,7 +58,7 @@ tensorflow-hub==0.11.0
 
 と[Build from source  |  TensorFlow](https://www.tensorflow.org/install/source#gpu_support_2)にあるのでそれぞれ対応したものを入れる。
 もとのドライバ関連をすべて`# apt --purge remove`し、新しく入れる。
-cudaについては対応するページに記載されたコードをコピペ、cudnnについてはダウンロードしたtbzファイルの中身を`/usr/local/cuda`内に入れる。
+cudaについては対応するページに記載されたコードをコピー&ペースト、cudnnについてはダウンロードしたtbzファイルの中身を`/usr/local/cuda`内に入れる。
 ~~毎回 nvidia に登録しているような気がする~~
 
 この状態で元のコードを叩くと相変わらずエラーが出た。
@@ -69,6 +69,6 @@ _仮想環境だけでなく、ホスト環境に入っている tensorflow も 
 
 なんでかはよくわからないけどホストに2.3.0が残っているとエラーがでる。
 
-元のコードは`pipenv run python -m ~~~`で実行しているので見てるのは仮想環境のpythonのはず。
+元のコードは`pipenv run python -m ~~~`で実行しているので見てるのは仮想環境のPythonのはず。
 
 よくわからないけどとりあえず動いたのでヨシとする。

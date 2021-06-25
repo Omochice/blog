@@ -40,7 +40,7 @@ jobs:
           git push origin ${{ steps.extract_branch.outputs.BRANCH_NAME  }}
 ```
 
-fortranのformatterの[fprettify](https://github.com/pseewald/fprettify)はpipで入れれるのでubuntu-latestとpythonをセットアップするレシピ(用語が正しいかわからない)を使って入れる。
+fortranのformatterの[fprettify](https://github.com/pseewald/fprettify)はpipで入れれるのでUbuntu-latestとPythonをセットアップするレシピ(用語が正しいかわからない)を使って入れる。
 pipでfprettfyを入れ、`-r(--recursive)`オプションで`src`以下のfortranファイルを上書きフォーマットする。
 
 `git add -u`で追跡ファイルのうち、変更があったものをステージングする。

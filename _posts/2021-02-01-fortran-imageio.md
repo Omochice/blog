@@ -107,7 +107,7 @@ end function load_pnm
 P3の場合RGBの順でデータが並んでいるのでそれぞれ対応したレイヤに数値を移動させるため、マスクみたいな配列`div_row, mod_row`を作成している。
 
 また、P1~P3以外のデータが入ったときは`stop 1`が呼ばれ、プログラムが終了する。
-pythonなら`raise FormatError`とかするんだけどfortranでエラー処理が見つからなかったのでとりあえずこの形で実装した。
+Pythonなら`raise FormatError`とかするんだけどfortranでエラー処理が見つからなかったのでとりあえずこの形で実装した。
 
 ## 出力
 
@@ -172,7 +172,7 @@ end subroutine save_pnm
 ```
 
 pnmのフォーマットだけは左詰めで書かないとエラーになるため書式を設定している。
-pythonなら`" ".join(map(str, (width, height)))`とかで書くんだけどfortranで間空白の方法がわからないし、これで動いのたのでヨシとする。
+Pythonなら`" ".join(map(str, (width, height)))`とかで書くんだけどfortranで間空白の方法がわからないし、これで動いのたのでヨシとする。
 ファイルサイズは大きくなるが、そもそもファイルサイズを気にするならP4~P6でいい。
 
 ### 画像の表示
