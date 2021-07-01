@@ -14,7 +14,7 @@ excerpt: ""
 
 rofiのリポジトリは [davatorium/rofi](https://github.com/davatorium/rofi)と [adi1090x/rofi](https://github.com/adi1090x/rofi)の2箇所ある。
 
-最初?? ?? となったのでそれぞれをまとめる。
+最初?? となったのでそれぞれをまとめる。
 
 - davatorium/rofi
   `yay -S rofi`で参照されるリポジトリ。
@@ -43,7 +43,7 @@ ACCENT="#1d3b53"
 ## キーバインドをいじる
 
 themeのインストールをすると`~/.config/rofi/config.rasi`が作成されるのでこれに書き足す。
-colorfulの`style_3`を選んだのでとりあえずjとkの移動をつける。
+colorfulの`style_3`を選んだのでとりあえず`j`と`k`の移動をつける。
 デフォルトで使ってるバインディングを消さないとエラーになるので`rofi -show keys`で確認しながら設定した。
 
 ```
