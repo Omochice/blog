@@ -14,7 +14,7 @@ excerpt: ""
 
 rofiのリポジトリは [davatorium/rofi](https://github.com/davatorium/rofi)と [adi1090x/rofi](https://github.com/adi1090x/rofi)の2箇所ある。
 
-最初?? ？？となったのでそれぞれをまとめる。
+最初?? ?? となったのでそれぞれをまとめる。
 
 - davatorium/rofi
   `yay -S rofi`で参照されるリポジトリ。

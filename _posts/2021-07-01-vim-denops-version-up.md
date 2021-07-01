@@ -30,7 +30,6 @@ excerpt: ""
 +     async codicVim(args: unknown): Promise<void>{
 ```
 
-
 - ### `execute`の方法が変わった
 
 ```diff
@@ -38,6 +37,7 @@ excerpt: ""
 + await execute(
 +   denops,
 ```
+
 だったり、
 
 ```diff
@@ -55,11 +55,11 @@ denops側で変わった部分は以上。
 ついでにリファクタリングをした。
 
 - 関数名の変更
-    `fetchAPI`だと曖昧で情報が少ないので`codic`に変更した。
-    合わせて、`main`の中にいた`codic`は`codicVim`に変更した。
+  `fetchAPI`だと曖昧で情報が少ないので`codic`に変更した。
+  合わせて、`main`の中にいた`codic`は`codicVim`に変更した。
 - 変数の命名変更
-    `BASEURL`だったり`TOKEN`だった部分をcamelCaseに変更した。
-    定数なのでUPPERCASEにしていたが、`const`なのでcaseで区別する必要はなさそう。
+  `BASEURL`だったり`TOKEN`だった部分をcamelCaseに変更した。
+  定数なのでUPPERCASEにしていたが、`const`なのでcaseで区別する必要はなさそう。
 
 denoというかtypescript自体の知識が足りてないから引数の型をうまく書けない。
 とりあえず`Any`でlinterを黙らせたけど直さなきゃいけない。
