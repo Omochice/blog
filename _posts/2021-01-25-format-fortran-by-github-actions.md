@@ -40,16 +40,16 @@ jobs:
           git push origin ${{ steps.extract_branch.outputs.BRANCH_NAME  }}
 ```
 
-fortranのformatterの[fprettify](https://github.com/pseewald/fprettify)はpipで入れれるのでUbuntu-latestとPythonをセットアップするレシピ(用語が正しいかわからない)を使って入れる。
-pipでfprettfyを入れ、`-r(--recursive)`オプションで`src`以下のfortranファイルを上書きフォーマットする。
+fortran の formatter の[fprettify](https://github.com/pseewald/fprettify)は pip で入れれるので Ubuntu-latest と Python をセットアップするレシピ(用語が正しいかわからない)を使って入れる。
+pip で fprettfy を入れ、`-r(--recursive)` オプションで `src` 以下の fortran ファイルを上書きフォーマットする。
 
-`git add -u`で追跡ファイルのうち、変更があったものをステージングする。
+`git add -u` で追跡ファイルのうち、変更があったものをステージングする。
 
-> ここの部分、変更ファイルがないとエラーを吐きそうなので`--allow-empty`とかしたほうがいいかもしれない
+> ここの部分、変更ファイルがないとエラーを吐きそうなので `--allow-empty` とかしたほうがいいかもしれない
 
-github actionsの変数で見ているブランチが入る`steps.extract_branch.outputs.BRANCH_NAME`があるみたいなのでそれを使ってpushする。
+github actions の変数で見ているブランチが入る `steps.extract_branch.outputs.BRANCH_NAME` があるみたいなのでそれを使って push する。
 
-> ここの`origin`の設定をしていないけど大丈夫なのか(動いているから多分大丈夫なんだと思う)
+> ここの `origin` の設定をしていないけど大丈夫なのか(動いているから多分大丈夫なんだと思う)
 
 ## 参考
 

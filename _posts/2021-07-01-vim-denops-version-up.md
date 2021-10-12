@@ -7,7 +7,7 @@ excerpt: ""
 
 # {{ page.title }}
 
-以前にdenopsを使ってプラグインを書いたときから時間が経ってdenops本体のアップデートがあったので自作のプラグインの更新作業をした。
+以前に denops を使ってプラグインを書いたときから時間が経って denops 本体のアップデートがあったので自作のプラグインの更新作業をした。
 
 更新点をまとめておく。
 
@@ -30,7 +30,7 @@ excerpt: ""
 +     async codicVim(args: unknown): Promise<void>{
 ```
 
-- ### `execute`の方法が変わった
+- ### `execute` の方法が変わった
 
 ```diff
 - await vim.execute(`
@@ -50,16 +50,16 @@ excerpt: ""
 + );
 ```
 
-denops側で変わった部分は以上。
+denops 側で変わった部分は以上。
 
 ついでにリファクタリングをした。
 
 - 関数名の変更
-  `fetchAPI`だと曖昧で情報が少ないので`codic`に変更した。
-  合わせて、`main`の中にいた`codic`は`codicVim`に変更した。
+  `fetchAPI` だと曖昧で情報が少ないので `codic` に変更した。
+  合わせて、`main` の中にいた `codic` は `codicVim` に変更した。
 - 変数の命名変更
-  `BASEURL`だったり`TOKEN`だった部分をcamelCaseに変更した。
-  定数なのでUPPERCASEにしていたが、`const`なのでcaseで区別する必要はなさそう。
+  `BASEURL` だったり `TOKEN` だった部分を camelCase に変更した。
+  定数なので UPPERCASE にしていたが、`const` なので case で区別する必要はなさそう。
 
-denoというかtypescript自体の知識が足りてないから引数の型をうまく書けない。
-とりあえず`Any`でlinterを黙らせたけど直さなきゃいけない。
+deno というか typescript 自体の知識が足りてないから引数の型をうまく書けない。
+とりあえず `Any` で linter を黙らせたけど直さなきゃいけない。

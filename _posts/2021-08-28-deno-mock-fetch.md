@@ -10,9 +10,9 @@ excerpt: ""
 _Deno 1.13.2の時点での情報です。_
 _バージョンによってはより良い方法があったり、これでは動かなかったりするかもしれません。_
 
-denopsで作ったプラグインにテストをつけたくてやっていたが、関数の中で使ってる`fetch`をmock化する方法が見つからなかったので、記録しておく。
+denops で作ったプラグインにテストをつけたくてやっていたが、関数の中で使ってる `fetch` を mock 化する方法が見つからなかったので、記録しておく。
 
-`fetch`は`window.fetch`を見ているらしく、それをオーバーライドしてやればmock化できる。
+`fetch` は `window.fetch` を見ているらしく、それをオーバーライドしてやれば mock 化できる。
 
 ```typescript
 window.fetch = async(): Promise<Response> => {
@@ -27,8 +27,8 @@ window.fetch = async(): Promise<Response> => {
 };
 ```
 
-`body`についてはjsonを返すmockならそれっぽい文字列を入れてやればよい。
-異常系のテストなら`null`でもよい。
+`body` については json を返す mock ならそれっぽい文字列を入れてやればよい。
+異常系のテストなら `null` でもよい。
 
 
 ### 参考

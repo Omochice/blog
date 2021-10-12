@@ -7,16 +7,16 @@ excerpt: ""
 
 # mongo db
 
-RDBとは違いNoSQLである(詳しいのは他の人のがわかりやすい)
+RDB とは違い NoSQL である(詳しいのは他の人のがわかりやすい)
 
-とりあえず`pacman`にあるやろと思ったらなかった[MongoDB - ArchWiki](https://wiki.archlinux.org/index.php/MongoDB)
+とりあえず `pacman` にあるやろと思ったらなかった[MongoDB - ArchWiki](https://wiki.archlinux.org/index.php/MongoDB)
 
-AURにあったので入れようとしたがいろいろある
-どうやら`bin`がついていないものはソースからビルドするらしい。
+AUR にあったので入れようとしたがいろいろある
+どうやら `bin` がついていないものはソースからビルドするらしい。
 
 > mongodbAUR - builds from source, requiring 180GB+ free disk space, and may take several hours to build (i.e. 6.5 hours on Intel i7, 1 hour on 32 Xeon cores with high-end NVMe.)
 
-binで一番新しそうなのを入れた。
+bin で一番新しそうなのを入れた。
 
 ```console
 $ yay -S mongodb
@@ -25,7 +25,7 @@ $ yay -S mongodb
 
 ## 入れたあとのエラーへの対処
 
-インストール後、`mongo`を実行するとエラーがでた。
+インストール後、`mongo` を実行するとエラーがでた。
 
 ```log
 MongoDB shell version v4.4.3
@@ -37,7 +37,7 @@ exception: connect failed
 exiting with code 1
 ```
 
-とりあえずarchWiki(日本語)を見るとトラブルシューティングがあるのでやってみる。
+とりあえず archWiki(日本語)を見るとトラブルシューティングがあるのでやってみる。
 
 - データベースへのパスの設定
 
@@ -47,7 +47,7 @@ ExecStart行にパスを書く
 ExecStart=/usr/bin/numactl --interleave=all mongod --quiet --config /etc/mongodb.conf --dbpath /var/lib/mongodb
 ```
 
-そもそもDBサーバを起動していないのが原因だった。
+そもそも DB サーバを起動していないのが原因だった。
 
 ```console
 # systemctl start mongodb
@@ -60,12 +60,12 @@ ExecStart=/usr/bin/numactl --interleave=all mongod --quiet --config /etc/mongodb
 # systemctl is-enabled mongodb # 確認
 ```
 
-> `systemctl`のサービス名は`<service名>`でもいいし`<service名>.service`でもいいらしい
+> `systemctl` のサービス名は `<service名>` でもいいし `<service名>.service` でもいいらしい
 
 ## mongoDB を触る
 
-`mongo`でローカルのサーバと接続できる
-RDBじゃないので色々用語が違うが。
+`mongo` でローカルのサーバと接続できる
+RDB じゃないので色々用語が違うが。
 
 ```
 root
@@ -104,7 +104,7 @@ $ mongo
 +   authorization: enabled
 ```
 
-~~`authorization`とか`authorize`とか`authentication`とかタイポしやすくてきらい~~
+~~`authorization` とか `authorize` とか `authentication` とかタイポしやすくてきらい~~
 
 サービスを再起動する。
 
@@ -112,7 +112,7 @@ $ mongo
 # systemctl restart mongodb
 ```
 
-認証ありでmongodbを起動。
+認証ありで mongodb を起動。
 
 ```console
 $ mongo -u admin -authenticationDatabase admin
@@ -120,7 +120,7 @@ $ mongo -u admin -authenticationDatabase admin
 
 ~~connection refused で詰まってたけど reboot したらうまくいった。多分プロセスがうまく start してなかったんだと思う~~
 
-新しいcolletionをつくって読み書きできるユーザをつくる。
+新しい colletion をつくって読み書きできるユーザをつくる。
 
 ```console
 > use test_col

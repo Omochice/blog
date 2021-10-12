@@ -7,9 +7,9 @@ excerpt: ""
 
 # {{ page.title }}
 
-pnmにはP1~P6 まで種類があるが、今回は ascii 形式の P1~P3を対象とする。
+pnm には P1~P6 まで種類があるが、今回は ascii 形式の P1~P3 を対象とする。
 
-また、`#`で始まるコメント行を読み取るのが面倒なので`sed`で処理する。
+また、`#` で始まるコメント行を読み取るのが面倒なので `sed` で処理する。
 
 ```bash
 function convert_pgm() {
@@ -27,9 +27,9 @@ for arg; do
 done
 ```
 
-これでコメントなしのP1~P3の画像ができる。
+これでコメントなしの P1~P3 の画像ができる。
 
-P3だとこんな感じのテキストデータになる。
+P3 だとこんな感じのテキストデータになる。
 
 ```text
 P3
@@ -39,14 +39,14 @@ P3
 100 100 100 200 200 200 255 255 255
 ```
 
-- 1行目がフォーマット
-- 2行目がwidth, height
-- 3行目が画素値の最大(P1だと2で固定なので省略される)
-- 以降画素値がRGBの順で並ぶ
+- 1 行目がフォーマット
+- 2 行目が width, height
+- 3 行目が画素値の最大(P1 だと 2 で固定なので省略される)
+- 以降画素値が RGB の順で並ぶ
 
 ## 入力
 
-読み取って3次元配列を返すfunctionをfortranで書く。
+読み取って 3 次元配列を返す function を fortran で書く。
 
 ```fortran
 function load_pnm(filename) result(img_array)
@@ -102,19 +102,19 @@ function load_pnm(filename) result(img_array)
 end function load_pnm
 ```
 
-この関数はP1だろうがP2だろうが3次元の配列を返す。($1\times h \times w$)
+この関数は P1 だろうが P2 だろうが 3 次元の配列を返す。($1\times h \times w$)
 
-P3の場合RGBの順でデータが並んでいるのでそれぞれ対応したレイヤに数値を移動させるため、マスクみたいな配列`div_row, mod_row`を作成している。
+P3 の場合 RGB の順でデータが並んでいるのでそれぞれ対応したレイヤに数値を移動させるため、マスクみたいな配列 `div_row, mod_row` を作成している。
 
-また、P1~P3以外のデータが入ったときは`stop 1`が呼ばれ、プログラムが終了する。
-Pythonなら`raise FormatError`とかするんだけどfortranでエラー処理が見つからなかったのでとりあえずこの形で実装した。
+また、P1~P3 以外のデータが入ったときは `stop 1` が呼ばれ、プログラムが終了する。
+Python なら `raise FormatError` とかするんだけど fortran でエラー処理が見つからなかったのでとりあえずこの形で実装した。
 
 ## 出力
 
-出力は2段階に分けて処理する。
+出力は 2 段階に分けて処理する。
 
-1. pnm画像として出力
-2. `display`コマンドで表示
+1. pnm 画像として出力
+2. `display` コマンドで表示
 
 ### pnm 画像として出力
 
@@ -171,14 +171,14 @@ subroutine save_pnm(img_array, maximum_value, filename)
 end subroutine save_pnm
 ```
 
-pnmのフォーマットだけは左詰めで書かないとエラーになるため書式を設定している。
-Pythonなら`" ".join(map(str, (width, height)))`とかで書くんだけどfortranで間空白の方法がわからないし、これで動いのたのでヨシとする。
-ファイルサイズは大きくなるが、そもそもファイルサイズを気にするならP4~P6でいい。
+pnm のフォーマットだけは左詰めで書かないとエラーになるため書式を設定している。
+Python なら `" ".join(map(str, (width, height)))` とかで書くんだけど fortran で間空白の方法がわからないし、これで動いのたのでヨシとする。
+ファイルサイズは大きくなるが、そもそもファイルサイズを気にするなら P4~P6 でいい。
 
 ### 画像の表示
 
-fortranにはmatplotlibみたいに簡単に可視化できるものがなさそうなのでおとなしく`display`を使う。
-`display`がない環境はそもそもに`convert`がないはずなのでここまで来る前にエラーに遭うはず。
+fortran には matplotlib みたいに簡単に可視化できるものがなさそうなのでおとなしく `display` を使う。
+`display` がない環境はそもそもに `convert` がないはずなのでここまで来る前にエラーに遭うはず。
 
 ```fortran
 subroutine display_img(img, maximum_value)
@@ -197,7 +197,7 @@ subroutine display_img(img, maximum_value)
 end subroutine display_img
 ```
 
-`output.pnm`というファイルで書き出して`call system("display output.pnm")`で呼び出す。
+`output.pnm` というファイルで書き出して `call system("display output.pnm")` で呼び出す。
 
 ## モジュール化
 
@@ -205,7 +205,7 @@ end subroutine display_img
 
 [github](https://github.com/Omochice/image-processing/blob/main/src/pnm_tools.f90)においた。
 
-これを`gfortran pnm_tools.f90 -c`で`.o`を作成したら次のテストプログラムが動く。
+これを `gfortran pnm_tools.f90 -c` で `.o` を作成したら次のテストプログラムが動く。
 
 ```fortran
 program test_load_pnm
@@ -224,8 +224,8 @@ end program test_load_pnm
 ## 要改善点
 
 - メモリの順序を意識しないで書いたから効率が良くない
-- いちいち`display_img`に数値を渡すのがめんどくさい
+- いちいち `display_img` に数値を渡すのがめんどくさい
   - デフォルト値を設定したい
 - テストを書きたい
-  - fortranのテストよくわからん
-- そもそも`Imageクラス`を作ってしまって`Image.show()`とかの方が簡単なのでは？
+  - fortran のテストよくわからん
+- そもそも `Imageクラス` を作ってしまって `Image.show()` とかの方が簡単なのでは？

@@ -9,7 +9,7 @@ excerpt: ""
 
 覚えがきで記しておく。
 
-Pythonで言うところの`list.append()`みたいな感じで引数自身が返り値の性質を持つときはsubroutineで書く方が多分それっぽくなる。
+Python で言うところの `list.append()` みたいな感じで引数自身が返り値の性質を持つときは subroutine で書く方が多分それっぽくなる。
 
 ```fortran
 subroutine foo(a)
@@ -21,9 +21,9 @@ end subroutine foo
 
 ## fortran で関数を引数に取る関数を書く
 
-これがよくわからなくてsubroutineで第2引数で出力用配列を入れてた。
+これがよくわからなくて subroutine で第 2 引数で出力用配列を入れてた。
 
-functionだとこんな感じで書く。
+function だとこんな感じで書く。
 
 ```fortran
 pure function foo(n) result(r)
@@ -34,6 +34,6 @@ pure function foo(n) result(r)
 end function foo
 ```
 
-決定的な動作をする関数なので申し訳程度に`pure`をつけている。
+決定的な動作をする関数なので申し訳程度に `pure` をつけている。
 
 フィルタリング周りをこれを使って書き直そう。

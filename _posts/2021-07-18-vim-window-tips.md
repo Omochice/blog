@@ -7,9 +7,9 @@ excerpt: ""
 
 # {{ page.title }}
 
-denops.vimを使ってプラグインを書いているときに使った（引用した）tipsを備忘録的にまとめる。
+denops.vim を使ってプラグインを書いているときに使った（引用した）tips を備忘録的にまとめる。
 
-- すでに開いてるwindowを上書きして出力を出す。
+- すでに開いてる window を上書きして出力を出す。
 
 引用元は[thinca/vim-quickrun](https://github.com/thinca/vim-quickrun/blob/master/autoload/quickrun/outputter/buffer.vim#L114)。
 
@@ -38,11 +38,11 @@ denops.vimを使ってプラグインを書いているときに使った（引�
 
 1. 指定の名前で開いているバッファがあるか調べる（`bufnr()`）
 2. あればそのバッファの番号を取得
-3. バッファ番号を含むwindowのidを取得
-4. カレントのタブにそのwindowがあるか確認
+3. バッファ番号を含む window の id を取得
+4. カレントのタブにその window があるか確認
 5. あればそのウィンドウに移動する
 
-これをtypescriptに移植すると以下のようになった。
+これを typescript に移植すると以下のようになった。
 
 ```typescript
 let bufnr: number;
@@ -75,6 +75,6 @@ if (bufExist) {
 }
 ```
 
-一箇所だけ`denops.eval`を使っている部分（`map`と`filter`を使っている部分）が残っているが、それぞれの関数内で別途`await`するとなんだかなあって感じがしたのでそのままにしている。
+一箇所だけ `denops.eval` を使っている部分（`map` と `filter` を使っている部分）が残っているが、それぞれの関数内で別途 `await` するとなんだかなあって感じがしたのでそのままにしている。
 
 

@@ -10,14 +10,14 @@ math: true
 
 ## ヒストグラム伸張化
 
-画像中の輝度値の分布に偏りがある(画像全体が暗いetc)ときに輝度値の分布を補正することで見やすくする。
+画像中の輝度値の分布に偏りがある(画像全体が暗い etc)ときに輝度値の分布を補正することで見やすくする。
 具体的には次の式を各画素に適用する。
 
 $$
 V_{after} = \mathrm{min}(V_{max}, \mathrm{max}(0, \frac{V_{before} - V_{min}}{V_{max} - V_{min}} \times V_{max}))
 $$
 
-fortranのpure functionで書くと次のようになる。
+fortran の pure function で書くと次のようになる。
 
 ```fortran
 
@@ -39,11 +39,11 @@ pure function linear_translation(img, maximum) result(translated)
 end function linear_translation
 ```
 
-画素毎に計算をするのはコスト的にアレなので先に`look up table(lut)`を作っておくことで楽をする。
+画素毎に計算をするのはコスト的にアレなので先に `look up table(lut)` を作っておくことで楽をする。
 
-fortranだとわざわざループしてlutを適用しなくても`translated = lut(img)`で各画素ごとによしなにしてくれるが、可読性がちょっと気になる。
+fortran だとわざわざループして lut を適用しなくても `translated = lut(img)` で各画素ごとによしなにしてくれるが、可読性がちょっと気になる。
 
-また、画素値0や画素値255が1画素だけ混じっていたりするとそれがストッパーになってヒストグラムが引き伸ばせなくなるのでオプショナルに設定できるようにする。
+また、画素値 0 や画素値 255 が 1 画素だけ混じっていたりするとそれがストッパーになってヒストグラムが引き伸ばせなくなるのでオプショナルに設定できるようにする。
 
 結果以下のようになった。
 
@@ -89,6 +89,6 @@ pure function linear_translation(img, maximum_value, low_threshold, high_thresho
 end function linear_translation
 ```
 
-オプショナル引数の関係でごちゃごちゃしているがやっていることはv_minとv_maxが引数で与えられたらそれで置き換える処理なのでほとんど変わっていない。
+オプショナル引数の関係でごちゃごちゃしているがやっていることは v_min と v_max が引数で与えられたらそれで置き換える処理なのでほとんど変わっていない。
 
 カラー画像だと各チャネルごとにヒストグラムを伸ばすので思っている画像が出ないかもしれない。
