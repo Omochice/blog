@@ -43,4 +43,4 @@ end
 Sample.send(:good_bye, "taro")
 ```
 
-最初は `class << self` ではなく `module_functions :hello` と書いていたが、これでは `send` で呼び出せないようだ。
+最初は `class << self` ではなく `module_function :hello` と書いていたが、これでは `send` で呼び出せないようだ。
