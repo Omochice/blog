@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "fortranでラプラシアンフィルタを書く"
 category: "fortran"
 excerpt: ""
+type: tech
 ---
 
 # {{ page.title }}

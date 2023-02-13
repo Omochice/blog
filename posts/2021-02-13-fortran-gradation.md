@@ -4,6 +4,7 @@ title: "Fortranで階調補正をする"
 category: "fortran"
 excerpt: ""
 math: true
+type: tech
 ---
 
 ## ヒストグラム伸張化

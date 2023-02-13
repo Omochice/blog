@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "fortranでpnmの入出力を書く"
 category: "fortran"
 excerpt: ""
+type: tech
 ---
 
 pnm には P1~P6 まで種類があるが、今回は ascii 形式の P1~P3 を対象とする。

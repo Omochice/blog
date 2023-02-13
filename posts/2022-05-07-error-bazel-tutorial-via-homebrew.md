@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "Bazelのbuild時に`1-homebrew`のエラーが出る問題"
 category: "mac"
 excerpt: ""
+type: tech
 ---
 
 ## 要約

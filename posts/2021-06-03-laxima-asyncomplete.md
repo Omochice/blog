@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "lexima.vimとasyncomplete.vimのキーバインドにハマった話"
 category: "vim"
 excerpt: ""
+type: tech
 ---
 
 先日、vim.jp で[auto-pairs のプラグインでハマった部分の解決策を教えてもらった](https://vim-jp.org/slacklog/CLKR04BEF/2021/05/#ts-1621244693.416300)。

@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "vimですでに出ているwindowを雨が書きして出力を出す方法"
 category: "Vim"
 excerpt: ""
+type: tech
 ---
 
 denops.vim を使ってプラグインを書いているときに使った（引用した）tips を備忘録的にまとめる。

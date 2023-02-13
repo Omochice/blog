@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "BioRubyでローカルのBlastが動かない"
 category: "bioruby"
 excerpt: ""
+type: tech
 ---
 
 BioRuby には `Bio::Blast` というクラスがあり、リモート / ローカルの Blast を動かすことができる。

@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "fortranのfunctionとsubroutineの差異"
 category: "fortran"
 excerpt: ""
+type: tech
 ---
 
 # {{ page.title }}

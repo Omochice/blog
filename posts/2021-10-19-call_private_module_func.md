@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "RubyのModule内にあるPrivateな関数を呼ぶ"
 category: "Ruby"
 excerpt: ""
+type: tech
 ---
 
 研究室で個人的に使ってる便利な関数や使われがちな関数をまとめて野良 Gem を作ろうとしている。

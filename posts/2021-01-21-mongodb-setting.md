@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "mongo dbのセッティングの話"
 category: ""
 excerpt: ""
+type: tech
 ---
 
 # mongo db

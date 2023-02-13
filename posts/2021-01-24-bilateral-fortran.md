@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "fortranでバイラテラルフィルタをつくる"
 category: "fortran"
 excerpt: ""
+type: tech
 ---
 
 # Fortran でバイラテラルフィルタをつくる

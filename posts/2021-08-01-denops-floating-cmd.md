@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "denops-popupをカーソル下に出そうとして詰まった"
 category: "Vim"
 excerpt: ""
+type: tech
 ---
 
 最近は `denops.vim` を使ったプラグインを作っている。

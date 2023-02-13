@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "matplotlibで左右の軸にそれぞれ別の色をつける"
 category: "python"
 excerpt: ""
+type: tech
 ---
 
 matplotlibでx軸を共有するグラフを作ったときに、左右どっちの軸を参照しているかわかるようにbarと同じ色をつけたくて調べたので、以下にまとめる。

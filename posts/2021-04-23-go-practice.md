@@ -4,6 +4,7 @@ title: "golangで学部の演習をする"
 category: "golang"
 excerpt: ""
 math: true
+type: tech
 ---
 
 # {{ page.title }}

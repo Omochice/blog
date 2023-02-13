@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "`get-diff-action`で日本語のファイルを抽出する"
 category: "git"
 excerpt: ""
+type: tech
 ---
 
 # {{ page.title }}

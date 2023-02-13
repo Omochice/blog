@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "Self-hostedなgitlabをglab-cliでデフォルトに設定する"
 category: "gitlab"
 excerpt: ""
+type: tech
 ---
 
 github-cliと同じように使えるツールに[glab-cli](https://github.com/profclems/glab/)というものがある。

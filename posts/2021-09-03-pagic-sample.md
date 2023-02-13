@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "pagicをちょっと触ってみた"
 category: "deno"
 excerpt: ""
+type: tech
 ---
 
 Deno 製の静的サイトジェネレーターの[pagic](https://github.com/xcatliu/pagic)を少し触ってみたので感想を書く。

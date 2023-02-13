@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "weztermをためしてみる"
 category: ""
 excerpt: ""
+type: tech
 ---
 
 # {{ page.title }}

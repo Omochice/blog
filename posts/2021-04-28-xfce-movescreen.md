@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "xfceでマルチモニタ間のwindowの移動をする"
 category: "xfce"
 excerpt: ""
+type: tech
 ---
 
 gnome であれば `super + Left or Right...` で別のモニタに window を移動できる。

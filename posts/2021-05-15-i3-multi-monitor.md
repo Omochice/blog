@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "i3でマルチモニタをしようとしてハマった話"
 category: "i3-wm"
 excerpt: ""
+type: tech
 ---
 
 今まで xfce を使ってきて i3 に乗り換えた（前の記事を参照）

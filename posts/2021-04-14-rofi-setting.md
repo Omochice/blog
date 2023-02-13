@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "rofiの設定についての覚え書き"
 category: "cui"
 excerpt: ""
+type: tech
 ---
 
 # {{ page.title }}

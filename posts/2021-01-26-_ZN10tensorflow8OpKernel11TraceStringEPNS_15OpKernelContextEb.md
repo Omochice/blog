@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "tensorflow2.3.0でエラーが出て解決にそこそこかかった話"
 category: "python"
 excerpt: ""
+type: tech
 ---
 
 いつも使っている tensorflow のコードを動かそうとしたら次のエラーが出た。

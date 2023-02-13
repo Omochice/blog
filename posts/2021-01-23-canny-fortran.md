@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "canny edge detectionをfortranで書く"
 category: ""
 excerpt: ""
+type: tech
 ---
 
 # canny edge detection

@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "vimの拡張機能をDenoで書いた話"
 category: "vim"
 excerpt: ""
+type: tech
 ---
 
 [denops で vim の codic 拡張機能を書いた](https://zenn.dev/omochice/articles/67922b4970c32ec0899a)

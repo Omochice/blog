@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "dps-codic-vimをdenopsの更新に合わせてアップデートした"
 category: "vim"
 excerpt: ""
+type: tech
 ---
 
 以前に denops を使ってプラグインを書いたときから時間が経って denops 本体のアップデートがあったので自作のプラグインの更新作業をした。

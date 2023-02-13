@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "Windows11でWindows+Lを無効化する"
 category: ""
 excerpt: ""
+type: tech
 ---
 
 # {{ page.title }}

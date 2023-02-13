@@ -3,6 +3,7 @@ layout: zenn.tsx
 title: "latexの二段組脚注の罫線を伸ばす"
 category: "latex"
 excerpt: ""
+type: tech
 ---
 
 latex で二段組をしたときの脚注の罫線を横に伸ばしたかったのでやったことをメモする。

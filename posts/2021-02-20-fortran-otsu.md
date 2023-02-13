@@ -4,6 +4,7 @@ title: "fortranで大津の2値化を書く"
 category: "fortran"
 excerpt: ""
 math: true
+type: tech
 ---
 
 # {{ page.title }}
