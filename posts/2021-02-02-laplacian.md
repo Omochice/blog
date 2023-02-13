@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "fortranでラプラシアンフィルタを書く"
-category: "fortran"
+topics: ["fortran"]
 excerpt: ""
 type: tech
 ---

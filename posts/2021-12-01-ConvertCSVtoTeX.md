@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "CSVライクな文字列をTeXの表に変換するプラグインを作った"
-category: "vim"
+topics: ["vim"]
 excerpt: ""
 type: tech
 ---

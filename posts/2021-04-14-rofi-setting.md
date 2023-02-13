@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "rofiの設定についての覚え書き"
-category: "cui"
+topics: ["cui"]
 excerpt: ""
 type: tech
 ---

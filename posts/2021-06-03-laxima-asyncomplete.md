@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "lexima.vimとasyncomplete.vimのキーバインドにハマった話"
-category: "vim"
+topics: ["vim"]
 excerpt: ""
 type: tech
 ---

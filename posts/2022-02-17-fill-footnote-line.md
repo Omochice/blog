@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "latexの二段組脚注の罫線を伸ばす"
-category: "latex"
+topics: ["latex"]
 excerpt: ""
 type: tech
 ---

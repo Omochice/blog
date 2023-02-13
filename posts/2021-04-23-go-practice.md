@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "golangで学部の演習をする"
-category: "golang"
+topics: ["golang"]
 excerpt: ""
 math: true
 type: tech

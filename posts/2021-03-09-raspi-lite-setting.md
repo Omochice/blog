@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "Raspberry Pi ZeroでRaspberry OS Liteの初期設定をする"
-category: "RaspberryPi"
+topics: ["RaspberryPi"]
 excerpt: ""
 type: tech
 ---

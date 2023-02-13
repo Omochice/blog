@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "mongo dbのセッティングの話"
-category: ""
+topics: [""]
 excerpt: ""
 type: tech
 ---

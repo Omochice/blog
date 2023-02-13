@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "i3でマルチモニタをしようとしてハマった話"
-category: "i3-wm"
+topics: ["i3-wm"]
 excerpt: ""
 type: tech
 ---

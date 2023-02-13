@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "Self-hostedなgitlabをglab-cliでデフォルトに設定する"
-category: "gitlab"
+topics: ["gitlab"]
 excerpt: ""
 type: tech
 ---

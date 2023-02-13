@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "denoのテストでfetchをmock化する方法"
-category: "deno"
+topics: ["deno"]
 excerpt: ""
 type: tech
 ---

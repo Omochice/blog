@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "xfceでマルチモニタ間のwindowの移動をする"
-category: "xfce"
+topics: ["xfce"]
 excerpt: ""
 type: tech
 ---

@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "denoでzenn-markdown-htmlを使う"
-category: "deno"
+topics: ["deno"]
 excerpt: ""
 type: tech
 ---

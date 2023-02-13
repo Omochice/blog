@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "Deno.statのモードの読み方"
-category: "Deno"
+topics: ["Deno"]
 excerpt: ""
 type: tech
 ---

@@ -2,7 +2,7 @@
 layout: zenn.tsx
 title: "first post"
 date: 2021-01-20
-category: ""
+topics: [""]
 excerpt: ""
 type: tech
 ---

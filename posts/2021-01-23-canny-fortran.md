@@ -1,7 +1,7 @@
 ---
 layout: zenn.tsx
 title: "canny edge detectionをfortranで書く"
-category: ""
+topics: [""]
 excerpt: ""
 type: tech
 ---
