@@ -5,8 +5,6 @@ category: "gitlab"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 github-cliと同じように使えるツールに[glab-cli](https://github.com/profclems/glab/)というものがある。
 
 デフォルトでは`gitlab.com`に対して操作をするようになっているが、これをself-hostしているgitlabを見るように変更したい。

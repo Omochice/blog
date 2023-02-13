@@ -5,8 +5,6 @@ category: "Vim"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 最近は `denops.vim` を使ったプラグインを作っている。
 
 popup/floating(vim と neovim で呼び方が違う)を使おうとすると色々差異があって面倒なので、[hrsh7th/denops-popup](https://github.com/hrsh7th/denops-popup)を使うのが楽だと思う。

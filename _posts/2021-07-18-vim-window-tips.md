@@ -5,8 +5,6 @@ category: "Vim"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 denops.vim を使ってプラグインを書いているときに使った（引用した）tips を備忘録的にまとめる。
 
 - すでに開いてる window を上書きして出力を出す。

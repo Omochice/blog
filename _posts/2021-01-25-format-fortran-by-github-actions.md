@@ -5,8 +5,6 @@ category: "fortran"
 excerpt: ""
 ---
 
-# {{ page.title  }}
-
 ```yaml
 name: Fortran CI
 

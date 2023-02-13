@@ -6,8 +6,6 @@ excerpt: ""
 math: true
 ---
 
-# {{ page.title }}
-
 大津の 2 値化ではあるしきい値を持って全体を 0,1 に分けていたが、dither 法では 0,1 をうまく使って中間色を表現しようとする手法である。
 
 今回は dither matrix のパターンとして、Bayer 法を使う。

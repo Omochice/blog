@@ -5,8 +5,6 @@ category: "latex"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 latex で二段組をしたときの脚注の罫線を横に伸ばしたかったのでやったことをメモする。
 
 普通に `\footnote` を書くと次のようになる。

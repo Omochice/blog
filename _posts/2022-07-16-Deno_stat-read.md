@@ -5,8 +5,6 @@ category: "Deno"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 ## 要約
 
 - `Deno.stat().mode` は 10 進数表記の実行権限を返してくる

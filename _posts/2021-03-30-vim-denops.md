@@ -5,8 +5,6 @@ category: "vim"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 [denops で vim の codic 拡張機能を書いた](https://zenn.dev/omochice/articles/67922b4970c32ec0899a)
 
 詳しい話は zenn に書いているのでそっちを参照。

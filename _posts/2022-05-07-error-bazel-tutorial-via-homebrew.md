@@ -5,8 +5,6 @@ category: "mac"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 ## 要約
 
 以下を実行する。

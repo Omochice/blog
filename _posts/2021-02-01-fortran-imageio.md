@@ -5,8 +5,6 @@ category: "fortran"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 pnm には P1~P6 まで種類があるが、今回は ascii 形式の P1~P3 を対象とする。
 
 また、`#` で始まるコメント行を読み取るのが面倒なので `sed` で処理する。

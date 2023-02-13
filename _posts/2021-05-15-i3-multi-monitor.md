@@ -5,8 +5,6 @@ category: "i3-wm"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 今まで xfce を使ってきて i3 に乗り換えた（前の記事を参照）
 
 マルチモニタ環境でうまくやるために `i3-workscreen` を入れたわけだが、たまに `i3-workscreen` の起動と同時に画面が落ちるようになった。

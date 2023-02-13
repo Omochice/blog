@@ -5,8 +5,6 @@ category: "deno"
 excerpt: ""
 ---
 
-# {{ page.title }}
-
 Deno 製の静的サイトジェネレーターの[pagic](https://github.com/xcatliu/pagic)を少し触ってみたので感想を書く。
 
 もろもろの設定は `pagic.config.ts` または `pagic.config.tsx` に書く。
