@@ -8,7 +8,7 @@ export const BlogPosts = ({ posts }: Props) => (
   <>
     <ul>
       {posts.map((post) => (
-        <li key={post.data.title}>
+        <li key={post.data.title} class="my-3">
           <BlogPost post={post} />
         </li>
       ))}
