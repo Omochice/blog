@@ -1,0 +1,45 @@
+:root {
+  text-size-adjust: auto;
+  font-size: 16px;
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--font-primary);
+}
+
+main pre {
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+main p>code {
+  color: #cdd6f4;
+  background: var(--code-background);
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
+/* NOTE: conflict prismjs style and windi. */
+/* so, cancel windi */
+main code .table {
+  display: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #24273a;
+    --code-background: #1e2030;
+    --font-primary: whitesmoke;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: white;
+    --code-background: #1a2638;
+    --font-primary: black;
+  }
+}
