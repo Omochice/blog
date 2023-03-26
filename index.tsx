@@ -8,8 +8,8 @@ export default (_data: Data) => {
   const blogPosts = getPosts();
   return (
     <>
-      <h1 className="text-6xl leading-normal">
-        Recent posts
+      <h1 className="text-5xl leading-normal font-mono">
+        $ Omochice 2&gt;&amp;1
       </h1>
       <BlogPosts posts={blogPosts} />
     </>
