@@ -1,5 +1,5 @@
 import type { Data } from "lume/core.ts";
-import { getPosts } from "./posts.ts";
+import { getPosts } from "./_includes/logics/posts.ts";
 import { BlogPosts } from "./_includes/blogPosts.tsx";
 
 export const layout = "base.tsx";
