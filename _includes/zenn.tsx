@@ -15,7 +15,9 @@ export default ({ title, children, topics, emoji }: ZennPageData) => (
       <h1 className="text-5xl">
         {title} {emoji}
       </h1>
-      {(topics ?? []).map((topic) => <TopicButton topic={topic} />)}
+      <div>
+        {(topics ?? []).map((topic) => <TopicButton topic={topic} key={topic} />)}
+      </div>
       <main className="overflow-ellipsis" style={contentWidth}>
         <article className="znc leading-loose">{children}</article>
       </main>
