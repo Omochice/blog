@@ -1,20 +1,23 @@
 import type { ZennPageData } from "plugins/zenn-renderer/mod.ts";
+import { TopicButton } from "./topicButton.tsx";
+import { joinUrl } from "./logics/joinUrl.ts";
 
 export const layout = "base.tsx";
 
 const contentWidth = {
   width: "max(80%, min(100%, 1024px))",
-}
+};
 
 export default ({ title, children, topics, emoji }: ZennPageData) => (
   <>
-    <h1>
-      {title} {emoji}
-    </h1>
-    <div className="flex justify-center">
+    <a href={joinUrl("/")}>&lt; Return to index</a>
+    <div className="flex justify-center flex-col gap-y-4">
+      <h1 className="text-5xl">
+        {title} {emoji}
+      </h1>
+      {(topics ?? []).map((topic) => <TopicButton topic={topic} />)}
       <main className="overflow-ellipsis" style={contentWidth}>
-        {(topics ?? []).map((value) => <div>{value}</div>)}
-        <article className="znc">{children}</article>
+        <article className="znc leading-loose">{children}</article>
       </main>
     </div>
   </>
