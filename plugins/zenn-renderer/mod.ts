@@ -22,16 +22,16 @@ export class MarkdownEngine implements Engine {
     content: string,
     _data?: Data,
     _filename?: string,
-  ): string {
-    return markdownToHtml(content);
+  ): Promise<string> {
+    return Promise.resolve(markdownToHtml(content));
   }
 
   renderSync(
     content: string,
-    data?: Data,
-    filename?: string,
+    _data?: Data,
+    _filename?: string,
   ): string {
-    return this.render(content, data, filename);
+    return markdownToHtml(content);
   }
 
   addHelper() {}
