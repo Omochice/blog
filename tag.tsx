@@ -4,13 +4,13 @@ import { getPosts, getTags } from "./posts.ts";
 import { BlogPosts } from "./_includes/blogPosts.tsx";
 
 export default function* (): Generator<Data> {
-  const ext = ".html"
+  const ext = ".html";
   for (const tag of getTags()) {
     const title = `#${tag}`;
     const posts = getPosts(tag);
 
     yield {
-      url: join("/", "tag", tag + ext ),
+      url: join("/", "tag", tag + ext),
       title,
       tag,
       layout: "base.tsx",

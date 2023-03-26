@@ -4,7 +4,8 @@
     "clean": "rm -rf ./_site",
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "MODE=PROD deno task lume",
-    "serve": "deno task lume -s"
+    "serve": "deno task lume -s",
+    "fmt": "deno fmt $(find -name '*.ts' -or -name '*.tsx')"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

@@ -1,7 +1,7 @@
 import { SharedHead } from "./components/sharedHead.tsx";
 import { ZennHeader } from "./components/zennHeader.tsx";
-import { PrismHighlight } from "./components/prismHighlight.tsx"
-import { KatexHeader } from "./components/katexHeader.tsx"
+import { PrismHighlight } from "./components/prismHighlight.tsx";
+import { KatexHeader } from "./components/katexHeader.tsx";
 
 export default ({ title, children, type }) => (
   <>
