@@ -17,3 +17,5 @@ site.use(jsx())
   .copy("/assets");
 
 export default site;
+
+export const title = "$ Omochice 2>&1";
