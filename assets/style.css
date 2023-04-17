@@ -15,6 +15,19 @@ main pre {
   overflow-x: auto;
 }
 
+#search p {
+  color: var(--font-primary);
+}
+
+#search li {
+  color: var(--font-primary);
+  background: var(--code-background);
+}
+
+#search a {
+  color: cyan;
+}
+
 main p>code {
   color: #cdd6f4;
   background: var(--code-background);

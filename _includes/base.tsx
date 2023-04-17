@@ -4,6 +4,7 @@ import { SharedHead } from "./components/sharedHead.tsx";
 import { ZennHeader } from "./components/zennHeader.tsx";
 import { PrismHighlight } from "./components/prismHighlight.tsx";
 import { KatexHeader } from "./components/katexHeader.tsx";
+import { SearchBox } from "./searchBox.tsx";
 
 export default ({ title, children }: Data) => (
   <>
@@ -16,7 +17,10 @@ export default ({ title, children }: Data) => (
         <link rel="stylesheet" href="/assets/style.css" />
         <title>{title || blogTitle}</title>
       </head>
-      <body className="p-10">{children}</body>
+      <body className="p-10">
+        <SearchBox />
+        {children}
+      </body>
     </html>
   </>
 );
