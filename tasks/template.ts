@@ -1,6 +1,6 @@
 import { stringify } from "https://deno.land/std@0.191.0/yaml/mod.ts";
 import { format } from "npm:date-fns@2.3.0";
-import { join } from "https://deno.land/std@0.183.0/path/mod.ts";
+import { join } from "https://deno.land/std@0.191.0/path/mod.ts";
 
 function generate() {
   const frontMatter = {
