@@ -16,9 +16,14 @@
     "jsxImportSource": "npm:preact"
   },
   "lint": {
-    "include": ["./**/*.ts", "./**/*.tsx"]
+    "include": [
+      "./**/*.ts",
+      "./**/*.tsx"
+    ]
   },
   "fmt": {
-    "exclude": ["./**/*.md"]
+    "exclude": [
+      "./**/*.md"
+    ]
   }
 }
