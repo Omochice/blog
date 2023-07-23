@@ -1,4 +1,4 @@
-import type { ZennPageData } from "plugins/zenn-renderer/mod.ts";
+import type { ZennPageData } from "../plugins/zenn-renderer/mod.ts";
 import { TopicButton } from "./topicButton.tsx";
 import { joinUrl } from "./logics/joinUrl.ts";
 

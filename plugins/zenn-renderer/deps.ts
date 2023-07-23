@@ -11,7 +11,7 @@ export {
   createExtractor,
   Format,
 } from "https://deno.land/std@0.195.0/front_matter/mod.ts";
-export type { Parser } from "https://deno.land/std@0.195.0/encoding/front_matter/mod.ts";
+export type { Parser } from "https://deno.land/std@0.195.0/front_matter/mod.ts";
 export { parse as parseYAML } from "https://deno.land/std@0.195.0/yaml/parse.ts";
 // export { default as markdownToHtml } from "https://esm.sh/zenn-markdown-html@0.1.134?bundle";
 import zenn from "npm:zenn-markdown-html@0.1.145-alpha.0";
