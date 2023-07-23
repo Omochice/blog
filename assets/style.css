@@ -1,4 +1,10 @@
 @tailwind base;
+
+/* reset reset-css */
+a {
+  @apply text-blue-500 cursor-pointer;
+}
+
 @tailwind components;
 @tailwind utilities;
 
