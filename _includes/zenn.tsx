@@ -16,7 +16,12 @@ export default ({ title, children, topics, emoji }: ZennPageData) => (
         {title} {emoji}
       </h1>
       <div>
-        {(topics ?? []).map((topic) => <TopicButton topic={topic} key={topic} />)}
+        {(topics ?? []).map((topic) => (
+          <TopicButton
+            topic={topic}
+            key={topic}
+          />
+        ))}
       </div>
       <main className="overflow-ellipsis" style={contentWidth}>
         <article className="znc leading-loose">{children}</article>

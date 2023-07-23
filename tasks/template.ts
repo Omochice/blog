@@ -22,5 +22,5 @@ if (import.meta.main) {
   const outPath = join(Deno.cwd(), "posts", filename);
 
   Deno.writeTextFileSync(outPath, generate());
-  console.log(`generate template to ${outPath}`)
+  console.log(`generate template to ${outPath}`);
 }
