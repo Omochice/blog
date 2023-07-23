@@ -12,7 +12,6 @@ export const BlogPost = ({ post }: Props) => (
       >
         <a
           href={joinUrl(post.data.url)}
-          className="text-blue-500 cursor-pointer"
         >
           {post.data.title}
         </a>
