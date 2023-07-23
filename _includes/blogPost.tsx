@@ -3,7 +3,7 @@ import { joinUrl } from "./logics/joinUrl.ts";
 import type { PageData } from "lume/core.ts";
 
 type Props = { post: PageData };
-export const BlogPost = ({ post }: posts) => (
+export const BlogPost = ({ post }: Props) => (
   <>
     <div className="flex">
       <div

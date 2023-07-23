@@ -13,7 +13,7 @@
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:react"
+    "jsxImportSource": "npm:preact"
   },
   "lint": {
     "include": ["./**/*.ts", "./**/*.tsx"]
