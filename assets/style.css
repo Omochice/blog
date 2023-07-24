@@ -5,6 +5,10 @@ a {
   @apply text-blue-500 cursor-pointer;
 }
 
+blockquote {
+  @apply p-4 my-4 italic border-l-4 border-gray-300;
+}
+
 @tailwind components;
 @tailwind utilities;
 
