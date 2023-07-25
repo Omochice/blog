@@ -18,15 +18,15 @@ blockquote {
 }
 
 html {
-  background-color: var(--background-color);
   color: var(--font-primary);
+  background-color: var(--background-color);
 }
 
 main pre {
-  border-radius: 12px;
   padding: 1rem;
   margin: 1rem 0;
   overflow-x: auto;
+  border-radius: 12px;
 }
 
 #search p {
@@ -43,14 +43,14 @@ main pre {
 }
 
 main p>code {
-  color: #cdd6f4;
-  background: var(--code-background);
   display: inline-block;
   padding: 0 0.5rem;
+  color: #cdd6f4;
+  background: var(--code-background);
 }
 
-/* NOTE: conflict prismjs style and windi. */
-/* so, cancel windi */
+/* NOTE: conflict prismjs style and windi.
+ * so, cancel windi */
 main code .table {
   display: inherit;
 }
