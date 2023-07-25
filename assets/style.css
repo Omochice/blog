@@ -9,6 +9,30 @@ blockquote {
   @apply p-4 my-4 italic border-l-4 border-gray-300;
 }
 
+ul {
+  @apply my-2;
+
+  ul {
+    @apply my-0;
+  }
+
+  li {
+    @apply ml-4 my-1 list-disc;
+  }
+}
+
+ol{
+  @apply my-2;
+
+  ol {
+    @apply my-0;
+  }
+
+  li {
+    @apply ml-4 my-1 list-decimal;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
