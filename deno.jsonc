@@ -9,6 +9,7 @@
     "fmt": "deno fmt",
     "check": "deno check ./**/*.ts ./**/*.tsx",
     "lint": "deno lint",
+    "lint:style": "deno run -A npm:stylelint@15.10.2 ./**/*.css",
     "udd": "deno run --allow-read=. --allow-write=. --allow-net https://deno.land/x/udd@0.8.2/main.ts ./**/*.ts ./**/*.tsx import_map.json"
   },
   "compilerOptions": {
