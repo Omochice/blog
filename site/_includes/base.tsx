@@ -1,4 +1,3 @@
-import { title as blogTitle } from "../_config.ts";
 import type { Data } from "lume/core.ts";
 import { SharedHead } from "./components/sharedHead.tsx";
 import { ZennHeader } from "./components/zennHeader.tsx";
@@ -15,7 +14,7 @@ export default ({ title, children }: Data) => (
         <PrismHighlight />
         <KatexHeader />
         <link rel="stylesheet" href="/assets/style.css" />
-        <title>{title || blogTitle}</title>
+        <title>{title}</title>
       </head>
       <body className="p-10">
         <SearchBox />

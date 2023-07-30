@@ -1,14 +1,13 @@
-import site from "../_config.ts";
-import type { Page } from "lume/core.ts";
 import { BlogPost } from "./blogPost.tsx";
+import type { PageData } from "lume/core.ts";
 
-type Props = { posts: Page[] };
+type Props = { posts: PageData[] };
 
 export const BlogPosts = ({ posts }: Props) => (
   <>
     <ul>
       {posts.map((post) => (
-        <li key={post.data.title} class="my-3">
+        <li key={post.title} class="my-3">
           <BlogPost post={post} />
         </li>
       ))}

@@ -19,7 +19,7 @@ export default function* (): Generator<Data> {
           <h1 className="text-6xl leading-normal">
             {title}: match {posts.length} posts.
           </h1>
-          <BlogPosts posts={posts} />
+          <BlogPosts posts={posts.map((e) => e.data)} />
         </>
       ),
     };
