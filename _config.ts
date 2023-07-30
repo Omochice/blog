@@ -8,6 +8,7 @@ import zennKatex from "./plugins/zenn-katex/mod.ts";
 
 const site = lume({
   location: new URL("https://omochice.github.io/blog/"),
+  src: "site",
 });
 
 site
@@ -16,8 +17,6 @@ site
   .use(jsx())
   .use(zennRenderer())
   .use(zennKatex())
-  .use(resolveUrls())
+  .use(resolveUrls());
 
 export default site;
-
-export const title = "$ Omochice 2>&1";

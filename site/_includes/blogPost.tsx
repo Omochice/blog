@@ -11,14 +11,14 @@ export const BlogPost = ({ post }: Props) => (
         className="w-3/5 truncate"
       >
         <a
-          href={joinUrl(post.data.url)}
+          href={joinUrl(post.url || "")}
         >
-          {post.data.title}
+          {post.title}
         </a>
       </div>
 
       <div name="page-metadata" className="flex gap-1">
-        {(post.data.topics ?? []).filter((e) => !(/^\s*$/.test(e)))
+        {(post.topics ?? []).filter((e: string) => !(/^\s*$/.test(e)))
           .map((topic: string) => <TopicButton key={topic} topic={topic} />)}
       </div>
     </div>
