@@ -5,6 +5,7 @@ import postcss from "lume/plugins/postcss.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import zennRenderer from "./plugins/zenn-renderer/mod.ts";
 import zennKatex from "./plugins/zenn-katex/mod.ts";
+import feed from "lume/plugins/feed.ts";
 
 const site = lume({
   location: new URL("https://omochice.github.io/blog/"),
@@ -17,6 +18,20 @@ site
   .use(jsx())
   .use(zennRenderer())
   .use(zennKatex())
-  .use(resolveUrls());
+  .use(resolveUrls())
+  .use(feed({
+    output: ["/posts.rss", "/posts.json"],
+    query: "type=tech|idea",
+    info: {
+      title: "=site.title",
+      description: "=site.description",
+      lang: "ja",
+    },
+    items: {
+      title: "=title",
+      description: "=excerpt",
+      content: "$.znc",
+    },
+  }));
 
 export default site;
