@@ -7,6 +7,7 @@ on:
 
 jobs:
   update:
+    permissions: write-all
     name: Update by Denopendabot
     runs-on: ubuntu-latest
     steps:
