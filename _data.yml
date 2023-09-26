@@ -1,0 +1,11 @@
+lang: ja
+
+home:
+  welcome: hi
+
+# Metas plugin https://lume.land/plugins/metas/#description
+metas:
+  site: Omochice 2>&1
+  description: sample
+  twitter: "@omochicemgr"
+  lang: "=lang"
