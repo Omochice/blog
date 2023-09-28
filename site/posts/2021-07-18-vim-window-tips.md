@@ -1,6 +1,6 @@
 ---
 layout: zenn.tsx
-title: "vimですでに出ているwindowを雨が書きして出力を出す方法"
+title: "vimですでに出ているwindowを上書きして出力を出す方法"
 topics: ["Vim"]
 excerpt: ""
 type: tech
