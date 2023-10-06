@@ -4,9 +4,9 @@ export type {
   Helper,
   Page,
   Site,
-} from "https://deno.land/x/lume@v1.18.5/core.ts";
-export { merge } from "https://deno.land/x/lume@v1.18.5/core/utils.ts";
-export { default as loader } from "https://deno.land/x/lume@v1.18.5/core/loaders/text.ts";
+} from "https://deno.land/x/lume@v1.19.1/core.ts";
+export { merge } from "https://deno.land/x/lume@v1.19.1/core/utils.ts";
+export { default as loader } from "https://deno.land/x/lume@v1.19.1/core/loaders/text.ts";
 export {
   createExtractor,
   Format,
