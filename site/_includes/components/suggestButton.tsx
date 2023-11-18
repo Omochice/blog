@@ -1,4 +1,4 @@
-import { join } from "https://deno.land/std@0.205.0/url/join.ts";
+import { join } from "https://deno.land/std@0.207.0/url/join.ts";
 
 const classNames = [
   "bg-gray-300",
