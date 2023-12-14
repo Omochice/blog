@@ -46,6 +46,12 @@ html {
   background-color: var(--background-color);
 }
 
+main {
+  @apply ms-auto me-auto;
+
+  max-width: min(100% - 15vw, 60em);
+}
+
 main pre {
   padding: 1rem;
   margin: 1rem 0;
