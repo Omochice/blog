@@ -1,5 +1,4 @@
 {
-  "importMap": "./import_map.json",
   "tasks": {
     "clean": "rm -rf ./_site",
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
@@ -26,5 +25,9 @@
     "exclude": [
       "./**/*.md"
     ]
+  },
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.19.3/",
+    "date-fns": "npm:date-fns@2.30.0"
   }
 }
