@@ -1,0 +1,27 @@
+name: Link Check
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 15 * * *"
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Link Check
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts
+      - run: npm install textlint textlint-rule-no-dead-link @microsoft/eslint-formatter-sarif
+      - run: npx textlint site/posts/*.md --rule no-dead-link -f @microsoft/eslint-formatter-sarif -o textlint.sarif || exit 0 # workaround https://github.com/textlint/textlint/issues/103
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: textlint.sarif
+          category: textlint
