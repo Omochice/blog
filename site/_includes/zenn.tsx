@@ -16,7 +16,7 @@ export default ({ title, children, topics, emoji, page }: ZennPageData) => (
       <h1 className="text-5xl">
         {title} {emoji}
       </h1>
-      <div>
+      <div className="flex gap-2">
         {(topics ?? []).map((topic) => (
           <TopicButton
             topic={topic}
