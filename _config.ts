@@ -3,8 +3,7 @@ import jsx from "lume/plugins/jsx_preact.ts";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
-import zennRenderer from "./plugins/zenn-renderer/mod.ts";
-import zennKatex from "./plugins/zenn-katex/mod.ts";
+import zennRenderer from "https://pax.deno.dev/Omochice/lume-plugin-zenn-renderer@v0.0.1/mod.ts";
 import feed from "lume/plugins/feed.ts";
 
 const site = lume({
@@ -17,7 +16,6 @@ site
   .use(postcss())
   .use(jsx())
   .use(zennRenderer())
-  .use(zennKatex())
   .use(resolveUrls())
   .use(feed({
     output: ["/posts.rss", "/posts.json"],
