@@ -28,6 +28,6 @@
   },
   "imports": {
     "lume/": "https://deno.land/x/lume@v1.19.3/",
-    "date-fns": "npm:date-fns@2.30.0"
+    "date-fns": "npm:date-fns@3.2.0"
   }
 }
