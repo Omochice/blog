@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "fortranでdither法を使って2値化をする"
 topics: ["fortran"]
 excerpt: ""

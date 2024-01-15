@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "canny edge detectionをfortranで書く"
 topics: [""]
 excerpt: ""

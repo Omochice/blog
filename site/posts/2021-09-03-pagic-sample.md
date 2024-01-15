@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "pagicをちょっと触ってみた"
 topics: ["deno"]
 excerpt: ""

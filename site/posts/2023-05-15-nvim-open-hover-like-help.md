@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "nvim-lspでtextDocument/hoverをsplitで開く"
 topics: ["nvim", "lua", "lsp"]
 excerpt: ""

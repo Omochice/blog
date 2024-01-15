@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "tensorflow2.3.0でエラーが出て解決にそこそこかかった話"
 topics: ["python"]
 excerpt: ""

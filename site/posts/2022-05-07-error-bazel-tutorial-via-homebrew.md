@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "Bazelのbuild時に`1-homebrew`のエラーが出る問題"
 topics: ["mac"]
 excerpt: ""

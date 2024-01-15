@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "denoでzenn-markdown-htmlを使う"
 topics: ["deno"]
 excerpt: ""
