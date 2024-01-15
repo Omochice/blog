@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 TeX のアウトラインを出すプラグインを作るときに自分でロケーションリストを作る方法を調べたのでまとめる。
 
 Zenn のスクラップは[ここ](https://zenn.dev/omochice/scraps/0f24249a336b20)

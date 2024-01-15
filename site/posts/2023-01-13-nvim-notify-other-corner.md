@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 noice.nvim を導入したが、LS の警告等が右上に出てしまい、コーディングしている領域と被って見づらい。
 
 
