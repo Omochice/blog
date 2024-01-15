@@ -1,5 +1,5 @@
 import { BlogPost } from "./blogPost.tsx";
-import type { PageData } from "lume/core.ts";
+import type { PageData } from "lume/core/file.ts";
 
 type Props = { posts: PageData[] };
 

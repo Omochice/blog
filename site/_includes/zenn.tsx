@@ -1,4 +1,4 @@
-import type { ZennPageData } from "../plugins/zenn-renderer/mod.ts";
+import type { ZennPageData } from "https://pax.deno.dev/Omochice/lume-plugin-zenn-renderer@v0.2.0/mod.ts";
 import { TopicButton } from "./topicButton.tsx";
 import { joinUrl } from "./logics/joinUrl.ts";
 import SuggestButton from "./components/suggestButton.tsx";

@@ -1,8 +1,8 @@
 import { TopicButton } from "./topicButton.tsx";
 import { joinUrl } from "./logics/joinUrl.ts";
-import type { PageData } from "lume/core.ts";
+import type { Data } from "lume/core/file.ts";
 
-type Props = { post: PageData };
+type Props = { post: Data };
 export const BlogPost = ({ post }: Props) => (
   <>
     <div className="flex">

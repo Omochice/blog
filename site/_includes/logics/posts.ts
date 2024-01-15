@@ -1,4 +1,4 @@
-import type { Page } from "lume/core.ts";
+import type { Page } from "lume/core/file.ts";
 import site from "../../../_config.ts";
 import { compareDesc, fromUnixTime, parse } from "date-fns";
 import { basename } from "https://deno.land/std@0.212.0/path/basename.ts";

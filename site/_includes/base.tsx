@@ -1,4 +1,4 @@
-import type { Data } from "lume/core.ts";
+import type { Data } from "lume/core/file.ts";
 import { SharedHead } from "./components/sharedHead.tsx";
 import { ZennHeader } from "./components/zennHeader.tsx";
 import { PrismHighlight } from "./components/prismHighlight.tsx";

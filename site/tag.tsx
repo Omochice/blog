@@ -1,5 +1,5 @@
 import { join } from "https://deno.land/std@0.212.0/path/mod.ts";
-import { Data } from "lume/core.ts";
+import type { Data } from "lume/core/file.ts";
 import { getPosts, getTags } from "./_includes/logics/posts.ts";
 import { BlogPosts } from "./_includes/blogPosts.tsx";
 

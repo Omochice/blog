@@ -1,4 +1,4 @@
-import type { Data } from "lume/core.ts";
+import type { Data } from "lume/core/file.ts";
 import { getPosts } from "./logics/posts.ts";
 import { BlogPosts } from "./blogPosts.tsx";
 
