@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "rofiの設定についての覚え書き"
 topics: ["cui"]
 excerpt: ""

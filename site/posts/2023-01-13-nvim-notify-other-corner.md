@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "nvim-notifyでnotifyの表示を右上以外に表示する"
 topics: ["vim"]
 excerpt: ""

@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "fortranでラプラシアンフィルタを書く"
 topics: ["fortran"]
 excerpt: ""

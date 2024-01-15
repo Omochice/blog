@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "latexの二段組脚注の罫線を伸ばす"
 topics: ["latex"]
 excerpt: ""

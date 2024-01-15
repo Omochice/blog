@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "BioRubyでローカルのBlastが動かない"
 topics: ["bioruby"]
 excerpt: ""

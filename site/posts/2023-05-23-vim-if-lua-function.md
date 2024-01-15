@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "vimのif_luaがよくわからない"
 topics: ["vim", "lua"]
 excerpt: ""

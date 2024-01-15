@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "manjaroでアイコンフォントなどが豆腐になることへの対処"
 topics: [""]
 excerpt: ""

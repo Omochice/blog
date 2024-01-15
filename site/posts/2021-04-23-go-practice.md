@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "golangで学部の演習をする"
 topics: ["golang"]
 excerpt: ""

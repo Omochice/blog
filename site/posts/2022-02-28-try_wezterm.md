@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "weztermをためしてみる"
 topics: [""]
 excerpt: ""

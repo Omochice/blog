@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "fortranでバイラテラルフィルタをつくる"
 topics: ["fortran"]
 excerpt: ""

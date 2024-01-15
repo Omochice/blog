@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "mongo dbのセッティングの話"
 topics: [""]
 excerpt: ""

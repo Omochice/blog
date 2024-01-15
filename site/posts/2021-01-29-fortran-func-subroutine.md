@@ -1,5 +1,4 @@
 ---
-layout: zenn.tsx
 title: "fortranのfunctionとsubroutineの差異"
 topics: ["fortran"]
 excerpt: ""
