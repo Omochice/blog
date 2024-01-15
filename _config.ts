@@ -3,8 +3,9 @@ import jsx from "lume/plugins/jsx_preact.ts";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
-import zennRenderer from "https://pax.deno.dev/Omochice/lume-plugin-zenn-renderer@v0.0.1/mod.ts";
 import feed from "lume/plugins/feed.ts";
+import markdown from "lume/plugins/markdown.ts"
+import markdownItKatex from "npm:@vscode/markdown-it-katex";
 
 const site = lume({
   location: new URL("https://omochice.github.io/blog/"),
@@ -12,10 +13,14 @@ const site = lume({
 });
 
 site
+  .use(markdown({
+    plugins: [
+      markdownItKatex.default
+    ]
+  }))
   .use(tailwindcss())
   .use(postcss())
   .use(jsx())
-  .use(zennRenderer())
   .use(resolveUrls())
   .use(feed({
     output: ["/posts.rss", "/posts.json"],
