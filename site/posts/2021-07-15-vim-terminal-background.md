@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 vim の設定に `set termguicolors` というものがある。
 
 これは[TrueColorを使うための設定](https://vim-jp.org/vimdoc-ja/options.html#'termguicolors')で、これが set されていないと colorscheme の一部が正しく表示されないことがある。

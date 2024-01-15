@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 ## 結論
 
 `&&` のほうが若干速く見える。

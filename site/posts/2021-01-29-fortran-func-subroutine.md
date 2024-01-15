@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 覚えがきで記しておく。
 
 Python で言うところの `list.append()` みたいな感じで引数自身が返り値の性質を持つときは subroutine で書く方が多分それっぽくなる。

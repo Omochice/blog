@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 作った。
 [![Omochice/emptyls-fish - GitHub](https://gh-card.dev/repos/Omochice/emptyls-fish.svg)](https://github.com/Omochice/emptyls-fish)
 

@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 デスクトップ環境には xfce を使っているが、`ctrl-r` で起動するランチャーがなんかきれいじゃなくて気に食わないので[rofi](https://github.com/davatorium/rofi)を導入してみた。
 その時の設定の覚え書きを書く。
 

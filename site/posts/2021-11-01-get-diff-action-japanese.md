@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 Github Actions で直前コミットとの差分を取って変更があったファイルを抽出する [Action](https://github.com/technote-space/get-diff-action) がある。
 
 これを使って記事の更新があったときにタイムスタンプを自動で更新するワークフローを書いていた。

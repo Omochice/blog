@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 今まで denops.vim を使ってプラグインを作ってきたが、どれも 100％Typescript で書いてある。
 
 コマンドの定義まで Typescript でやっているため、プラグインを読み込んだ直後にはコマンドが何もない状態になる。

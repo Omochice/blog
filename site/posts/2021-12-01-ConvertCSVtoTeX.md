@@ -5,8 +5,6 @@ excerpt: ""
 type: tech
 ---
 
-# {{ page.title }}
-
 基本的に私が書いたプログラムが吐き出すデータは json か csv だ。
 
 しかし、これらをそのまま LaTeX の文書に入れると見た目が良くない。
