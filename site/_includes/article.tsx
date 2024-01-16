@@ -9,7 +9,11 @@ const contentWidth = {
   width: "max(80%, min(100%, 1024px))",
 };
 
-export default ({ title, children, topics, page }: Data) => (
+type PageData = Data & {
+  topics?: string[];
+};
+
+export default ({ title, children, topics, page }: PageData) => (
   <>
     <a href={joinUrl("/")}>&lt; Return to index</a>
     <div className="flex justify-center flex-col gap-y-4">
