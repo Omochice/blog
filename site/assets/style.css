@@ -1,3 +1,5 @@
+@import "./highlight.css";
+
 @tailwind base;
 
 /* reset reset-css */
@@ -21,7 +23,7 @@ ul {
   }
 }
 
-ol{
+ol {
   @apply my-2;
 
   ol {
@@ -47,10 +49,12 @@ html {
 }
 
 main pre {
-  padding: 1rem;
-  margin: 1rem 0;
   overflow-x: auto;
   border-radius: 12px;
+  background-color: var(--code-background);
+  color: whitesmoke;
+  padding: 1em;
+  margin: 1em 0;
 }
 
 #search p {
@@ -66,31 +70,34 @@ main pre {
   color: cyan;
 }
 
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background-color: var(--code-background);
+}
+
 main p>code {
   display: inline-block;
   padding: 0 0.5rem;
   color: #cdd6f4;
   background: var(--code-background);
+  border-radius: 5px;
 }
 
-/* NOTE: conflict prismjs style and windi.
- * so, cancel windi */
-main code .table {
-  display: inherit;
+:root {
+  --code-background: #1e1e2e;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #24273a;
-    --code-background: #1e2030;
     --font-primary: whitesmoke;
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color: white;
-    --code-background: #1a2638;
+    --background-color: whitesmoke;
     --font-primary: black;
   }
 }

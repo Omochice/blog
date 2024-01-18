@@ -29,7 +29,7 @@ const SuggestButton = (prop: Prop) => {
   return (
     <>
       <a
-        href={url}
+        href={url.href}
         className={classNames.join(" ")}
       >
         編集を提案
