@@ -1,4 +1,4 @@
-import type { Data } from "lume/core.ts";
+import type { Data } from "lume/core/file.ts";
 import { TopicButton } from "./topicButton.tsx";
 import { joinUrl } from "./logics/joinUrl.ts";
 import SuggestButton from "./components/suggestButton.tsx";

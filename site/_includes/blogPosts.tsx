@@ -1,7 +1,7 @@
 import { BlogPost } from "./blogPost.tsx";
-import type { PageData } from "lume/core.ts";
+import type { Data } from "lume/core/file.ts";
 
-type Props = { posts: PageData[] };
+type Props = { posts: Data[] };
 
 export const BlogPosts = ({ posts }: Props) => (
   <>

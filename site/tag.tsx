@@ -1,9 +1,8 @@
 import { join } from "https://deno.land/std@0.212.0/path/mod.ts";
-import { Data } from "lume/core.ts";
 import { getPosts, getTags } from "./_includes/logics/posts.ts";
 import { BlogPosts } from "./_includes/blogPosts.tsx";
 
-export default function* (): Generator<Data> {
+export default function* (): Generator {
   const ext = ".html";
   for (const tag of getTags()) {
     const title = `#${tag}`;
