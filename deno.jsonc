@@ -6,6 +6,7 @@
     "serve": "deno task lume -s",
     "generate": "deno run -A tasks/template.ts",
     "fmt": "deno fmt",
+    "fmt:check": "deno fmt --check",
     "check": "deno check ./**/*.ts ./**/*.tsx",
     "lint": "deno lint",
     "lint:style": "deno run -A npm:stylelint@15.10.2 ./**/*.css",
@@ -27,7 +28,7 @@
     ]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.19.3/",
+    "lume/": "https://deno.land/x/lume@v2.0.3/",
     "date-fns": "npm:date-fns@3.3.1"
   }
 }

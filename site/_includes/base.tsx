@@ -1,4 +1,4 @@
-import type { Data } from "lume/core.ts";
+import type { Data } from "lume/core/file.ts";
 import { SearchBox } from "./searchBox.tsx";
 
 export default ({ title, children }: Data) => (
