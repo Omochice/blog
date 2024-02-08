@@ -14,7 +14,7 @@
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:preact@10.19.3"
+    "jsxImportSource": "npm:preact@10.19.4"
   },
   "lint": {
     "include": [
