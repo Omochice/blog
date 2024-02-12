@@ -19,8 +19,8 @@ if (import.meta.main) {
   const filename =
     [format(new Date(), "yyyy-MM-dd"), crypto.randomUUID()].join("-") +
     ".md";
-  const outPath = join(Deno.cwd(), "posts", filename);
+  const outPath = join(Deno.cwd(), "site", "posts", filename);
 
-  Deno.writeTextFileSync(outPath, generate());
+  Deno.writeTextFileSync(outPath, generate(), { create: true });
   console.log(`generate template to ${outPath}`);
 }
