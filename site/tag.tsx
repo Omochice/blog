@@ -1,4 +1,4 @@
-import { join } from "https://deno.land/std@0.214.0/path/mod.ts";
+import { join } from "https://deno.land/std@0.216.0/path/mod.ts";
 import { getPosts, getTags } from "./_includes/logics/posts.ts";
 import { BlogPosts } from "./_includes/blogPosts.tsx";
 
