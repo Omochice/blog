@@ -4,7 +4,6 @@ import { join } from "https://deno.land/std@0.218.2/path/mod.ts";
 
 function generate() {
   const frontMatter = {
-    layout: "zenn.tsx",
     title: "",
     topics: [],
     excerpt: "",
