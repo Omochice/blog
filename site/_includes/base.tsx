@@ -1,12 +1,15 @@
 import type { Data } from "lume/core/file.ts";
 import { SearchBox } from "./searchBox.tsx";
 
-export default ({ title, children }: Data) => (
+export default ({ title, children, blogTitle }: Data) => (
   <>
     <html lang="ja">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        />
         <link rel="stylesheet" href="/assets/style.css" />
         <link
           rel="stylesheet"
@@ -15,6 +18,18 @@ export default ({ title, children }: Data) => (
           crossOrigin="anonymous"
         />
         <title>{title}</title>
+        <link
+          rel="alternate"
+          href="/feed.xml"
+          type="application/atom+xml"
+          title={blogTitle}
+        />
+        <link
+          rel="alternate"
+          href="/feed.json"
+          type="application/json"
+          title={blogTitle}
+        />
       </head>
       <body className="p-10">
         <SearchBox />

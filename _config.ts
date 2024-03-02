@@ -25,7 +25,7 @@ site
   .use(jsx())
   .use(resolveUrls())
   .use(feed({
-    output: ["/feed.rss", "/feed.json"],
+    output: ["/feed.xml", "/feed.json"],
     query: "type=tech|idea",
     info: {
       title: "=site.title",
