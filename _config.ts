@@ -3,6 +3,7 @@ import jsx from "lume/plugins/jsx_preact.ts";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
+import relativeUrls from "lume/plugins/relative_urls.ts";
 import feed from "lume/plugins/feed.ts";
 import markdown from "lume/plugins/markdown.ts";
 import markdownItKatex from "npm:@vscode/markdown-it-katex";
@@ -24,6 +25,7 @@ site
   .use(postcss())
   .use(jsx())
   .use(resolveUrls())
+  .use(relativeUrls())
   .use(feed({
     output: ["/feed.xml", "/feed.json"],
     query: "type=tech|idea",
