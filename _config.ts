@@ -38,6 +38,7 @@ site
       title: "=title",
       description: "=excerpt",
       content: "$.article",
+      published: "=date",
     },
   }))
   .remoteFile(
