@@ -17,7 +17,7 @@ export default ({ title, children, topics, page }: PageData) => (
   <>
     <a href={joinUrl("/")}>&lt; Return to index</a>
     <div className="flex justify-center flex-col gap-y-4">
-      <h1 className="text-5xl">
+      <h1 className="text-3xl">
         {title}
       </h1>
       <div className="flex gap-2">

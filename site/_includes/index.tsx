@@ -8,7 +8,7 @@ export default ({ title }: Data) => {
   const blogPosts = getPosts().map((page) => page.data);
   return (
     <>
-      <h1 className="text-5xl leading-normal font-mono">
+      <h1 className="text-4xl leading-normal font-mono">
         {title}
       </h1>
       <BlogPosts posts={blogPosts} />
