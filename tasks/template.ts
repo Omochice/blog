@@ -1,5 +1,5 @@
 import { stringify } from "https://deno.land/std@0.218.2/yaml/mod.ts";
-import { format } from "npm:date-fns@3.3.1";
+import { format } from "npm:date-fns@3.4.0";
 import { join } from "https://deno.land/std@0.218.2/path/mod.ts";
 
 function generate() {
