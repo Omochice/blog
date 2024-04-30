@@ -13,7 +13,7 @@
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:preact@10.20.2"
+    "jsxImportSource": "npm:preact@10.21.0"
   },
   "lint": {
     "include": [
