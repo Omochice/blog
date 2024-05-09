@@ -1,4 +1,4 @@
-import { join } from "jsr:@std/url@0.222.1/join";
+import { join } from "jsr:@std/url@0.224.0/join";
 
 const classNames = [
   "bg-gray-300",
