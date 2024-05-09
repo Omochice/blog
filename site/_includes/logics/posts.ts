@@ -1,7 +1,7 @@
 import type { Page } from "lume/core/file.ts";
 import site from "../../../_config.ts";
 import { compareDesc, fromUnixTime, parse } from "date-fns";
-import { basename } from "jsr:@std/path@0.222.1/basename";
+import { basename } from "jsr:@std/path@0.224.0/basename";
 import { err, ok, Result } from "npm:neverthrow@6.2.1";
 
 function comparePage(a: Page, b: Page): number {
