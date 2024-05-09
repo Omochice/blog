@@ -1,4 +1,4 @@
-import { stringify } from "jsr:@std/yaml@0.222.1";
+import { stringify } from "jsr:@std/yaml@0.224.0";
 import { format } from "npm:date-fns@3.6.0";
 import { join } from "jsr:@std/path@0.222.1";
 
