@@ -5,10 +5,6 @@ import SuggestButton from "./components/suggestButton.tsx";
 
 export const layout = "base.tsx";
 
-const contentWidth = {
-  width: "max(80%, min(100%, 1024px))",
-};
-
 type PageData = Data & {
   topics?: string[];
 };
@@ -16,22 +12,22 @@ type PageData = Data & {
 export default ({ title, children, topics, page }: PageData) => (
   <>
     <a href={joinUrl("/")}>&lt; Return to index</a>
-    <div className="flex justify-center flex-col gap-y-4">
-      <h1 className="text-3xl">
-        {title}
-      </h1>
-      <div className="flex gap-2">
-        {(topics ?? []).map((topic) => (
-          <TopicButton
-            topic={topic}
-            key={topic}
-          />
-        ))}
+    <article className="overflow-ellipsis">
+      <div className="flex justify-center flex-col gap-y-4">
+        <h1 className="text-4xl text-center">
+          {title}
+        </h1>
+        <div className="flex gap-2">
+          {(topics ?? []).map((topic) => (
+            <TopicButton
+              topic={topic}
+              key={topic}
+            />
+          ))}
+        </div>
       </div>
-      <main className="overflow-ellipsis" style={contentWidth}>
-        <article className="leading-loose article">{children}</article>
-      </main>
+      <section className="leading-loose article">{children}</section>
       <SuggestButton path={page?.src.entry?.path ?? ""} />
-    </div>
+    </article>
   </>
 );

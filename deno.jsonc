@@ -12,7 +12,10 @@
     "lint:style": "deno run -A npm:stylelint@15.10.2 ./**/*.css"
   },
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "types": [
+      "lume/types.ts"
+    ],
+    "jsx": "precompile",
     "jsxImportSource": "npm:preact@10.21.0"
   },
   "lint": {
