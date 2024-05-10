@@ -1,6 +1,10 @@
 import type { Data } from "lume/core/file.ts";
 import { SearchBox } from "./searchBox.tsx";
 
+const contentWidth = {
+  maxWidth: "800px",
+};
+
 export default ({ title, children, blogTitle }: Data) => (
   <>
     <html lang="ja">
@@ -32,8 +36,12 @@ export default ({ title, children, blogTitle }: Data) => (
         />
       </head>
       <body className="p-10">
-        <SearchBox />
-        {children}
+        <header></header>
+        <main class="mx-auto my-0" style={contentWidth}>
+          <SearchBox />
+          {children}
+        </main>
+        <footer></footer>
       </body>
     </html>
   </>
