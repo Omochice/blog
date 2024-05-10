@@ -15,7 +15,7 @@
     "types": [
       "lume/types.ts"
     ],
-    "jsx": "precompile",
+    "jsx": "react-jsx",
     "jsxImportSource": "npm:preact@10.21.0"
   },
   "lint": {
