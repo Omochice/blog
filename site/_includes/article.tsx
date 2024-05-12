@@ -26,7 +26,7 @@ export default ({ title, children, topics, page }: PageData) => (
           ))}
         </div>
       </div>
-      <section className="leading-loose article">{children}</section>
+      <section className="leading-10 article">{children}</section>
       <SuggestButton path={page?.src.entry?.path ?? ""} />
     </article>
   </>
