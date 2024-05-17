@@ -30,7 +30,7 @@
     ]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.1.4/",
+    "lume/": "https://deno.land/x/lume@v2.2.0/",
     "date-fns": "npm:date-fns@3.6.0"
   },
   "lock": false
