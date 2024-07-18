@@ -1,6 +1,6 @@
 import { stringify } from "jsr:@std/yaml@0.224.1";
 import { format } from "npm:date-fns@3.6.0";
-import { join } from "jsr:@std/path@0.225.1";
+import { join } from "jsr:@std/path@0.225.2";
 
 function generate() {
   const frontMatter = {
