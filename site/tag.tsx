@@ -1,4 +1,4 @@
-import { join } from "jsr:@std/path@1.0.3";
+import { join } from "jsr:@std/path@1.0.4";
 import { getPosts, getTags } from "./_includes/logics/posts.ts";
 import { BlogPosts } from "./_includes/blogPosts.tsx";
 
