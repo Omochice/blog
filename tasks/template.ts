@@ -1,5 +1,5 @@
 import { stringify } from "jsr:@std/yaml@1.0.5";
-import { format } from "npm:date-fns@3.6.0";
+import { format } from "npm:date-fns@4.1.0";
 import { join } from "jsr:@std/path@1.0.6";
 
 function generate() {
