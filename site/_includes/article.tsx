@@ -2,7 +2,7 @@ import type { Data } from "lume/core/file.ts";
 import { TopicButton } from "./topicButton.tsx";
 import { joinUrl } from "./logics/joinUrl.ts";
 import SuggestButton from "./components/suggestButton.tsx";
-import { loadDefaultJapaneseParser } from "npm:budoux@0.6.2";
+import { loadDefaultJapaneseParser } from "npm:budoux@0.6.3";
 
 const parser = loadDefaultJapaneseParser();
 
