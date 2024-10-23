@@ -2,7 +2,7 @@ import type { Page } from "lume/core/file.ts";
 import site from "../../../_config.ts";
 import { compareDesc, fromUnixTime, parse } from "date-fns";
 import { basename } from "jsr:@std/path@1.0.6/basename";
-import { err, ok, Result } from "npm:neverthrow@8.0.0";
+import { err, ok, Result } from "npm:neverthrow@8.1.0";
 
 function comparePage(a: Page, b: Page): number {
   const defaultCreated = fromUnixTime(0);
