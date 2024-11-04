@@ -9,10 +9,6 @@ export default {
     ...recessOrder,
     ...tailwind,
   },
-  plugins: [
-    order,
-  ],
-  ignoreFiles: [
-    "_site/**/*",
-  ],
+  plugins: [order],
+  ignoreFiles: ["_site/**/*"],
 };
