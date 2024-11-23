@@ -5,6 +5,9 @@ import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import { loadDefaultJapaneseParser } from "budoux";
+
+const parser = loadDefaultJapaneseParser();
 
 const posts = (await getCollection("post")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -71,7 +74,7 @@ const posts = (await getCollection("post")).sort(
 						posts.map((post) => (
 							<li>
 								<a href={`/posts/${post.slug}/`}>
-									<h4 class="title">{post.data.title}</h4>
+									<h4 class="title" set:html={parser.parse(post.data.title).join("<wbr />")} />
 									<p class="date">
 										<FormattedDate date={post.data.date} />
 									</p>
