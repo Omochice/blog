@@ -18,16 +18,31 @@ const budouxed = parser.parse(title).join("<wbr />");
 <html lang="ja">
 	<head>
 		<BaseHead title={title} description={description} />
+		<style is:global>
+			h1:before {
+				content: "# ";
+				color: gray;
+			}
+			h2:before {
+				content: "## ";
+				color: gray;
+			}
+			h3:before {
+				content: "### ";
+				color: gray;
+			}
+			h4:before {
+				content: "#### ";
+				color: gray;
+			}
+		</style>
 		<style>
 			main {
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
 			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
+			img {
 				display: block;
 				margin: 0 auto;
 				border-radius: 12px;
