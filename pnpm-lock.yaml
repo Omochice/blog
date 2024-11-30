@@ -41,6 +41,9 @@ importers:
       typescript:
         specifier: ^5.6.3
         version: 5.7.2
+      ufo:
+        specifier: ^1.5.4
+        version: 1.5.4
       vitest:
         specifier: ^2.1.5
         version: 2.1.6(jsdom@25.0.1)(yaml@2.6.0)
@@ -2317,6 +2320,9 @@ packages:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  ufo@1.5.4:
+    resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
 
   unified@11.0.5:
     resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
@@ -5458,6 +5464,8 @@ snapshots:
       semver: 7.6.3
 
   typescript@5.7.2: {}
+
+  ufo@1.5.4: {}
 
   unified@11.0.5:
     dependencies:
