@@ -1,0 +1,128 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { loadDefaultJapaneseParser } from "budoux";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import Header from "../components/Header.astro";
+
+type Props = CollectionEntry<"post">["data"];
+
+const parser = loadDefaultJapaneseParser();
+
+const { title, description, date, updatedDate } = Astro.props;
+
+const budouxed = parser.parse(title).join("<wbr />");
+const lastUpdatedOn: Date = updatedDate ?? date;
+---
+
+<html lang="ja">
+	<head>
+		<BaseHead title={title} description={description} />
+		<meta name="last-updated-on" content={lastUpdatedOn.toISOString()} />
+		<style is:global>
+			article {
+				h1:before {
+					content: "# ";
+					color: gray;
+				}
+				h2:before {
+					content: "## ";
+					color: gray;
+				}
+				h3:before {
+					content: "### ";
+					color: gray;
+				}
+				h4:before {
+					content: "#### ";
+					color: gray;
+				}
+			}
+		</style>
+		<style>
+			main {
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0;
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+				box-shadow: var(--box-shadow);
+			}
+			.prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
+			}
+			.title {
+				margin-bottom: 1em;
+				padding: 1em 0;
+				text-align: center;
+				line-height: 1;
+			}
+			.title h1 {
+				margin: 0 0 0.5em 0;
+			}
+			.date {
+				margin-bottom: 0.5em;
+				color: rgb(var(--gray));
+			}
+			.last-updated-on {
+				font-style: italic;
+			}
+		</style>
+	<script>
+    import { isPastYear } from "../lib/is-past-year";
+    window.addEventListener("DOMContentLoaded", () => {
+      const lastUpdatedOn = document.querySelector<HTMLMetaElement>("meta[name=last-updated-on]")?.content;
+      if (!lastUpdatedOn) {
+        return;
+      }
+      const lastUpdatedDate = new Date(lastUpdatedOn);
+      const currentDate = new Date();
+      if (!isPastYear(lastUpdatedDate, currentDate)) {
+        return
+      }
+        const postDateInformation = document.querySelector("#post-date-information");
+        if (!postDateInformation) {
+            return;
+        }
+        const caution = document.createElement("span");
+        caution.classList.add("caution");
+        caution.textContent = " (Updated more than a year ago)";
+        postDateInformation.appendChild(caution);
+    });
+	</script>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<div class="prose">
+					<div class="title">
+						<h1 set:html={budouxed} />
+						<div class="date" id="post-date-information">
+							<FormattedDate date={date} />
+							{
+								updatedDate && (
+									<div class="last-updated-on">
+										Last updated on <FormattedDate date={updatedDate} />
+									</div>
+								)
+							}
+						</div>
+						<hr />
+					</div>
+					<slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

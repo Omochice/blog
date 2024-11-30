@@ -1,0 +1,37 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "clean": "rimraf dist",
+    "check": "npm-run-all check:*",
+    "check:astro": "astro check ",
+    "check:biome": "biome ci",
+    "preview": "astro preview",
+    "astro": "astro",
+    "fmt": "npm-run-all fmt:*",
+    "fmt:package": "sort-package-json",
+    "fmt:biome": "npm-run-all fmt:biome:*",
+    "fmt:biome:format": "biome format --write",
+    "fmt:biome:check": "biome check --write"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^3.1.9",
+    "@astrojs/rss": "^4.0.9",
+    "@astrojs/sitemap": "^3.2.1",
+    "@biomejs/biome": "^1.9.4",
+    "astro": "^4.16.8",
+    "budoux": "^0.6.3",
+    "npm-run-all2": "^7.0.1",
+    "rimraf": "^6.0.1",
+    "sort-package-json": "^2.10.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  },
+  "packageManager": "pnpm@9.14.4"
+}
