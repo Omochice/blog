@@ -14,11 +14,15 @@ const { title, description, date, updatedDate } = Astro.props;
 
 const budouxed = parser.parse(title).join("<wbr />");
 const lastUpdatedOn: Date = updatedDate ?? date;
+// NOTE: fallback if description is empty string too.
+const postDescription =
+  description ||
+  `Omochice's blog post at ${date.toISOString().substring(0, 10)}`;
 ---
 
 <html lang="ja">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={postDescription} />
 		<meta name="last-updated-on" content={lastUpdatedOn.toISOString()} />
 		<style is:global>
 			article {
