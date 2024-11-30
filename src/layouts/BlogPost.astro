@@ -21,21 +21,23 @@ const lastUpdatedOn: Date = updatedDate ?? date;
 		<BaseHead title={title} description={description} />
 		<meta name="last-updated-on" content={lastUpdatedOn.toISOString()} />
 		<style is:global>
-			h1:before {
-				content: "# ";
-				color: gray;
-			}
-			h2:before {
-				content: "## ";
-				color: gray;
-			}
-			h3:before {
-				content: "### ";
-				color: gray;
-			}
-			h4:before {
-				content: "#### ";
-				color: gray;
+			article {
+				h1:before {
+					content: "# ";
+					color: gray;
+				}
+				h2:before {
+					content: "## ";
+					color: gray;
+				}
+				h3:before {
+					content: "### ";
+					color: gray;
+				}
+				h4:before {
+					content: "#### ";
+					color: gray;
+				}
 			}
 		</style>
 		<style>
