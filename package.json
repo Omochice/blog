@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "clean": "rimraf dist",
+    "check": "npm-run-all check:*",
+    "check:astro": "astro check ",
+    "check:biome": "biome ci",
     "preview": "astro preview",
     "astro": "astro",
     "fmt": "npm-run-all fmt:*",
