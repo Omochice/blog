@@ -13,11 +13,13 @@ const parser = loadDefaultJapaneseParser();
 const { title, description, date, updatedDate } = Astro.props;
 
 const budouxed = parser.parse(title).join("<wbr />");
+const lastUpdatedOn: Date = updatedDate ?? date;
 ---
 
 <html lang="ja">
 	<head>
 		<BaseHead title={title} description={description} />
+		<meta name="last-updated-on" content={lastUpdatedOn.toISOString()} />
 		<style is:global>
 			h1:before {
 				content: "# ";
@@ -72,6 +74,28 @@ const budouxed = parser.parse(title).join("<wbr />");
 				font-style: italic;
 			}
 		</style>
+	<script>
+    import { isPastYear } from "../lib/is-past-year";
+    window.addEventListener("DOMContentLoaded", () => {
+      const lastUpdatedOn = document.querySelector<HTMLMetaElement>("meta[name=last-updated-on]")?.content;
+      if (!lastUpdatedOn) {
+        return;
+      }
+      const lastUpdatedDate = new Date(lastUpdatedOn);
+      const currentDate = new Date();
+      if (!isPastYear(lastUpdatedDate, currentDate)) {
+        return
+      }
+        const postDateInformation = document.querySelector("#post-date-information");
+        if (!postDateInformation) {
+            return;
+        }
+        const caution = document.createElement("span");
+        caution.classList.add("caution");
+        caution.textContent = " (Updated more than a year ago)";
+        postDateInformation.appendChild(caution);
+    });
+	</script>
 	</head>
 
 	<body>
@@ -81,7 +105,7 @@ const budouxed = parser.parse(title).join("<wbr />");
 				<div class="prose">
 					<div class="title">
 						<h1 set:html={budouxed} />
-						<div class="date">
+						<div class="date" id="post-date-information">
 							<FormattedDate date={date} />
 							{
 								updatedDate && (
