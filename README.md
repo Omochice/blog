@@ -6,8 +6,7 @@ My personal blog
 
 Currently, using:
 
-- [deno](https://deno.com/)
-- [lume](https://lume.land/)
+- [Astro](https://astro.build/)
 
 ## License
 
