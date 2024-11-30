@@ -15,7 +15,9 @@
     "astro": "astro",
     "fmt": "npm-run-all fmt:*",
     "fmt:package": "sort-package-json",
-    "fmt:biome": "biome format --write"
+    "fmt:biome": "npm-run-all fmt:biome:*",
+    "fmt:biome:format": "biome format --write",
+    "fmt:biome:check": "biome check --write"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
