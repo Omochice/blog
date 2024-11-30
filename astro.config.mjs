@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://Omochice.github.io",
-  base: process.env.CI ? "/blog" : "/",
+  site: "https://Omochice.github.io/blog",
+  base: "/blog",
   integrations: [mdx(), sitemap()],
 });

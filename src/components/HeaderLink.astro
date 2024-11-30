@@ -1,13 +1,14 @@
 ---
 import type { HTMLAttributes } from "astro/types";
+import { isSamePath } from "ufo";
 
-type Props = HTMLAttributes<"a">;
+type Props = HTMLAttributes<"a"> & { href: string | URL };
 
 const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
-const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href === `/${subpath?.[0]}`;
+const normalized = typeof href === "string" ? href : href.pathname;
+const isActive = isSamePath(normalized, pathname);
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
