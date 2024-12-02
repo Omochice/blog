@@ -20,6 +20,9 @@ const posts = (await getCollection("post")).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
+			@view-transition {
+				navigation: auto;
+			}
 			main {
 				width: 960px;
 			}
@@ -79,7 +82,7 @@ const posts = (await getCollection("post")).sort(
 										"posts",
 										post.slug,
 									)}>
-									<h4 class="title" set:html={parser.parse(post.data.title).join("<wbr />")} />
+									<h4 class="title" set:html={parser.parse(post.data.title).join("<wbr />")} style={{ viewTransitionName: `transition-${post.slug}`}}/>
 									<p class="date">
 										<FormattedDate date={post.data.date} />
 									</p>

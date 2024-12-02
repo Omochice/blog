@@ -6,11 +6,11 @@ import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import Header from "../components/Header.astro";
 
-type Props = CollectionEntry<"post">["data"];
+type Props = CollectionEntry<"post">["data"] & { slug: string };
 
 const parser = loadDefaultJapaneseParser();
 
-const { title, description, date, updatedDate } = Astro.props;
+const { title, description, date, updatedDate, slug } = Astro.props;
 
 const budouxed = parser.parse(title).join("<wbr />");
 const lastUpdatedOn: Date = updatedDate ?? date;
@@ -45,6 +45,9 @@ const postDescription =
 			}
 		</style>
 		<style>
+			@view-transition {
+				navigation: auto;
+			}
 			main {
 				width: calc(100% - 2em);
 				max-width: 100%;
@@ -110,7 +113,7 @@ const postDescription =
 			<article>
 				<div class="prose">
 					<div class="title">
-						<h1 set:html={budouxed} />
+            <h1 set:html={budouxed} style={{viewTransitionName: slug }}/>
 						<div class="date" id="post-date-information">
 							<FormattedDate date={date} />
 							{
