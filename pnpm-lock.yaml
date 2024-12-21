@@ -44,9 +44,6 @@ importers:
       ufo:
         specifier: ^1.5.4
         version: 1.5.4
-      unist-util-visit:
-        specifier: ^5.0.0
-        version: 5.0.0
       vitest:
         specifier: ^2.1.5
         version: 2.1.8(jsdom@25.0.1)
