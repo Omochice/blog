@@ -1,5 +1,5 @@
 ---
-title: "yank-remote-urlからsystemlist依存を剥した"
+title: "yank-remote-urlからsystemlist依存を剥がした"
 date: 2025-01-26
 topics: ["vim"]
 excerpt: ''
@@ -8,7 +8,7 @@ type: tech
 
 [yank-remote-url.vim](https://github.com/Omochice/yank-remote-url.vim)というローカルのコードをGitHubのリンクでyankするプラグインを作っている。
 
-もくもく会で[yank-remote-url.vim](https://github.com/Omochice/yank-remote-url.vim)から`systemlist`の依存を剥した。
+もくもく会で[yank-remote-url.vim](https://github.com/Omochice/yank-remote-url.vim)から`systemlist`の依存を剥がした。
 
 `systemlist`はコマンド実行をして標準出力を取得する関数。
 
