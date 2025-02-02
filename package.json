@@ -34,5 +34,5 @@
     "ufo": "^1.5.4",
     "vitest": "^2.1.5"
   },
-  "packageManager": "pnpm@9.15.4"
+  "packageManager": "pnpm@9.15.5"
 }
