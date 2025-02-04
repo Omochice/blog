@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(typescript@5.7.3)
       '@astrojs/mdx':
         specifier: ^4.0.0
-        version: 4.0.8(astro@5.2.4(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0))
+        version: 4.0.8(astro@5.2.5(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0))
       '@astrojs/rss':
         specifier: ^4.0.9
         version: 4.0.11
@@ -25,7 +25,7 @@ importers:
         version: 1.9.4
       astro:
         specifier: ^5.0.0
-        version: 5.2.4(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0)
+        version: 5.2.5(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0)
       budoux:
         specifier: ^0.6.3
         version: 0.6.3
@@ -996,8 +996,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@5.2.4:
-    resolution: {integrity: sha512-zTWiOyRIy+cKzdjG4mvb5gJ8/Gy0z1s9nAZVirlzpYXd8j5LORlKPywEalNU+Q+nssG2QadBTxXCmAjhKYB93Q==}
+  astro@5.2.5:
+    resolution: {integrity: sha512-AYXyYkc+c5xbKTm48FyQA91y81nXyNPAaoyafR0LUugE4lAwuvIUcXDBfMzmbuP1lGRvsE33G2oypv6gbGaPFg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2837,12 +2837,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.8(astro@5.2.4(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0))':
+  '@astrojs/mdx@4.0.8(astro@5.2.5(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.1.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.2.4(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0)
+      astro: 5.2.5(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.4
@@ -3582,7 +3582,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.2.4(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0):
+  astro@5.2.5(jiti@2.4.2)(rollup@4.34.2)(typescript@5.7.3)(yaml@2.6.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.5.1
