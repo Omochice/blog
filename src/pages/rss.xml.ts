@@ -17,7 +17,7 @@ export async function GET(context: Context) {
       ...post.data,
       link: joinURL(import.meta.env.BASE_URL, "posts", post.slug),
       pubDate: post.data.date,
-      description: post.data.description || post.body.substring(0, 100),
+      description: post.data.description || post.body,
     })),
   });
 }
