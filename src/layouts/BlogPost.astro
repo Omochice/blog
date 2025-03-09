@@ -28,21 +28,25 @@ const postDescription =
 			article {
 				word-break: normal;
 				word-break: auto-phrase;
-				h1:before {
+
+				h1::before {
+					color: gray;
 					content: "# ";
-					color: gray;
 				}
-				h2:before {
+
+				h2::before {
+					color: gray;
 					content: "## ";
-					color: gray;
 				}
-				h3:before {
+
+				h3::before {
+					color: gray;
 					content: "### ";
-					color: gray;
 				}
-				h4:before {
-					content: "#### ";
+
+				h4::before {
 					color: gray;
+					content: "#### ";
 				}
 			}
 		</style>
@@ -50,37 +54,44 @@ const postDescription =
 			@view-transition {
 				navigation: auto;
 			}
+
 			main {
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
 			}
+
 			img {
 				display: block;
 				margin: 0 auto;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
 			}
+
 			.prose {
 				width: 720px;
 				max-width: calc(100% - 2em);
-				margin: auto;
 				padding: 1em;
+				margin: auto;
 				color: rgb(var(--gray-dark));
 			}
+
 			.title {
-				margin-bottom: 1em;
 				padding: 1em 0;
-				text-align: center;
+				margin-bottom: 1em;
 				line-height: 1;
+				text-align: center;
 			}
+
 			.title h1 {
-				margin: 0 0 0.5em 0;
+				margin: 0 0 0.5em;
 			}
+
 			.date {
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
 			}
+
 			.last-updated-on {
 				font-style: italic;
 			}
