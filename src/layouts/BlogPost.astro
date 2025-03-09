@@ -29,24 +29,17 @@ const postDescription =
 				word-break: normal;
 				word-break: auto-phrase;
 
-				h1::before {
+				.anchor > .anchor-link {
 					color: gray;
-					content: "# ";
-				}
+					text-decoration: none;
 
-				h2::before {
-					color: gray;
-					content: "## ";
-				}
+					&:hover {
+						text-decoration: underline;
+					}
 
-				h3::before {
-					color: gray;
-					content: "### ";
-				}
-
-				h4::before {
-					color: gray;
-					content: "#### ";
+					&::after {
+						content: " ";
+					}
 				}
 			}
 		</style>
