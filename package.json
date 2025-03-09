@@ -11,6 +11,7 @@
     "check": "npm-run-all check:*",
     "check:astro": "astro check ",
     "check:biome": "biome ci",
+    "check:stylelint": "stylelint --config stylelint.config.mjs **/*.{css,astro}",
     "preview": "astro preview",
     "astro": "astro",
     "fmt": "npm-run-all fmt:*",
