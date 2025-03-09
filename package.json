@@ -17,7 +17,8 @@
     "fmt:package": "sort-package-json",
     "fmt:biome": "npm-run-all fmt:biome:*",
     "fmt:biome:format": "biome format --write",
-    "fmt:biome:check": "biome check --write"
+    "fmt:biome:check": "biome check --write",
+    "fmt:style": "stylelint --config stylelint.config.mjs --fix ./**/*.css"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
@@ -30,6 +31,10 @@
     "npm-run-all2": "^7.0.1",
     "rimraf": "^6.0.1",
     "sort-package-json": "^3.0.0",
+    "stylelint": "^16.15.0",
+    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-order": "^6.0.4",
     "typescript": "^5.6.3",
     "ufo": "^1.5.4",
     "vitest": "^3.0.0"
