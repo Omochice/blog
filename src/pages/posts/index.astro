@@ -23,45 +23,54 @@ const posts = (await getCollection("post")).sort(
 			@view-transition {
 				navigation: auto;
 			}
+
 			main {
 				width: 960px;
 			}
+
 			ul {
 				display: flex;
 				flex-wrap: wrap;
 				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
 				padding: 0;
+				margin: 0;
+				list-style-type: none;
 			}
+
       ul li {
         width: 100%;
       }
+
 			ul li * {
 				text-decoration: none;
 				transition: 0.2s ease;
 			}
-			ul li a {
-				display: block;
-			}
+
+      ul li a {
+        display: block;
+      }
+
 			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				overflow: hidden;
 				display: -webkit-box;
-				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 3;
+				margin: 0;
+				overflow: hidden;
 				text-overflow: ellipsis;
+				-webkit-line-clamp: 3;
+				color: rgb(var(--black));
+				-webkit-box-orient: vertical;
 			}
+
 			.date {
 				margin: 0;
 				color: rgb(var(--gray));
 			}
+
 			ul li a:hover h4,
 			ul li a:hover .date {
 				color: rgb(var(--accent));
 			}
-			@media (max-width: 720px) {
+
+			@media (width <= 720px) {
 				ul {
 					gap: 0.5em;
 				}

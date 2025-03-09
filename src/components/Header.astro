@@ -26,11 +26,12 @@ import HeaderLink from "./HeaderLink.astro";
 </header>
 <style>
 	header {
-		margin: 0;
 		padding: 0 1em;
+		margin: 0;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
+
 	h2 {
 		margin: 0;
 		font-size: 1em;
@@ -40,29 +41,35 @@ import HeaderLink from "./HeaderLink.astro";
 	h2 a.active {
 		text-decoration: none;
 	}
+
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
+
 	nav a {
 		padding: 1em 0.5em;
 		color: var(--black);
-		border-bottom: 4px solid transparent;
 		text-decoration: none;
+		border-bottom: 4px solid transparent;
 	}
+
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+
   nav .internal-links {
     flex: 1;
   }
+
 	.social-links,
 	.social-links a {
 		display: flex;
 	}
-	@media (max-width: 720px) {
+
+	@media (width <= 720px) {
 		.social-links {
 			display: none;
 		}
