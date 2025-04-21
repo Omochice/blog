@@ -16,7 +16,7 @@ type: tech
 
 (これも入ったことは聞いてたけどちゃんと見てなかった)
 
-zshとかだと[zeno.zsh](https://github.com/yuki-yano/zeno.zsh)が似たようなことができる(というよりこっちのが色々できるはず？)。
+zshとかだと[`zeno.zsh`](https://github.com/yuki-yano/zeno.zsh)が似たようなことができる(というよりこっちのが色々できるはず？)。
 
 例えば`docker run`を`docker container run`にexpandすることができる。
 
