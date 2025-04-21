@@ -20,7 +20,7 @@ zshとかだと[`zeno.zsh`](https://github.com/yuki-yano/zeno.zsh)が似たよ�
 
 例えば`docker run`を`docker container run`にexpandできる。
 
-いままでのfishだと`run`を何かにexpandすることはできたが、`docker`のあとの`run`をーみたいな条件がつけられなかった。
+いままでのfishだと`run`を何かにexpandすることはできたが、"`docker`のあとの`run`だけexpandする"のような条件をつけられなかった。
 
 なので、`docker ~~~~`系をexpandするpluginを生やした。
 
