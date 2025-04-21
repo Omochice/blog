@@ -18,7 +18,7 @@ type: tech
 
 zshとかだと[`zeno.zsh`](https://github.com/yuki-yano/zeno.zsh)が似たようなことができる(というよりこっちのが色々できるはず？)。
 
-例えば`docker run`を`docker container run`にexpandすることができる。
+例えば`docker run`を`docker container run`にexpandできる。
 
 いままでのfishだと`run`を何かにexpandすることはできたが、`docker`のあとの`run`をーみたいな条件がつけられなかった。
 
