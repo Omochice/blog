@@ -22,11 +22,11 @@ zshとかだと[`zeno.zsh`](https://github.com/yuki-yano/zeno.zsh)が似たよ�
 
 いままでのfishだと`run`を何かにexpandすることはできたが、"`docker`のあとの`run`だけexpandする"のような条件をつけられなかった。
 
-なので、`docker ~~~~`系をexpandするpluginを生やした。
+なので、`docker ~~~~`系をexpandするプラグインを生やした。
 
 [Omochice/docker-abbreviations.fish: Docker abbreviations for fish-shell](https://github.com/Omochice/docker-abbreviations.fish)
 
-`docker --help`出てきたコマンドを片っ端から並べただけの力技plugin。
+`docker --help`出てきたコマンドを片っ端から並べただけの力技プラグイン。
 
 入っているdockerのversionとかを考慮していないオレオレプラグインだけど、ここに供養する。
 
