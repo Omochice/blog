@@ -12,7 +12,7 @@ type: tech
 
 いつのまにかにfishのv4が出て、rustになっていた(rustになってv4でたのは知ってたけどちゃんと追ってなかった)。
 
-[4.0.0](https://github.com/fish-shell/fish-shell/releases/tag/4.0.0)には色々なfeatが入ってて、[Restticting abbreviations](https://github.com/fish-shell/fish-shell/pull/10452)がしれっと入ってた。
+[4.0.0](https://github.com/fish-shell/fish-shell/releases/tag/4.0.0)には色々なfeatが入ってて、[Restricting abbreviations](https://github.com/fish-shell/fish-shell/pull/10452)がしれっと入ってた。
 
 (これも入ったことは聞いてたけどちゃんと見てなかった)
 
