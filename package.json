@@ -45,7 +45,7 @@
     "ufo": "^1.5.4",
     "vitest": "^3.0.0"
   },
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.10.0",
   "pnpm": {
     "onlyBuiltDependencies": ["@biomejs/biome", "esbuild", "sharp"]
   }
