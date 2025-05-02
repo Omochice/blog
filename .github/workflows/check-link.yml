@@ -24,7 +24,7 @@ jobs:
       - run: npm install textlint textlint-rule-no-dead-link @microsoft/eslint-formatter-sarif
       - run: npx textlint site/posts/*.md --rule no-dead-link -f @microsoft/eslint-formatter-sarif -o textlint.sarif || exit 0 # workaround https://github.com/textlint/textlint/issues/103
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@28deaeda66b76a05916b6923827895f2b14ab387 # v3.28.16
+        uses: github/codeql-action/upload-sarif@60168efe1c415ce0f5521ea06d5c2062adbeed1b # v3.28.17
         with:
           sarif_file: textlint.sarif
           category: textlint
