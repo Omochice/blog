@@ -20,7 +20,7 @@ https://github.com/Omochice/nur-packages/issues/86
 
 ここで、[2.0.4のdiff](https://github.com/actions/create-github-app-token/compare/v2.0.3...v2.0.4)をみてみるとactionsの引数で`permission-pull-requests`を指定すると環境変数`INPUT_PERMISSION-PULL-REQUESTS`になるようだった。
 
-これは公式のdocumentにも書かれている変換方式である。
+これは公式のドキュメントにも書かれている変換方式である。
 
 https://docs.github.com/en/actions/sharing-automations/creating-actions/metadata-syntax-for-github-actions#example-specifying-inputs
 
