@@ -8,9 +8,9 @@ type: tech
 
 [actions/create-github-app-token](https://github.com/actions/create-github-app-token)が2.0.4になったタイミングでCIが落ちるようになってしまった。
 
-なんやかんやで直したので以下に備忘録を書く。
-
 [nur-packages issue #86](https://github.com/Omochice/nur-packages/issues/86)
+
+なんやかんやで直したので以下に備忘録を書く。
 
 アプリにはちゃんと必要な権限ついてるし、2.0.3までは動いていたので、なにかが2.0.4で変わったことになる。
 
