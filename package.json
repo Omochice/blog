@@ -4,29 +4,31 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "astro": "astro",
     "build": "astro build",
-    "clean": "rimraf dist",
     "check": "npm-run-all check:*",
     "check:astro": "astro check ",
     "check:biome": "biome ci",
     "check:stylelint": "stylelint --config stylelint.config.mjs **/*.{css,astro}",
-    "preview": "astro preview",
-    "astro": "astro",
+    "clean": "rimraf dist",
+    "dev": "astro dev",
     "fmt": "npm-run-all fmt:*",
-    "fmt:package": "sort-package-json",
     "fmt:biome": "npm-run-all fmt:biome:*",
-    "fmt:biome:format": "biome format --write",
     "fmt:biome:check": "biome check --write",
-    "fmt:style": "stylelint --config stylelint.config.mjs --fix **/*.{css,astro}"
+    "fmt:biome:format": "biome format --write",
+    "fmt:package": "sort-package-json",
+    "fmt:style": "stylelint --config stylelint.config.mjs --fix **/*.{css,astro}",
+    "preview": "astro preview",
+    "start": "astro dev"
   },
+  "dependencies": {},
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.0.0",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
     "@biomejs/biome": "^1.9.4",
+    "@microsoft/eslint-formatter-sarif": "^3.1.0",
     "@types/sanitize-html": "^2.13.0",
     "astro": "^5.0.0",
     "budoux": "^0.7.0",
@@ -41,12 +43,18 @@
     "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-standard": "^38.0.0",
     "stylelint-order": "^7.0.0",
+    "textlint": "^14.7.1",
+    "textlint-rule-no-dead-link": "^5.2.0",
     "typescript": "^5.6.3",
     "ufo": "^1.5.4",
     "vitest": "^3.0.0"
   },
   "packageManager": "pnpm@10.11.0",
   "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild", "sharp"]
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "esbuild",
+      "sharp"
+    ]
   }
 }
