@@ -14,7 +14,6 @@
   --gray-gradient: rgb(var(--gray-light), 50%), #fff;
   --box-shadow: 0 2px 6px rgb(var(--gray), 25%), 0 8px 24px
     rgb(var(--gray), 33%), 0 16px 32px rgb(var(--gray), 33%);
-  --caution: #d8000c;
 
   view-transition-name: none;
 }
@@ -178,8 +177,4 @@ hr {
 
   /* modern browsers, clip-path works inwards from each corner */
   clip-path: inset(50%);
-}
-
-.caution {
-  color: var(--caution);
 }

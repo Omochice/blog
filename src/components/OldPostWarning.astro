@@ -1,0 +1,21 @@
+---
+import { isPastYear } from "../lib/is-past-year";
+interface Props {
+  publishDate: Date;
+}
+
+const { publishDate } = Astro.props;
+const now = new Date();
+---
+
+{
+  isPastYear(publishDate, now) && (
+    <span class="caution">(Updated more than a year ago)</span>
+  )
+}
+
+<style>
+  .caution {
+    color: #d8000c;
+  }
+</style>
