@@ -104,16 +104,18 @@ const postDescription =
               set:html={budouxed}
               style={{ viewTransitionName: slug }}
             />
-            <div class="date">
-              <FormattedDate date={date} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-              <OldPostWarning date={lastUpdatedOn} />
+            <div>
+              <p class="date">
+                <FormattedDate date={date} />
+                {
+                  updatedDate && (
+                    <span class="last-updated-on">
+                      Last updated on <FormattedDate date={updatedDate} />
+                    </span>
+                  )
+                }
+                <OldPostWarning publishDate={lastUpdatedOn} />
+              </p>
             </div>
             <hr />
           </div>
