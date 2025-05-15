@@ -17,91 +17,93 @@ const posts = (await getCollection("post")).sort(
 
 <!doctype html>
 <html lang="ja">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			@view-transition {
-				navigation: auto;
-			}
+  <head>
+    <BaseHead
+      title={SITE_TITLE}
+      description={SITE_DESCRIPTION}
+    />
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
 
-			main {
-				width: 960px;
-			}
+      main {
+        width: 960px;
+      }
 
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				padding: 0;
-				margin: 0;
-				list-style-type: none;
-			}
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
 
       ul li {
         width: 100%;
       }
 
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
+      ul li * {
+        text-decoration: none;
+        transition: 0.2s ease;
+      }
 
       ul li a {
         display: block;
       }
 
-			.title {
-				display: -webkit-box;
-				margin: 0;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				-webkit-line-clamp: 3;
-				color: rgb(var(--black));
-				-webkit-box-orient: vertical;
-			}
+      .title {
+        display: -webkit-box;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        color: rgb(var(--black));
+        -webkit-box-orient: vertical;
+      }
 
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
+      .date {
+        margin: 0;
+        color: rgb(var(--gray));
+      }
 
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
+      ul li a:hover h4,
+      ul li a:hover .date {
+        color: rgb(var(--accent));
+      }
 
-			@media (width <= 720px) {
-				ul {
-					gap: 0.5em;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={
-									joinURL(
-                    import.meta.env.BASE_URL,
-										"posts",
-										post.slug,
-									)}>
-									<h4 class="title" set:html={parser.parse(post.data.title).join("<wbr />")} style={{ viewTransitionName: `transition-${post.slug}`}}/>
-									<p class="date">
-										<FormattedDate date={post.data.date} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
+      @media (width <= 720px) {
+        ul {
+          gap: 0.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section>
+        <ul>
+          {
+            posts.map((post) => (
+              <li>
+                <a href={joinURL(import.meta.env.BASE_URL, "posts", post.slug)}>
+                  <h4
+                    class="title"
+                    set:html={parser.parse(post.data.title).join("<wbr />")}
+                    style={{ viewTransitionName: `transition-${post.slug}` }}
+                  />
+                  <p class="date">
+                    <FormattedDate date={post.data.date} />
+                  </p>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>

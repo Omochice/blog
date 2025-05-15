@@ -21,121 +21,137 @@ const postDescription =
 ---
 
 <html lang="ja">
-	<head>
-		<BaseHead title={title} description={postDescription} />
-		<meta name="last-updated-on" content={lastUpdatedOn.toISOString()} />
-		<style is:global>
-			article {
-				word-break: normal;
-				word-break: auto-phrase;
+  <head>
+    <BaseHead
+      title={title}
+      description={postDescription}
+    />
+    <meta
+      name="last-updated-on"
+      content={lastUpdatedOn.toISOString()}
+    />
+    <style is:global>
+      article {
+        word-break: normal;
+        word-break: auto-phrase;
 
-				.anchor > .anchor-link {
-					color: gray;
-					text-decoration: none;
+        .anchor > .anchor-link {
+          color: gray;
+          text-decoration: none;
 
-					&:hover {
-						text-decoration: underline;
-					}
+          &:hover {
+            text-decoration: underline;
+          }
 
-					&::after {
-						content: " ";
-					}
-				}
-			}
-		</style>
-		<style>
-			@view-transition {
-				navigation: auto;
-			}
-
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-
-			img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				padding: 1em;
-				margin: auto;
-				color: rgb(var(--gray-dark));
-			}
-
-			.title {
-				padding: 1em 0;
-				margin-bottom: 1em;
-				line-height: 1;
-				text-align: center;
-			}
-
-			.title h1 {
-				margin: 0 0 0.5em;
-			}
-
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
-	<script>
-    import { isPastYear } from "../lib/is-past-year";
-    window.addEventListener("DOMContentLoaded", () => {
-      const lastUpdatedOn = document.querySelector<HTMLMetaElement>("meta[name=last-updated-on]")?.content;
-      if (!lastUpdatedOn) {
-        return;
+          &::after {
+            content: " ";
+          }
+        }
       }
-      const lastUpdatedDate = new Date(lastUpdatedOn);
-      const currentDate = new Date();
-      if (!isPastYear(lastUpdatedDate, currentDate)) {
-        return
+    </style>
+    <style>
+      @view-transition {
+        navigation: auto;
       }
-        const postDateInformation = document.querySelector("#post-date-information");
+
+      main {
+        width: calc(100% - 2em);
+        max-width: 100%;
+        margin: 0;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+      }
+
+      .prose {
+        width: 720px;
+        max-width: calc(100% - 2em);
+        padding: 1em;
+        margin: auto;
+        color: rgb(var(--gray-dark));
+      }
+
+      .title {
+        padding: 1em 0;
+        margin-bottom: 1em;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .title h1 {
+        margin: 0 0 0.5em;
+      }
+
+      .date {
+        margin-bottom: 0.5em;
+        color: rgb(var(--gray));
+      }
+
+      .last-updated-on {
+        font-style: italic;
+      }
+    </style>
+    <script>
+      import { isPastYear } from "../lib/is-past-year";
+      window.addEventListener("DOMContentLoaded", () => {
+        const lastUpdatedOn = document.querySelector<HTMLMetaElement>(
+          "meta[name=last-updated-on]",
+        )?.content;
+        if (!lastUpdatedOn) {
+          return;
+        }
+        const lastUpdatedDate = new Date(lastUpdatedOn);
+        const currentDate = new Date();
+        if (!isPastYear(lastUpdatedDate, currentDate)) {
+          return;
+        }
+        const postDateInformation = document.querySelector(
+          "#post-date-information",
+        );
         if (!postDateInformation) {
-            return;
+          return;
         }
         const caution = document.createElement("span");
         caution.classList.add("caution");
         caution.textContent = " (Updated more than a year ago)";
         postDateInformation.appendChild(caution);
-    });
-	</script>
-	</head>
+      });
+    </script>
+  </head>
 
-	<body>
-		<Header />
-		<main>
-			<article>
-				<div class="prose">
-					<div class="title">
-            <h1 set:html={budouxed} style={{viewTransitionName: slug }}/>
-						<div class="date" id="post-date-information">
-							<FormattedDate date={date} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<hr />
-					</div>
-					<slot />
-				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
+  <body>
+    <Header />
+    <main>
+      <article>
+        <div class="prose">
+          <div class="title">
+            <h1
+              set:html={budouxed}
+              style={{ viewTransitionName: slug }}
+            />
+            <div
+              class="date"
+              id="post-date-information"
+            >
+              <FormattedDate date={date} />
+              {
+                updatedDate && (
+                  <div class="last-updated-on">
+                    Last updated on <FormattedDate date={updatedDate} />
+                  </div>
+                )
+              }
+            </div>
+            <hr />
+          </div>
+          <slot />
+        </div>
+      </article>
+    </main>
+    <Footer />
+  </body>
 </html>
