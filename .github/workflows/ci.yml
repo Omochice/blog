@@ -30,6 +30,7 @@ jobs:
     needs: path-filter
     if: needs.path-filter.outputs.actions == 'true'
     timeout-minutes: 30
+    permissions: {}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -47,6 +48,7 @@ jobs:
     needs: path-filter
     timeout-minutes: 30
     runs-on: ubuntu-latest
+    permissions: {}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
