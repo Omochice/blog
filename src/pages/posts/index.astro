@@ -1,58 +1,36 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
-import Header from "../../components/Header.astro";
 import PostLists from "../../components/PostLists.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
-
-interface Props {
-  size?: number;
-}
-
-const size = Astro.props.size ?? Number.POSITIVE_INFINITY;
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<!doctype html>
-<html lang="ja">
-  <head>
-    <BaseHead
-      title={SITE_TITLE}
-      description={SITE_DESCRIPTION}
-    />
-    <style>
-      @view-transition {
-        navigation: auto;
-      }
+<BaseLayout>
+  <style slot="head">
+    @view-transition {
+      navigation: auto;
+    }
 
-      main {
-        width: 960px;
-      }
+    main {
+      width: 960px;
+    }
 
+    ul {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    @media (width <= 720px) {
       ul {
-        display: flex;
-        flex-flow: column wrap;
-        gap: 2rem;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
+        gap: 0.5em;
       }
-
-      @media (width <= 720px) {
-        ul {
-          gap: 0.5em;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <section>
-        <ul>
-          <PostLists size={size} />
-        </ul>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+    }
+  </style>
+  <section>
+    <ul>
+      <PostLists />
+    </ul>
+  </section>
+</BaseLayout>
