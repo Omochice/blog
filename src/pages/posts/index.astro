@@ -8,25 +8,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     @view-transition {
       navigation: auto;
     }
-
-    main {
-      width: 960px;
-    }
-
-    ul {
-      display: flex;
-      flex-flow: column wrap;
-      gap: 2rem;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-    }
-
-    @container root (width <= 720px) {
-      ul {
-        gap: 0.5em;
-      }
-    }
   </style>
   <section>
     <ul>
@@ -34,3 +15,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </ul>
   </section>
 </BaseLayout>
+
+<style>
+  ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+</style>
