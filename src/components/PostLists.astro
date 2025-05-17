@@ -23,7 +23,7 @@ const posts = (await getCollection("post"))
         <h4
           class="title"
           set:html={budouxfy(post.data.title)}
-          style={{ viewTransitionName: `transition-${post.slug}` }}
+          transition:name={`transition-${post.slug}`}
         />
         <p class="date">
           <FormattedDate
