@@ -8,10 +8,20 @@ import HeaderLink from "./HeaderLink.astro";
   <nav>
     <h2><a href={import.meta.env.BASE_URL}>{SITE_TITLE}</a></h2>
     <div class="internal-links">
-      <HeaderLink href={import.meta.env.BASE_URL}>Home</HeaderLink>
-      <HeaderLink href={joinURL(import.meta.env.BASE_URL, "posts")}
-        >All Posts</HeaderLink
-      >
+      <div class="align-right">
+        <label class="show-menu"
+          ><input
+            class="hidden-checkbox"
+            type="checkbox"
+          />=</label
+        >
+      </div>
+      <div class="header-links">
+        <HeaderLink href={import.meta.env.BASE_URL}>Home</HeaderLink>
+        <HeaderLink href={joinURL(import.meta.env.BASE_URL, "posts")}
+          >All Posts</HeaderLink
+        >
+      </div>
     </div>
     <div class="social-links">
       <a
@@ -84,5 +94,62 @@ import HeaderLink from "./HeaderLink.astro";
     .social-links {
       display: none;
     }
+  }
+
+  @container (width < calc(406px - 2em)) {
+    .align-right {
+      padding: 0.1em;
+      vertical-align: middle;
+      text-align: right;
+    }
+
+    .show-menu {
+      position: relative;
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      vertical-align: middle;
+      text-align: center;
+      cursor: pointer;
+      border: lightgray 1px solid;
+      border-radius: 0.2em;
+    }
+
+    .header-links {
+      position: absolute;
+
+      /* NOTE: DONT USE Z-INDEX */
+      z-index: 1;
+      border-radius: 0.2em;
+    }
+
+    .show-menu:hover {
+      background: lightgray;
+    }
+
+    .internal-links {
+      position: relative;
+    }
+
+    .internal-links:not(:has(.hidden-checkbox:checked)) > .header-links {
+      display: none;
+    }
+
+    .internal-links:has(.hidden-checkbox:checked) > .header-links {
+      display: block;
+      text-align: right;
+      background: white;
+    }
+  }
+
+  @container (width >= calc(406px - 2em)) {
+    .show-menu {
+      display: none;
+    }
+  }
+
+  .hidden-checkbox {
+    position: absolute;
+    visibility: hidden;
   }
 </style>
