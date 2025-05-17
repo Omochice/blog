@@ -1,5 +1,36 @@
 ---
-import Base from "./posts/index.astro";
+import PostLists from "../components/PostLists.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<Base />
+<BaseLayout>
+  <style slot="head">
+    @view-transition {
+      navigation: auto;
+    }
+
+    main {
+      width: 960px;
+    }
+
+    ul {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    @media (width <= 720px) {
+      ul {
+        gap: 0.5em;
+      }
+    }
+  </style>
+  <section>
+    <ul>
+      <PostLists size={10} />
+    </ul>
+  </section>
+</BaseLayout>
