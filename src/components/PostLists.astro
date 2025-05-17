@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import { joinURL } from "ufo";
+import FormattedDate from "../components/FormattedDate.astro";
+import { budouxfy } from "../lib/parse-with-budoux";
+
+interface Props {
+  size?: number;
+}
+
+const posts = (await getCollection("post"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, Astro.props.size);
+---
+
+{
+  posts.map((post) => (
+    <li>
+      <a
+        class="link-to-post"
+        href={joinURL(import.meta.env.BASE_URL, "posts", post.slug)}
+      >
+        <h4
+          class="title"
+          set:html={budouxfy(post.data.title)}
+          style={{ viewTransitionName: `transition-${post.slug}` }}
+        />
+        <p class="date">
+          <FormattedDate date={post.data.date} />
+        </p>
+      </a>
+    </li>
+  ))
+}
+
+<style>
+  .link-to-post {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+
+  .title {
+    display: -webkit-box;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    color: rgb(var(--black));
+    -webkit-box-orient: vertical;
+  }
+
+  .date {
+    margin: 0;
+    color: rgb(var(--gray));
+  }
+
+  .link-to-post:hover .title,
+  .link-to-post:hover .date {
+    color: rbg(var(--accent));
+  }
+</style>
