@@ -16,6 +16,7 @@
     rgb(var(--gray), 33%), 0 16px 32px rgb(var(--gray), 33%);
 
   view-transition-name: none;
+  container: root / inline-size;
 }
 
 body {
@@ -131,7 +132,7 @@ hr {
   border-top: 1px solid rgb(var(--gray-light));
 }
 
-@media (width <= 720px) {
+@container root (width <= 720px) {
   body {
     font-size: 18px;
   }
