@@ -26,7 +26,10 @@ const posts = (await getCollection("post"))
           style={{ viewTransitionName: `transition-${post.slug}` }}
         />
         <p class="date">
-          <FormattedDate date={post.data.date} />
+          <FormattedDate
+            date={post.data.date}
+            transition:name={`transition-${post.slug}-date`}
+          />
         </p>
       </a>
     </li>

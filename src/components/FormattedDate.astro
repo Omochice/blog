@@ -3,9 +3,14 @@ interface Props {
   date: Date;
 }
 
-const { date } = Astro.props;
+const { date, ...rest } = Astro.props;
+
+const datetime = date.toISOString();
 ---
 
-<time datetime={date.toISOString()}>
-  {date.toISOString().substring(0, 10)}
+<time
+  datetime={datetime}
+  {...rest}
+>
+  {datetime.substring(0, 10)}
 </time>
