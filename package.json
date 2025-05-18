@@ -11,6 +11,7 @@
     "check:astro:astro": "astro check ",
     "check:astro:prettier": "NODE_OPTIONS='--experimental-strip-types' prettier --check **/*.astro",
     "check:biome": "biome ci",
+    "check:markuplint": "markuplint --config markuplint.config.ts **/*.astro",
     "check:stylelint": "stylelint --config stylelint.config.mjs **/*.{css,astro}",
     "clean": "rimraf dist",
     "dev": "astro dev",
