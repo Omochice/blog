@@ -63,6 +63,9 @@
       "@biomejs/biome",
       "esbuild",
       "sharp"
-    ]
+    ],
+    "executionEnv": {
+      "nodeVersion": "22.15.0"
+    }
   }
 }
