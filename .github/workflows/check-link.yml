@@ -21,6 +21,7 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: lts/*
+      - run: pnpm install
       - run: pnpm exec textlint src/content/post/*.md --rule no-dead-link -f @microsoft/eslint-formatter-sarif -o textlint.sarif
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@ff0a06e83cb2de871e5a09832bc6a81e7276941f # v3.28.18
