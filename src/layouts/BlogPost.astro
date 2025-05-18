@@ -1,17 +1,15 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { loadDefaultJapaneseParser } from "budoux";
 import FormattedDate from "../components/FormattedDate.astro";
 import OldPostWarning from "../components/OldPostWarning.astro";
+import { budouxfy } from "../lib/parse-with-budoux.ts";
 import BaseLayout from "./BaseLayout.astro";
 
 type Props = CollectionEntry<"post">["data"] & { slug: string };
 
-const parser = loadDefaultJapaneseParser();
-
 const { title, description, date, updatedDate, slug } = Astro.props;
 
-const budouxed = parser.parse(title).join("<wbr />");
+const budouxed = budouxfy(title);
 const lastUpdatedOn: Date = updatedDate ?? date;
 // NOTE: fallback if description is empty string too.
 const postDescription =
