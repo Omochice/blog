@@ -13,28 +13,30 @@ const posts = (await getCollection("post"))
   .slice(0, Astro.props.size);
 ---
 
-{
-  posts.map((post) => (
-    <li>
-      <a
-        class="link-to-post"
-        href={joinURL(import.meta.env.BASE_URL, "posts", post.slug)}
-      >
-        <h4
-          class="title"
-          set:html={budouxfy(post.data.title)}
-          transition:name={`transition-${post.slug}`}
-        />
-        <p class="date">
-          <FormattedDate
-            date={post.data.date}
-            transition:name={`transition-${post.slug}-date`}
+<ul>
+  {
+    posts.map((post) => (
+      <li>
+        <a
+          class="link-to-post"
+          href={joinURL(import.meta.env.BASE_URL, "posts", post.slug)}
+        >
+          <h2
+            class="title"
+            set:html={budouxfy(post.data.title)}
+            transition:name={`transition-${post.slug}`}
           />
-        </p>
-      </a>
-    </li>
-  ))
-}
+          <p class="date">
+            <FormattedDate
+              date={post.data.date}
+              transition:name={`transition-${post.slug}-date`}
+            />
+          </p>
+        </a>
+      </li>
+    ))
+  }
+</ul>
 
 <style>
   .link-to-post {
@@ -50,6 +52,7 @@ const posts = (await getCollection("post"))
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
+    font-size: 1.17em;
     color: rgb(var(--black));
     -webkit-box-orient: vertical;
   }
@@ -62,5 +65,14 @@ const posts = (await getCollection("post"))
   .link-to-post:hover .title,
   .link-to-post:hover .date {
     color: rgb(var(--accent));
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
   }
 </style>
