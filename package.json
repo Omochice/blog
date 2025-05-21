@@ -65,7 +65,7 @@
       "sharp"
     ],
     "executionEnv": {
-      "nodeVersion": "22.15.1"
+      "nodeVersion": "22.16.0"
     }
   }
 }
