@@ -1,5 +1,5 @@
 ---
-title: GitHubのReposotoryの設定をOpenTofuで管理してみようとした
+title: GitHubのRepositoryの設定をOpenTofuで管理してみようとした
 date: 2025-06-01
 topics: ["tofu"]
 excerpt: ''
