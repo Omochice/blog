@@ -69,7 +69,7 @@ $ nix run nixpkgs#opentofu import github_repository.here ddu-source-gitlab
 
 複数のrepositoryに一々設定するのが面倒なのでなんとかしたい。
 
-代替以下のように書けば実現できそう
+以下のように書けば実現できそう
 
 
 ```terraform
