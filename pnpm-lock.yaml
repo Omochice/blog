@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/mdx':
         specifier: 4.3.0
-        version: 4.3.0(astro@5.9.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0))
+        version: 4.3.0(astro@5.9.2(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0))
       '@astrojs/rss':
         specifier: 4.0.12
         version: 4.0.12
@@ -36,8 +36,8 @@ importers:
         specifier: 2.16.0
         version: 2.16.0
       astro:
-        specifier: 5.9.1
-        version: 5.9.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0)
+        specifier: 5.9.2
+        version: 5.9.2(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0)
       budoux:
         specifier: 0.7.0
         version: 0.7.0
@@ -113,8 +113,8 @@ packages:
   '@astrojs/compiler@2.12.0':
     resolution: {integrity: sha512-7bCjW6tVDpUurQLeKBUN9tZ5kSv5qYrGmcn0sG0IwacL7isR2ZbyyA3AdZ4uxsuUFOS2SlgReTH7wkxO6zpqWA==}
 
-  '@astrojs/compiler@2.12.1':
-    resolution: {integrity: sha512-WDSyVIiz7sNcJcCJxJFITu6XjfGhJ50Z0auyaWsrM+xb07IlhBLFtQuDkNy0caVHWNcKTM2LISAaHhgkRqGAVg==}
+  '@astrojs/compiler@2.12.2':
+    resolution: {integrity: sha512-w2zfvhjNCkNMmMMOn5b0J8+OmUaBL1o40ipMvqcG6NRpdC+lKxmTi48DT8Xw0SzJ3AfmeFLB45zXZXtmbsjcgw==}
 
   '@astrojs/internal-helpers@0.6.1':
     resolution: {integrity: sha512-l5Pqf6uZu31aG+3Lv8nl/3s4DbUzdlxTWDof4pEpto6GUJNhhCbelVi9dEyurOVyqaelwmS9oSyOWOENSfgo9A==}
@@ -1088,8 +1088,8 @@ packages:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.9.1:
-    resolution: {integrity: sha512-wxoJcTbuDZNFSv6EaL0PAlrp0Wx6VnOAULCXvy0scsV70oWMeUkdxuBxfO54JxO5Qgyvwj9h99y6E0elqOpGtA==}
+  astro@5.9.2:
+    resolution: {integrity: sha512-K/zZlQOWMpamfLDOls5jvG7lrsjH1gkk3ESRZyZDCkVBtKHMF4LbjwCicm/iBb3mX3V/PerqRYzLbOy3/4JLCQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4011,7 +4011,7 @@ snapshots:
 
   '@astrojs/compiler@2.12.0': {}
 
-  '@astrojs/compiler@2.12.1': {}
+  '@astrojs/compiler@2.12.2': {}
 
   '@astrojs/internal-helpers@0.6.1': {}
 
@@ -4067,12 +4067,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.0(astro@5.9.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0))':
+  '@astrojs/mdx@4.3.0(astro@5.9.2(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.9.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0)
+      astro: 5.9.2(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -5145,9 +5145,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.9.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0):
+  astro@5.9.2(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0):
     dependencies:
-      '@astrojs/compiler': 2.12.1
+      '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
       '@astrojs/markdown-remark': 6.3.2
       '@astrojs/telemetry': 3.3.0
