@@ -48,7 +48,7 @@
     "sort-package-json": "3.2.1",
     "stylelint": "16.20.0",
     "stylelint-config-astro": "1.0.4",
-    "stylelint-config-recess-order": "6.0.0",
+    "stylelint-config-recess-order": "6.1.0",
     "stylelint-config-standard": "38.0.0",
     "stylelint-order": "7.0.0",
     "textlint": "14.8.1",
