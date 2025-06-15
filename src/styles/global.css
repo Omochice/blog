@@ -1,165 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-:root {
-  --accent: #2337ff;
-  --accent-dark: #000d8a;
-  --black: 15, 18, 25;
-  --gray: 96, 115, 159;
-  --gray-light: 229, 233, 240;
-  --gray-dark: 34, 41, 57;
-  --gray-gradient: rgb(var(--gray-light), 50%), #fff;
-  --box-shadow: 0 2px 6px rgb(var(--gray), 25%), 0 8px 24px
-    rgb(var(--gray), 33%), 0 16px 32px rgb(var(--gray), 33%);
+@layer base {
+  :root {
+    view-transition-name: none;
+    container: root / inline-size;
+  }
 
-  view-transition-name: none;
-  container: root / inline-size;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-  font-size: 20px;
-  line-height: 1.7;
-  color: rgb(var(--gray-dark));
-  text-align: left;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
-  background-size: 100% 600px;
-}
-
-main {
-  width: 720px;
-  max-width: calc(100% - 2em);
-  padding: 3em 1em;
-  margin: auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 0.5rem;
-  line-height: 1.2;
-  color: rgb(var(--black));
-}
-
-h1 {
-  font-size: 1.953em;
-}
-
-h2 {
-  font-size: 1.563em;
-}
-
-h3,
-h4,
-h5 {
-  font-size: 1.17em;
-}
-
-strong,
-b {
-  font-weight: 700;
-}
-
-a {
-  color: var(--accent);
-}
-
-a:hover {
-  color: var(--accent);
-}
-
-p {
-  margin-bottom: 1em;
-}
-
-.prose p {
-  margin-bottom: 2em;
-}
-
-textarea {
-  width: 100%;
-  font-size: 16px;
-}
-
-input {
-  font-size: 16px;
-}
-
-table {
-  width: 100%;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-code {
-  padding: 2px 5px;
-  background-color: rgb(var(--gray-light));
-  border-radius: 2px;
-}
-
-pre {
-  padding: 1.5em;
-  border-radius: 8px;
-}
-
-pre > code {
-  all: unset;
-}
-
-blockquote {
-  padding: 0 0 0 20px;
-  margin: 0;
-  font-size: 0.97em;
-  border-left: 4px solid var(--accent);
-}
-
-hr {
-  border: none;
-  border-top: 1px solid rgb(var(--gray-light));
-}
-
-@container root (width <= 720px) {
   body {
-    font-size: 18px;
+    @apply p-0 m-0 font-sans text-[20px] leading-[1.7] text-gray-dark text-left break-words bg-gray-gradient bg-no-repeat;
+    background-size: 100% 600px;
   }
 
   main {
-    padding: 1em;
+    @apply w-720 max-w-[calc(100%-2em)] py-12 px-4 mx-auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply m-0 mb-2 leading-[1.2] text-black;
+  }
+
+  h1 {
+    @apply text-[1.953em];
+  }
+
+  h2 {
+    @apply text-[1.563em];
+  }
+
+  h3,
+  h4,
+  h5 {
+    @apply text-[1.17em];
+  }
+
+  strong,
+  b {
+    @apply font-bold;
+  }
+
+  a {
+    @apply text-accent;
+  }
+
+  a:hover {
+    @apply text-accent;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  textarea {
+    @apply w-full text-base;
+  }
+
+  input {
+    @apply text-base;
+  }
+
+  table {
+    @apply w-full;
+  }
+
+  img {
+    @apply max-w-full h-auto rounded-[8px];
+  }
+
+  code {
+    @apply py-0.5 px-[5px] bg-gray-light rounded-[2px];
+  }
+
+  pre {
+    @apply p-6 rounded-[8px];
+  }
+
+  pre > code {
+    all: unset;
+  }
+
+  blockquote {
+    @apply pl-5 p-0 m-0 text-[0.97em] border-l-4 border-accent;
+  }
+
+  hr {
+    @apply border-none border-t border-gray-light;
+  }
+
+  @container root (width <= 720px) {
+    body {
+      @apply text-[18px];
+    }
+
+    main {
+      @apply p-4;
+    }
   }
 }
 
-.sr-only {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+@layer components {
+  .prose p {
+    @apply mb-8;
+  }
 
-  /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-  white-space: nowrap;
-  border: 0;
-
-  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-  clip: rect(1px 1px 1px 1px);
-
-  /* maybe deprecated but we need to support legacy browsers */
-  clip: rect(1px, 1px, 1px, 1px);
-
-  /* modern browsers, clip-path works inwards from each corner */
-  clip-path: inset(50%);
+  .sr-only {
+    @apply absolute w-px h-px p-0 m-0 overflow-hidden whitespace-nowrap border-0;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+  }
 }

@@ -13,19 +13,8 @@ const isActive = isSamePath(normalized, pathname);
 
 <a
   href={href}
-  class:list={[className, { active: isActive }]}
+  class:list={[className, "inline-block no-underline py-4 px-2 text-black border-b-4 border-transparent", { "font-bold underline border-b-accent": isActive }]}
   {...props}
 >
   <slot />
 </a>
-<style>
-  a {
-    display: inline-block;
-    text-decoration: none;
-  }
-
-  a.active {
-    font-weight: bolder;
-    text-decoration: underline;
-  }
-</style>

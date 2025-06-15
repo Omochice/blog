@@ -56,51 +56,24 @@ const postDescription =
         display: block;
         margin: 0 auto;
         border-radius: 12px;
-        box-shadow: var(--box-shadow);
-      }
-
-      .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
-        padding: 1em;
-        margin: auto;
-        color: rgb(var(--gray-dark));
-      }
-
-      .title {
-        padding: 1em 0;
-        margin-bottom: 1em;
-        line-height: 1;
-        text-align: center;
-      }
-
-      .title h1 {
-        margin: 0 0 0.5em;
-      }
-
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
-
-      .last-updated-on {
-        font-style: italic;
+        box-shadow: 0 2px 6px rgb(96 115 159 / 25%), 0 8px 24px rgb(96 115 159 / 33%), 0 16px 32px rgb(96 115 159 / 33%);
       }
     </style>
   </Fragment>
   <article>
-    <div class="prose">
-      <div class="title">
+    <div class="prose w-720 max-w-[calc(100%-2em)] p-4 mx-auto text-gray-dark">
+      <div class="title py-4 mb-4 leading-none text-center">
         <h1
+          class="m-0 mb-2"
           set:html={budouxed}
           style={{ viewTransitionName: slug }}
         />
         <div>
-          <p class="date">
+          <p class="date mb-2 text-gray">
             <FormattedDate date={date} />
             {
               updatedDate && (
-                <span class="last-updated-on">
+                <span class="last-updated-on italic">
                   Last updated on <FormattedDate date={updatedDate} />
                 </span>
               )

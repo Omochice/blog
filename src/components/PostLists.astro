@@ -13,20 +13,21 @@ const posts = (await getCollection("post"))
   .slice(0, Astro.props.size);
 ---
 
-<ul>
+<ul class="flex flex-col gap-8 p-0 m-0 list-none">
   {
     posts.map((post) => (
       <li>
         <a
-          class="link-to-post"
+          class="block w-full no-underline transition-colors duration-200 ease-out hover:[&_.title]:text-accent hover:[&_.date]:text-accent"
           href={joinURL(import.meta.env.BASE_URL, "posts", post.slug)}
         >
           <h2
-            class="title"
+            class="title m-0 overflow-hidden text-ellipsis text-[1.17em] text-black line-clamp-3"
+            style="-webkit-box-orient: vertical; display: -webkit-box;"
             set:html={budouxfy(post.data.title)}
             transition:name={`transition-${post.slug}`}
           />
-          <p class="date">
+          <p class="date m-0 text-gray">
             <FormattedDate
               date={post.data.date}
               transition:name={`transition-${post.slug}-date`}
@@ -37,42 +38,3 @@ const posts = (await getCollection("post"))
     ))
   }
 </ul>
-
-<style>
-  .link-to-post {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    transition: 0.2s ease;
-  }
-
-  .title {
-    display: -webkit-box;
-    margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    font-size: 1.17em;
-    color: rgb(var(--black));
-    -webkit-box-orient: vertical;
-  }
-
-  .date {
-    margin: 0;
-    color: rgb(var(--gray));
-  }
-
-  .link-to-post:hover .title,
-  .link-to-post:hover .date {
-    color: rgb(var(--accent));
-  }
-
-  ul {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 2rem;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
-</style>

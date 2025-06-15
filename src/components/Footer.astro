@@ -4,13 +4,14 @@ import { NAME } from "../consts";
 const today = new Date();
 ---
 
-<footer>
+<footer class="py-8 px-4 pb-24 text-gray text-center bg-gray-gradient bg-no-repeat">
   &copy; {today.getFullYear()}
   {NAME}. All rights reserved.
-  <div class="social-links">
+  <div class="social-links flex gap-4 justify-center mt-4">
     <a
       href="https://github.com/Omochice"
       target="_blank"
+      class="text-gray no-underline hover:text-gray-dark"
     >
       <span class="sr-only">Omochice github user page</span>
       <GithubIcon
@@ -23,27 +24,3 @@ const today = new Date();
     </a>
   </div>
 </footer>
-<style>
-  footer {
-    padding: 2em 1em 6em;
-    color: rgb(var(--gray));
-    text-align: center;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-  }
-
-  .social-links {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    margin-top: 1em;
-  }
-
-  .social-links a {
-    color: rgb(var(--gray));
-    text-decoration: none;
-  }
-
-  .social-links a:hover {
-    color: rgb(var(--gray-dark));
-  }
-</style>

@@ -5,29 +5,30 @@ import { SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
 ---
 
-<header>
-  <nav>
-    <h2><a href={import.meta.env.BASE_URL}>{SITE_TITLE}</a></h2>
-    <div class="internal-links">
-      <div class="align-right">
-        <label class="show-menu"
+<header class="px-4 m-0 bg-white shadow-header" style="container-type: inline-size;">
+  <nav class="flex items-center justify-between">
+    <h2 class="m-0 text-base"><a href={import.meta.env.BASE_URL} class="no-underline">{SITE_TITLE}</a></h2>
+    <div class="internal-links flex-1 relative">
+      <div class="align-right p-0.5 text-right [@container_(width<calc(406px-2em))]:block [@container_(width>=calc(406px-2em))]:hidden">
+        <label class="show-menu relative inline-block w-8 h-8 text-center cursor-pointer border border-gray-300 rounded-[0.2em] hover:bg-gray-300"
           ><input
-            class="hidden-checkbox"
+            class="hidden-checkbox absolute invisible"
             type="checkbox"
           />=</label
         >
       </div>
-      <div class="header-links">
+      <div class="header-links [@container_(width<calc(406px-2em))]:absolute [@container_(width<calc(406px-2em))]:z-[1] [@container_(width<calc(406px-2em))]:rounded-[0.2em] [@container_(width<calc(406px-2em))]:text-right [@container_(width<calc(406px-2em))]:bg-white [@container_(width<calc(406px-2em))]:hidden [.internal-links:has(.hidden-checkbox:checked)>&]:[@container_(width<calc(406px-2em))]:block">
         <HeaderLink href={import.meta.env.BASE_URL}>Home</HeaderLink>
         <HeaderLink href={joinURL(import.meta.env.BASE_URL, "posts")}
           >All Posts</HeaderLink
         >
       </div>
     </div>
-    <div class="social-links">
+    <div class="social-links flex [@container_(width<=calc(720px-2em))]:hidden">
       <a
         href="https://github.com/Omochice"
         target="_blank"
+        class="flex"
       >
         <span class="sr-only">Omochice github user page</span>
         <GithubIcon
@@ -41,112 +42,3 @@ import HeaderLink from "./HeaderLink.astro";
     </div>
   </nav>
 </header>
-<style>
-  header {
-    padding: 0 1em;
-    margin: 0;
-    container-type: inline-size;
-    background: white;
-    box-shadow: 0 2px 8px rgb(var(--black), 5%);
-  }
-
-  h2 {
-    margin: 0;
-    font-size: 1em;
-  }
-
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    text-decoration: none;
-    border-bottom: 4px solid transparent;
-  }
-
-  nav a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
-  }
-
-  nav .internal-links {
-    flex: 1;
-  }
-
-  .social-links,
-  .social-links a {
-    display: flex;
-  }
-
-  @container (width <= calc(720px - 2em)) {
-    .social-links {
-      display: none;
-    }
-  }
-
-  @container (width < calc(406px - 2em)) {
-    .align-right {
-      padding: 0.1em;
-      vertical-align: middle;
-      text-align: right;
-    }
-
-    .show-menu {
-      position: relative;
-      display: inline-block;
-      width: 2em;
-      height: 2em;
-      vertical-align: middle;
-      text-align: center;
-      cursor: pointer;
-      border: lightgray 1px solid;
-      border-radius: 0.2em;
-    }
-
-    .header-links {
-      position: absolute;
-
-      /* NOTE: DONT USE Z-INDEX */
-      z-index: 1;
-      border-radius: 0.2em;
-    }
-
-    .show-menu:hover {
-      background: lightgray;
-    }
-
-    .internal-links {
-      position: relative;
-    }
-
-    .internal-links:not(:has(.hidden-checkbox:checked)) > .header-links {
-      display: none;
-    }
-
-    .internal-links:has(.hidden-checkbox:checked) > .header-links {
-      display: block;
-      text-align: right;
-      background: white;
-    }
-  }
-
-  @container (width >= calc(406px - 2em)) {
-    .show-menu {
-      display: none;
-    }
-  }
-
-  .hidden-checkbox {
-    position: absolute;
-    visibility: hidden;
-  }
-</style>
