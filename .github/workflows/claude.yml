@@ -38,4 +38,4 @@ jobs:
           claude_refresh_token: ${{ secrets.CLAUDE_REFRESH_TOKEN }}
           claude_expires_at: ${{ secrets.CLAUDE_EXPIRES_AT }}
           timeout_minutes: "60"
-          model: claude-4-sonnet-20250224
+          model: claude-sonnet-4-20250514
