@@ -31,7 +31,7 @@ jobs:
           fetch-depth: 1
           persist-credentials: false
       - name: Run Claude PR Action
-        uses: grll/claude-code-action@5cbe2352fe7561b6a191847aad7915fdbdbcfd27 # v0.0.19-oauth
+        uses: grll/claude-code-action@81b441bcdfcbaee9b7c75cdbe9529e1899ce2e41 # v0.0.24-oauth
         with:
           use_oauth: true
           claude_access_token: ${{ secrets.CLAUDE_ACCESS_TOKEN }}
