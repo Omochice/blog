@@ -13,7 +13,7 @@ type: tech
 - `npm publish`をgithub actionからするには`.npmrc`の設定が必要
 - setup-nodeが勝手にやるのでそれをつかうのがよい
 
-## What happen
+## What happened
 
 [@omochice/vite-plugin-inject-readme](https://github.com/Omochice/vite-plugin-inject-readme)を
 github actionsでnpmにpublishしようとしたが、以下のエラーがでた。
