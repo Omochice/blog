@@ -11,7 +11,7 @@ type: tech
 ## TL;DR:
 
 - `npm publish`をgithub actionからするには`.npmrc`の設定が必要
-- setup-nodeが勝手にやるのでそれをつかうのがよい
+- setup-nodeが勝手にやるのでそれを使うのがよい
 
 ## What happened
 
