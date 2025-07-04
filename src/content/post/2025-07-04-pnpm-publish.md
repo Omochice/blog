@@ -1,5 +1,5 @@
 ---
-title: setup-pnpmでpnpm publishをしようとしたら手間取った話
+title: setup-pnpmでpnpm publishをするのに手間取った話
 date: 2025-07-04
 topics: ["github-action", "pnpm"]
 excerpt: ''
