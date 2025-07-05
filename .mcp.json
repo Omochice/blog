@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "textlint": {
+      "type": "stdio",
+      "command": "pnpm",
+      "args": ["exec", "textlint", "--mcp"],
+      "env": {}
+    }
+  }
+}
