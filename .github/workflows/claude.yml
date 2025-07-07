@@ -31,11 +31,12 @@ jobs:
           fetch-depth: 1
           persist-credentials: false
       - name: Run Claude PR Action
-        uses: grll/claude-code-action@5cbe2352fe7561b6a191847aad7915fdbdbcfd27 # v0.0.19-oauth
+        uses: grll/claude-code-action@792c9c2d588c95f0ffade9619c76afc2a6522405 # v0.0.27-oauth
         with:
           use_oauth: true
           claude_access_token: ${{ secrets.CLAUDE_ACCESS_TOKEN }}
           claude_refresh_token: ${{ secrets.CLAUDE_REFRESH_TOKEN }}
           claude_expires_at: ${{ secrets.CLAUDE_EXPIRES_AT }}
+          secrets_admin_pat: ${{ secrets.SECRETS_ADMIN_PAT }}
           timeout_minutes: "60"
           model: claude-sonnet-4-20250514
