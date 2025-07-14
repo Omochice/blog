@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.8.3)
       '@astrojs/mdx':
         specifier: 4.3.0
-        version: 4.3.0(astro@5.11.0(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0))
+        version: 4.3.0(astro@5.11.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0))
       '@astrojs/rss':
         specifier: 4.0.12
         version: 4.0.12
@@ -36,8 +36,8 @@ importers:
         specifier: 2.16.0
         version: 2.16.0
       astro:
-        specifier: 5.11.0
-        version: 5.11.0(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0)
+        specifier: 5.11.1
+        version: 5.11.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0)
       budoux:
         specifier: 0.7.0
         version: 0.7.0
@@ -1099,8 +1099,8 @@ packages:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.11.0:
-    resolution: {integrity: sha512-MEICntERthUxJPSSDsDiZuwiCMrsaYy3fnDhp4c6ScUfldCB8RBnB/myYdpTFXpwYBy6SgVsHQ1H4MuuA7ro/Q==}
+  astro@5.11.1:
+    resolution: {integrity: sha512-32dpUh0tXSV/FR2q2/z7LOA6IXl7RqET9J51IA0pPSSi3exhRP3EOSQGjBq10DzXT7VrvplDrFqwfiiWBS8oYA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4123,9 +4123,6 @@ packages:
   zod@3.25.36:
     resolution: {integrity: sha512-eRFS3i8T0IrpGdL8HQyqFAugGOn7jOjyGgGdtv5NY4Wkhi7lJDk732bNZ609YMIGFbLoaj6J69O1Mura23gfIw==}
 
-  zod@3.25.56:
-    resolution: {integrity: sha512-rd6eEF3BTNvQnR2e2wwolfTmUTnp70aUTqr0oaGbHifzC3BKJsoV+Gat8vxUMR1hwOKBs6El+qWehrHbCpW6SQ==}
-
   zod@3.25.71:
     resolution: {integrity: sha512-BsBc/NPk7h8WsUWYWYL+BajcJPY8YhjelaWu2NMLuzgraKAz4Lb4/6K11g9jpuDetjMiqhZ6YaexFLOC0Ogi3Q==}
 
@@ -4215,12 +4212,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.0(astro@5.11.0(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0))':
+  '@astrojs/mdx@4.3.0(astro@5.11.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.11.0(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0)
+      astro: 5.11.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -5320,7 +5317,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.11.0(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0):
+  astro@5.11.1(@types/node@22.15.24)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.6.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -5380,9 +5377,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
-      zod: 3.25.56
-      zod-to-json-schema: 3.24.5(zod@3.25.56)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.56)
+      zod: 3.25.71
+      zod-to-json-schema: 3.24.5(zod@3.25.71)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.71)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -9096,22 +9093,16 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zod-to-json-schema@3.24.5(zod@3.25.56):
-    dependencies:
-      zod: 3.25.56
-
   zod-to-json-schema@3.24.5(zod@3.25.71):
     dependencies:
       zod: 3.25.71
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.56):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.71):
     dependencies:
       typescript: 5.8.3
-      zod: 3.25.56
+      zod: 3.25.71
 
   zod@3.25.36: {}
-
-  zod@3.25.56: {}
 
   zod@3.25.71: {}
 
