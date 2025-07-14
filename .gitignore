@@ -83,3 +83,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# zk-org/zk
+.zk/notebook.db
