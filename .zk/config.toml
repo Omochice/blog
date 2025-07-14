@@ -1,0 +1,15 @@
+template = "default.md"
+
+[group.blog]
+paths = ["src/content/post"]
+
+[group.blog.note]
+filename = "{{format-date now}}-{{id}}"
+extension = "md"
+template = "blog.md"
+id-charset = "hex"
+id-length = 8
+id-case = "lower"
+
+[alias]
+blog = 'zk new --no-input --group blog "$ZK_NOTEBOOK_DIR/src/content/post"'
