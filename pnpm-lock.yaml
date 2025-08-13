@@ -27,8 +27,8 @@ importers:
         specifier: 4.6.20
         version: 4.6.20
       '@markuplint/ml-config':
-        specifier: 4.8.11
-        version: 4.8.11
+        specifier: 4.8.12
+        version: 4.8.12
       '@microsoft/eslint-formatter-sarif':
         specifier: 3.1.0
         version: 3.1.0
@@ -637,6 +637,9 @@ packages:
   '@markuplint/ml-config@4.8.11':
     resolution: {integrity: sha512-qTjoFHFpHXzdd3EvU6dT7o+HMcHgd/4vk1yTix6eKdafwuSPtFRTTx909bwk2ElcNPNVAo3jH0p5/+bj43+4yQ==}
 
+  '@markuplint/ml-config@4.8.12':
+    resolution: {integrity: sha512-V9VJfJWddw/rMrI+LIOWT1scHkQZQCSMwtntdv/rJ9nHib3UthFhdRdLX9bJx3Ql3j0lp3pqKp8XdnZ2Q/emZg==}
+
   '@markuplint/ml-core@4.12.4':
     resolution: {integrity: sha512-PG9qCAI6TprXX/vyxdiquPKjTd0YoogrwgCuLPO44hCBtZGpfCBVtXRCrGpL1mYR9MqkcAfQDxKuOyQYx1UOQA==}
 
@@ -657,6 +660,9 @@ packages:
 
   '@markuplint/selector@4.7.4':
     resolution: {integrity: sha512-a0Eurjhnv71Xr5Q6IiLy0AjHipLlbXrTVyVzuXpMMGgdoVL6sjOwZYzqn98rr9YDq1mww93liVM0xra7qKTJsg==}
+
+  '@markuplint/selector@4.7.5':
+    resolution: {integrity: sha512-mLjQCU4W8UPMg9dZBNPksdvxJHWz2Maen32/XRwWDV2RWYGEYOkYoXlFd+BRQOm/EdzlJ9KQm3ImpzmWOZTS0w==}
 
   '@markuplint/shared@4.4.11':
     resolution: {integrity: sha512-Jxcwsrl68Y3x+t8abt2XFlfM9kp6ndH025+uW1TB9GGGmNyK855+nHCsmoyl3nQg76CbIMUu1lruMVLU4gNuLg==}
@@ -929,6 +935,9 @@ packages:
 
   '@types/mustache@4.2.5':
     resolution: {integrity: sha512-PLwiVvTBg59tGFL/8VpcGvqOu3L4OuveNvPi0EYbWchRdEVP++yRUXJPFl+CApKEq13017/4Nf7aQ5lTtHUNsA==}
+
+  '@types/mustache@4.2.6':
+    resolution: {integrity: sha512-t+8/QWTAhOFlrF1IVZqKnMRJi84EgkIK5Kh0p2JV4OLywUvCwJPFxbJAl7XAow7DVIHsF+xW9f1MVzg0L6Szjw==}
 
   '@types/nlcst@2.0.3':
     resolution: {integrity: sha512-vSYNSDe6Ix3q+6Z7ri9lyWqgGhJTmzRjZRqyq15N0Z/1/UnVsno9G/N40NBijoYx2seFDIl0+B2mgAb9mezUCA==}
@@ -4711,6 +4720,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@markuplint/ml-config@4.8.12':
+    dependencies:
+      '@markuplint/ml-ast': 4.4.10
+      '@markuplint/ml-spec': 4.9.7
+      '@markuplint/selector': 4.7.5
+      '@markuplint/shared': 4.4.12
+      '@types/mustache': 4.2.6
+      deepmerge: 4.3.1
+      is-plain-object: 5.0.0
+      mustache: 4.2.0
+      type-fest: 4.41.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@markuplint/ml-core@4.12.4':
     dependencies:
       '@markuplint/config-presets': 4.5.12
@@ -4800,6 +4823,16 @@ snapshots:
       debug: 4.4.0
       postcss-selector-parser: 7.1.0
       type-fest: 4.39.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@markuplint/selector@4.7.5':
+    dependencies:
+      '@markuplint/ml-spec': 4.9.7
+      '@types/debug': 4.1.12
+      debug: 4.4.1
+      postcss-selector-parser: 7.1.0
+      type-fest: 4.41.0
     transitivePeerDependencies:
       - supports-color
 
@@ -5185,6 +5218,8 @@ snapshots:
   '@types/ms@2.1.0': {}
 
   '@types/mustache@4.2.5': {}
+
+  '@types/mustache@4.2.6': {}
 
   '@types/nlcst@2.0.3':
     dependencies:
