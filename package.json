@@ -16,7 +16,7 @@
     "clean": "rimraf dist",
     "dev": "astro dev",
     "fmt": "npm-run-all fmt:*",
-    "fmt:astro": "NODE_OPTIONS='--experimental-strip-types' prettier --write **/*.astro",
+    "fmt:astro": "prettier --write **/*.astro",
     "fmt:biome": "npm-run-all fmt:biome:*",
     "fmt:biome:check": "biome check --write",
     "fmt:biome:format": "biome format --write",
