@@ -37,7 +37,7 @@
     "@types/sanitize-html": "2.16.0",
     "astro": "5.13.3",
     "budoux": "0.7.0",
-    "markuplint": "4.13.0",
+    "markuplint": "4.13.1",
     "npm-run-all2": "8.0.4",
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
