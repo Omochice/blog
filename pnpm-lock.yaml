@@ -27,8 +27,8 @@ importers:
         specifier: 4.6.21
         version: 4.6.21
       '@markuplint/ml-config':
-        specifier: 4.8.12
-        version: 4.8.12
+        specifier: 4.8.13
+        version: 4.8.13
       '@microsoft/eslint-formatter-sarif':
         specifier: 3.1.0
         version: 3.1.0
@@ -639,6 +639,9 @@ packages:
   '@markuplint/ml-config@4.8.12':
     resolution: {integrity: sha512-V9VJfJWddw/rMrI+LIOWT1scHkQZQCSMwtntdv/rJ9nHib3UthFhdRdLX9bJx3Ql3j0lp3pqKp8XdnZ2Q/emZg==}
 
+  '@markuplint/ml-config@4.8.13':
+    resolution: {integrity: sha512-yiMpp7z4AIAnKKV41BPSJWki+z0Mnm2FYO3iw9QoLiUExeHzteOMp9VKehyLOqFEkT1lOXfs39iH0iaSh5KLxA==}
+
   '@markuplint/ml-core@4.13.0':
     resolution: {integrity: sha512-OURExsK7GZIDwSPtwVyYgZR5PLXyCTSgOJFBrCx0wTMDil7c6PUKQ3MozEwd5ySdjxjQ4M/E0waLJcqfrz4PfQ==}
 
@@ -659,6 +662,9 @@ packages:
 
   '@markuplint/selector@4.7.5':
     resolution: {integrity: sha512-mLjQCU4W8UPMg9dZBNPksdvxJHWz2Maen32/XRwWDV2RWYGEYOkYoXlFd+BRQOm/EdzlJ9KQm3ImpzmWOZTS0w==}
+
+  '@markuplint/selector@4.7.6':
+    resolution: {integrity: sha512-8VrIbgxqaBHuDEAiEP0/8qKNjM2BrpL6LeQ7NcOau/E+K5uwzCKQCMrPmN/NYWHBo+Y5+z1xj74ByruxJwEKgQ==}
 
   '@markuplint/shared@4.4.12':
     resolution: {integrity: sha512-mDB3tfJyekI5PhCuBHYCHxnZlZYu3Rzb0n9iZJee0lVAqTirKXX6igwj2QC6KcXE+PAG2lPmfIdJZvlGw6yUKw==}
@@ -4629,6 +4635,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@markuplint/ml-config@4.8.13':
+    dependencies:
+      '@markuplint/ml-ast': 4.4.10
+      '@markuplint/ml-spec': 4.10.0
+      '@markuplint/selector': 4.7.6
+      '@markuplint/shared': 4.4.12
+      '@types/mustache': 4.2.6
+      deepmerge: 4.3.1
+      is-plain-object: 5.0.0
+      mustache: 4.2.0
+      type-fest: 4.41.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@markuplint/ml-core@4.13.0':
     dependencies:
       '@markuplint/config-presets': 4.5.13
@@ -4714,6 +4734,16 @@ snapshots:
   '@markuplint/selector@4.7.5':
     dependencies:
       '@markuplint/ml-spec': 4.9.7
+      '@types/debug': 4.1.12
+      debug: 4.4.1
+      postcss-selector-parser: 7.1.0
+      type-fest: 4.41.0
+    transitivePeerDependencies:
+      - supports-color
+
+  '@markuplint/selector@4.7.6':
+    dependencies:
+      '@markuplint/ml-spec': 4.10.0
       '@types/debug': 4.1.12
       debug: 4.4.1
       postcss-selector-parser: 7.1.0
