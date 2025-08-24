@@ -31,7 +31,7 @@
     "@astrojs/rss": "4.0.12",
     "@astrojs/sitemap": "3.5.1",
     "@biomejs/biome": "2.2.2",
-    "@markuplint/astro-parser": "4.6.20",
+    "@markuplint/astro-parser": "4.6.21",
     "@markuplint/ml-config": "4.8.12",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@types/sanitize-html": "2.16.0",
