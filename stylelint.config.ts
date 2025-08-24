@@ -1,3 +1,5 @@
+import type { Config } from "stylelint";
+
 export default {
   extends: [
     "stylelint-config-standard",
@@ -9,4 +11,4 @@ export default {
       files: ["*.astro", "**/*.astro"],
     },
   ],
-};
+} as const satisfies Config;

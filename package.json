@@ -12,7 +12,7 @@
     "check:astro:prettier": "prettier --check **/*.astro",
     "check:biome": "biome ci",
     "check:markuplint": "markuplint --config markuplint.config.ts **/*.astro",
-    "check:stylelint": "stylelint --config stylelint.config.mjs **/*.{css,astro}",
+    "check:stylelint": "stylelint --config stylelint.config.ts **/*.{css,astro}",
     "clean": "rimraf dist",
     "dev": "astro dev",
     "fmt": "npm-run-all fmt:*",
@@ -21,7 +21,7 @@
     "fmt:biome:check": "biome check --write",
     "fmt:biome:format": "biome format --write",
     "fmt:package": "sort-package-json",
-    "fmt:style": "stylelint --config stylelint.config.mjs --fix **/*.{css,astro}",
+    "fmt:style": "stylelint --config stylelint.config.ts --fix **/*.{css,astro}",
     "preview": "astro preview",
     "start": "astro dev"
   },
