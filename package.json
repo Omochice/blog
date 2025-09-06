@@ -12,7 +12,7 @@
     "check:astro:prettier": "prettier --check **/*.astro",
     "check:biome": "biome ci",
     "check:markuplint": "markuplint --config markuplint.config.ts **/*.astro",
-    "check:stylelint": "stylelint --config stylelint.config.ts **/*.{css,astro}",
+    "check:stylelint": "stylelint --config stylelint.config.ts --ignore-path .gitignore **/*.{css,astro}",
     "clean": "rimraf dist",
     "dev": "astro dev",
     "fmt": "npm-run-all fmt:*",
@@ -21,7 +21,7 @@
     "fmt:biome:check": "biome check --write",
     "fmt:biome:format": "biome format --write",
     "fmt:package": "sort-package-json",
-    "fmt:style": "stylelint --config stylelint.config.ts --fix **/*.{css,astro}",
+    "fmt:style": "stylelint --config stylelint.config.ts --ignore-path .gitignore --fix **/*.{css,astro}",
     "preview": "astro preview",
     "start": "astro dev"
   },
@@ -37,6 +37,7 @@
     "@types/sanitize-html": "2.16.0",
     "astro": "5.13.5",
     "budoux": "0.7.0",
+    "lightningcss": "^1.30.1",
     "markuplint": "4.13.1",
     "npm-run-all2": "8.0.4",
     "prettier": "3.6.2",
@@ -55,6 +56,7 @@
     "textlint-rule-no-dead-link": "6.0.1",
     "typescript": "5.9.2",
     "ufo": "1.6.1",
+    "vite-plugin-lightningcss": "^0.0.5",
     "vitest": "3.2.4"
   },
   "packageManager": "pnpm@10.15.0",

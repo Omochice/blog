@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
+import lightningcss from "vite-plugin-lightningcss";
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,6 +30,15 @@ export default defineConfig({
           },
         },
       ],
+    ],
+  },
+  vite: {
+    plugins: [
+      ...lightningcss({
+        browserslist: ["> 0.5%", "last 2 versions", "not dead"],
+        minify: true,
+        sourceMap: true,
+      }),
     ],
   },
 });

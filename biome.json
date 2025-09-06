@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
   "files": {
-    "includes": ["**", "!**/.astro", "!**/package.json"]
+    "includes": ["**", "!**/.astro", "!**/package.json", "!dist"]
   },
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "formatter": {
