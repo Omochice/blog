@@ -1,6 +1,5 @@
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-// @ts-check
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
