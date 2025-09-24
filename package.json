@@ -35,7 +35,7 @@
     "@markuplint/ml-config": "4.8.13",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@types/sanitize-html": "2.16.0",
-    "astro": "5.13.10",
+    "astro": "5.13.11",
     "budoux": "0.7.0",
     "markuplint": "4.13.1",
     "npm-run-all2": "8.0.4",
