@@ -4,6 +4,11 @@
     "includes": ["**", "!**/.astro", "!**/package.json"]
   },
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
   "formatter": {
     "enabled": true,
     "indentStyle": "space"
