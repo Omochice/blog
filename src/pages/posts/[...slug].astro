@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
+import LinkToGitHub from "../../components/LinkToGitHub.astro";
 import BlogPost from "../../layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
@@ -20,4 +21,12 @@ const { Content } = await post.render();
   slug={`transition-${post.slug}`}
 >
   <Content />
+  {
+    post.filePath != null && (
+      <>
+        <hr />
+        <LinkToGitHub path={post.filePath} />
+      </>
+    )
+  }
 </BlogPost>
