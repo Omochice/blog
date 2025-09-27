@@ -8,7 +8,7 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Bootstrap, build, and test the repository:
 
-- Install pnpm globally: `npm install -g pnpm@lasest`
+- Install pnpm globally: `npm install -g pnpm@latest`
 - Install dependencies: `pnpm install` -- takes 33 seconds. NEVER CANCEL. Set timeout to 60+ seconds.
 - Run all checks: `pnpm run check` -- takes 19 seconds. NEVER CANCEL. Set timeout to 30+ seconds.
 - Build the site: `pnpm run build` -- takes 5 seconds. NEVER CANCEL. Set timeout to 30+ seconds.
