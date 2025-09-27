@@ -1,0 +1,36 @@
+---
+import { joinURL } from "ufo";
+import { DEFAULT_BRANCH, REPOSITORY } from "../consts";
+
+type Props = { path: string };
+
+const { path } = Astro.props;
+
+const href = joinURL(REPOSITORY.href, "blob", DEFAULT_BRANCH, path);
+---
+
+<div class="github-link">
+  <a
+    {href}
+    rel="noopener noreferrer"
+  >
+    View source on GitHub
+  </a>
+</div>
+
+<style>
+  .github-link {
+    text-align: center;
+  }
+
+  .github-link a {
+    font-size: 0.9em;
+    color: rgb(var(--gray));
+    text-decoration: none;
+  }
+
+  .github-link a:hover {
+    color: rgb(var(--gray-dark));
+    text-decoration: underline;
+  }
+</style>
