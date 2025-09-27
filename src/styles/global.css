@@ -16,8 +16,8 @@
     0 2px 6px rgb(var(--gray), 25%), 0 8px 24px rgb(var(--gray), 33%), 0 16px
     32px rgb(var(--gray), 33%);
 
-  view-transition-name: none;
   container: root / inline-size;
+  view-transition-name: none;
 }
 
 body {
