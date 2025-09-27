@@ -47,7 +47,7 @@ P3
 
 読み取って 3 次元配列を返す function を fortran で書く。
 
-```fortran
+```f90
 function load_pnm(filename) result(img_array)
   !!! load_pnm
   !!!
@@ -119,7 +119,7 @@ Python なら `raise FormatError` とかするんだけど fortran でエラー�
 
 入力時と逆のことをやる。
 
-```fortran
+```f90
 subroutine save_pnm(img_array, maximum_value, filename)
   !!! Save array as pnm image.
   !!\!
@@ -179,7 +179,7 @@ Python なら `" ".join(map(str, (width, height)))` とかで書くんだけど 
 fortran には matplotlib みたいに簡単に可視化できるものがなさそうなのでおとなしく `display` を使う。
 `display` がない環境はそもそもに `convert` がないはずなのでここまで来る前にエラーに遭うはず。
 
-```fortran
+```f90
 subroutine display_img(img, maximum_value)
   !!! Display array img.
   !!! save array as pnm image named "output.pnm" then show via imagemagick.
@@ -206,7 +206,7 @@ end subroutine display_img
 
 これを `gfortran pnm_tools.f90 -c` で `.o` を作成したら次のテストプログラムが動く。
 
-```fortran
+```f90
 program test_load_pnm
   use pnm_tools
   implicit none

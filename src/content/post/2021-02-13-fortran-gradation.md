@@ -18,7 +18,7 @@ $$
 
 fortran の pure function で書くと次のようになる。
 
-```fortran
+```f90
 
 pure function linear_translation(img, maximum) result(translated)
   implicit none
@@ -46,7 +46,7 @@ fortran だとわざわざループして lut を適用しなくても `translat
 
 結果以下のようになった。
 
-```fortran
+```f90
 pure function linear_translation(img, maximum_value, low_threshold, high_threshold) result(translated)
   implicit none
   integer, intent(in) :: img(:, :, :)

@@ -10,7 +10,7 @@ type: tech
 
 canny に続いて birateral filter を作った。
 
-```fortran
+```f90
   subroutine bilateral(img, output, sigma)
   !!! apply bilateral filter
   !!!
@@ -60,7 +60,7 @@ canny に続いて birateral filter を作った。
 
 注目画素(今回は 5\*5)なので `3~width-2` までに対して周辺 25 画素を。
 
-```fortran
+```f90
 window = img(h - 2:h + 2, w - 2:w + 2)
 ```
 
@@ -70,7 +70,7 @@ window = img(h - 2:h + 2, w - 2:w + 2)
 
 毎画素ごとにガウス分布を求めるのは冗長みたいなので予め 0~255 の範囲のガウス分布を求めておく。
 
-```fortran
+```f90
 gaussian_dist = (/(exp(-(real(i)/255)**2/(2*sigma**2)), i=0, 255)/)
 ```
 
