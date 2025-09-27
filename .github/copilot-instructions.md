@@ -1,25 +1,28 @@
 # Omochice Personal Blog
 
-Personal Japanese tech blog built with Astro v5.13.7, containing 70+ technical posts from 2021-2025 about vim, programming tools, and development experiences.
+Personal Japanese tech blog built with Astro, containing 70+ technical posts from 2021-2025 about vim, programming tools, and development experiences.
 
 Always reference these instructions first and fallback to search or bash commands only when you encounter unexpected information that does not match the info here.
 
 ## Working Effectively
 
 ### Bootstrap, build, and test the repository:
-- Install pnpm globally: `npm install -g pnpm@10.16.1`
+
+- Install pnpm globally: `npm install -g pnpm@lasest`
 - Install dependencies: `pnpm install` -- takes 33 seconds. NEVER CANCEL. Set timeout to 60+ seconds.
 - Run all checks: `pnpm run check` -- takes 19 seconds. NEVER CANCEL. Set timeout to 30+ seconds.
 - Build the site: `pnpm run build` -- takes 5 seconds. NEVER CANCEL. Set timeout to 30+ seconds.
-- Run tests: `npx vitest run` -- takes 1 second. Set timeout to 30+ seconds.
+- Run tests: `pnpm run test` -- takes 1 second. Set timeout to 30+ seconds.
 
 ### Development workflow:
+
 - Start development server: `pnpm run dev` -- starts on http://localhost:4321/blog
 - Start preview server: `pnpm run preview` -- serves built static files on http://localhost:4321/blog
-- Format code: `pnpm run clean && pnpm run fmt` -- takes 5 seconds. Always clean dist first to avoid biome errors.
+- Format code: `pnpm run fmt` -- takes 5 seconds.
 - Alternative dev command: `pnpm run start` (alias for dev)
 
 ### Content management:
+
 - Blog posts are in `src/content/post/` as Markdown files
 - Uses zk (zettelkasten) for note management - config in `.zk/config.toml`
 - Create new blog post: `zk blog` (uses zk templates)
@@ -43,13 +46,14 @@ Always reference these instructions first and fallback to search or bash command
 ## Common Tasks
 
 ### Repository structure
+
 ```
 src/
 ├── content/
 │   ├── config.ts          # Astro content collections schema
 │   └── post/              # Blog posts (70+ markdown files)
 ├── components/            # Reusable Astro components
-├── layouts/               # Page layout templates  
+├── layouts/               # Page layout templates
 ├── pages/                 # Astro pages (routes)
 ├── lib/                   # Utility functions with tests
 └── styles/                # Global CSS styles
@@ -61,15 +65,18 @@ package.json              # Dependencies and scripts
 ```
 
 ### Key configuration files
+
 - `astro.config.ts`: Site URL (https://Omochice.github.io/blog), base path (/blog), integrations
 - `tsconfig.json`: Extends astro/tsconfigs/strictest with strict null checks
 - `biome.json`: JavaScript/TypeScript linting and formatting
 - `markuplint.config.ts`: HTML validation for .astro files
 - `stylelint.config.ts`: CSS linting for styles and .astro files
-- `package.json`: Uses pnpm@10.16.1, Node.js 22.19.0
+- `package.json`: Uses pnpm-managed pnpm and node
 
 ### Content schema
+
 Posts in `src/content/post/` must have frontmatter:
+
 ```yaml
 ---
 title: "Post Title"
@@ -81,29 +88,32 @@ updatedDate: 2025-01-02 # optional
 ```
 
 ### Available npm scripts
+
 - `pnpm run dev` / `pnpm run start`: Development server
-- `pnpm run build`: Build static site  
+- `pnpm run build`: Build static site
 - `pnpm run preview`: Preview built site
 - `pnpm run check`: Run all linters and type checking
 - `pnpm run fmt`: Format all code (run clean first)
 - `pnpm run clean`: Remove dist directory
 
 ### Linting components
+
 - `check:astro:astro`: Astro type checking
 - `check:astro:prettier`: Prettier formatting check for .astro files
 - `check:biome`: Biome JavaScript/TypeScript linting
-- `check:markuplint`: HTML validation 
+- `check:markuplint`: HTML validation
 - `check:stylelint`: CSS linting
 
 ### Known issues
+
 - One acceptable biome warning about `!important` in `.sr-only` CSS class
-- Format command fails if dist directory contains generated files - always run `pnpm run clean` first
 - Some Shiki warnings about missing language definitions (fortran, conf, reST) - these are non-blocking
 
 ### Dependencies and toolchain
-- **CRITICAL**: Use pnpm@10.16.1, not npm. Package manager version specified in package.json.
-- Node.js version: 22.19.0 (specified in pnpm.executionEnv)
-- Astro v5.13.7 for static site generation
+
+- **CRITICAL**: Use pnpm not npm. Package manager version specified in package.json.
+- Node.js version is specified in pnpm.executionEnv
+- Astro for static site generation
 - Vitest for testing (only one test file currently)
 - Multiple linters: Biome, Prettier, Stylelint, Markuplint
 - MDX integration for enhanced markdown posts
@@ -111,15 +121,16 @@ updatedDate: 2025-01-02 # optional
 - Rehype plugins for heading links and slugs
 
 ### Timing expectations
+
 - **NEVER CANCEL** any build or check commands
 - Install: 33 seconds (set timeout 60+ seconds)
-- Check: 19 seconds (set timeout 30+ seconds)  
+- Check: 19 seconds (set timeout 30+ seconds)
 - Build: 5 seconds (set timeout 30+ seconds)
 - Format: 5 seconds (set timeout 30+ seconds)
 - Tests: 1 second (set timeout 30+ seconds)
 
 ### Testing
+
 - Test files: `src/lib/*.test.ts`
-- Run tests: `npx vitest run`
+- Run tests: `pnpm run test`
 - Currently one test file: `is-test-year.test.ts`
-- No test script in package.json - use vitest directly
