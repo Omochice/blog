@@ -23,7 +23,8 @@
     "fmt:package": "sort-package-json",
     "fmt:style": "stylelint --config stylelint.config.ts --fix **/*.{css,astro}",
     "preview": "astro preview",
-    "start": "astro dev"
+    "start": "astro dev",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.4",
