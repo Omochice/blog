@@ -144,6 +144,7 @@ hr {
 }
 
 .sr-only {
+  /* biome-ignore lint: need !important to override others */
   position: absolute !important;
   width: 1px;
   height: 1px;
