@@ -21,7 +21,7 @@ github で `canny edge detection langages:fortran` で調べたがヒットは�
 
 エッジの方向検出がいまいち納得できてない。
 
-```fortran
+```f90
 if ((way >= -1*PI/8 .and. way < PI/8) .or. (way < -7*PI/8 .or. way >= 7*PI/8)) then
   edges = edge_magnitudes(h - 1:h + 1, w)
 else if ((way >= PI/8 .and. way < 3*PI/8) .or. (way >= -7*PI/8 .and. way < -5*PI/8)) then

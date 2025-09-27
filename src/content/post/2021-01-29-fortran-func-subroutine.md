@@ -10,7 +10,7 @@ type: tech
 
 Python で言うところの `list.append()` みたいな感じで引数自身が返り値の性質を持つときは subroutine で書く方が多分それっぽくなる。
 
-```fortran
+```f90
 subroutine foo(a)
   implicit none
   integer, intent(inout) :: a
@@ -24,7 +24,7 @@ end subroutine foo
 
 function だとこんな感じで書く。
 
-```fortran
+```f90
 pure function foo(n) result(r)
   implicit none
   integer, intent(in) :: n(:)
