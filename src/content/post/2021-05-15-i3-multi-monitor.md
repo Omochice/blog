@@ -63,7 +63,7 @@ teratail で上記の問題を質問したところ、`udev` でモニタの切�
 
 なので設定する。
 
-```conf
+```text
 SUBSYSTEM=="drm" ACTION=="change", RUN+="i3-workscreen"
 ```
 
