@@ -27,7 +27,7 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.4",
+    "@astrojs/check": "0.9.5",
     "@astrojs/mdx": "4.3.7",
     "@astrojs/rss": "4.0.12",
     "@astrojs/sitemap": "3.6.0",
