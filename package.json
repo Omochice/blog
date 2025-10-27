@@ -58,7 +58,7 @@
     "textlint-rule-no-dead-link": "6.0.1",
     "typescript": "5.9.3",
     "ufo": "1.6.1",
-    "vitest": "4.0.3"
+    "vitest": "4.0.4"
   },
   "packageManager": "pnpm@10.19.0",
   "pnpm": {
