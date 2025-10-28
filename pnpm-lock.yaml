@@ -53,12 +53,6 @@ importers:
       npm-run-all2:
         specifier: 8.0.4
         version: 8.0.4
-      prettier:
-        specifier: 3.6.2
-        version: 3.6.2
-      prettier-plugin-astro:
-        specifier: 0.14.1
-        version: 0.14.1
       rehype-autolink-headings:
         specifier: 7.1.0
         version: 7.1.0
@@ -4181,7 +4175,8 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/compiler@2.12.0': {}
+  '@astrojs/compiler@2.12.0':
+    optional: true
 
   '@astrojs/compiler@2.12.2': {}
 
@@ -7798,11 +7793,13 @@ snapshots:
       '@astrojs/compiler': 2.12.0
       prettier: 3.6.2
       sass-formatter: 0.7.9
+    optional: true
 
   prettier@2.8.7:
     optional: true
 
-  prettier@3.6.2: {}
+  prettier@3.6.2:
+    optional: true
 
   prismjs@1.30.0: {}
 
@@ -8132,7 +8129,8 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
-  s.color@0.0.15: {}
+  s.color@0.0.15:
+    optional: true
 
   safe-buffer@5.2.1: {}
 
@@ -8150,6 +8148,7 @@ snapshots:
   sass-formatter@0.7.9:
     dependencies:
       suf-log: 2.5.3
+    optional: true
 
   sax@1.4.1: {}
 
@@ -8460,6 +8459,7 @@ snapshots:
   suf-log@2.5.3:
     dependencies:
       s.color: 0.0.15
+    optional: true
 
   supports-color@7.2.0:
     dependencies:
