@@ -56,11 +56,6 @@
       "selfCloseVoidElements": "always"
     }
   },
-  "overrides": [
-    {
-      "includes": ["*.astro"]
-    }
-  ],
   "assist": {
     "enabled": null,
     "actions": {
