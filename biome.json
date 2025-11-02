@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!**/package.json"]
+    "includes": ["**", "!**/.astro", "!**/package.json"]
   },
   "formatter": {
     "enabled": true,
