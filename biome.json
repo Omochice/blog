@@ -1,34 +1,66 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.3.2/schema.json",
-  "files": {
-    "includes": ["**", "!**/.astro", "!**/package.json"]
-  },
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "vcs": {
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
   },
+  "files": {
+    "includes": ["**", "!**/.astro", "!**/package.json"]
+  },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "attributePosition": "auto",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "expand": "auto",
+    "useEditorconfig": true
   },
   "linter": {
     "enabled": true,
-    "includes": ["**", "!**/*.astro"],
     "rules": {
       "recommended": true,
       "style": {
+        "noInferrableTypes": "error",
         "noParameterAssign": "error",
+        "noUnusedTemplateLiteral": "error",
+        "noUselessElse": "error",
         "useAsConstAssertion": "error",
         "useDefaultParameterLast": "error",
         "useEnumInitializers": "error",
-        "useSelfClosingElements": "error",
-        "useSingleVarDeclarator": "error",
-        "noUnusedTemplateLiteral": "error",
         "useNumberNamespace": "error",
-        "noInferrableTypes": "error",
-        "noUselessElse": "error"
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error"
+      }
+    },
+    "includes": ["**", "!**/*.astro"]
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "quoteStyle": "double"
+    }
+  },
+  "html": {
+    "formatter": {
+      "indentScriptAndStyle": false,
+      "selfCloseVoidElements": "always"
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
       }
     }
   }
