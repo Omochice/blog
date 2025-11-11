@@ -13,7 +13,7 @@ importers:
         version: 0.9.5(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3)
       '@astrojs/mdx':
         specifier: 4.3.10
-        version: 4.3.10(astro@5.15.4(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0))
+        version: 4.3.10(astro@5.15.5(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0))
       '@astrojs/rss':
         specifier: 4.0.13
         version: 4.0.13
@@ -36,8 +36,8 @@ importers:
         specifier: 2.16.0
         version: 2.16.0
       astro:
-        specifier: 5.15.4
-        version: 5.15.4(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0)
+        specifier: 5.15.5
+        version: 5.15.5(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0)
       browserslist:
         specifier: 4.27.0
         version: 4.27.0
@@ -1134,8 +1134,8 @@ packages:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.15.4:
-    resolution: {integrity: sha512-0g/68hLHEJZF2nYUcZM5O0kOnzCsCIf8eA9+0jfBAxp4ycujrIHRgIOdZCFKL9GoTsn8AypWbziypH5aEIF+aA==}
+  astro@5.15.5:
+    resolution: {integrity: sha512-A56u4H6gFHEb0yRHcGTOADBb7jmEwfDjQpkqVV/Z+ZWlu6mYuwCrIcOUtZjNno0chrRKmOeZWDofW23ql18y3w==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2430,9 +2430,6 @@ packages:
   lru-cache@11.1.0:
     resolution: {integrity: sha512-QIXZUBJUx+2zHUdQujWejBkcD9+cs94tLn0+YL8UrCh+D5sCXZ4c7LaEH48pNwRY3MLDgqUFyhlCyjJPf1WP0A==}
     engines: {node: 20 || >=22}
-
-  magic-string@0.30.19:
-    resolution: {integrity: sha512-2N21sPY9Ws53PZvsEpVtNuSW+ScYbQdp4b9qUaL+9QkHUrGFKo56Lg9Emg5s9V/qrtNBmiR01sYhUOwu3H+VOw==}
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -4236,12 +4233,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.10(astro@5.15.4(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0))':
+  '@astrojs/mdx@4.3.10(astro@5.15.5(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.8
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
-      astro: 5.15.4(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0)
+      astro: 5.15.5(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -5355,7 +5352,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.15.4(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0):
+  astro@5.15.5(@types/node@22.15.24)(jiti@2.4.2)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.6.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.7.4
@@ -5389,7 +5386,7 @@ snapshots:
       http-cache-semantics: 4.2.0
       import-meta-resolve: 4.2.0
       js-yaml: 4.1.0
-      magic-string: 0.30.19
+      magic-string: 0.30.21
       magicast: 0.3.5
       mrmime: 2.0.1
       neotraverse: 0.6.18
@@ -6859,10 +6856,6 @@ snapshots:
   lru-cache@10.4.3: {}
 
   lru-cache@11.1.0: {}
-
-  magic-string@0.30.19:
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
 
   magic-string@0.30.21:
     dependencies:
