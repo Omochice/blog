@@ -35,7 +35,7 @@
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@types/sanitize-html": "2.16.0",
     "astro": "5.15.5",
-    "browserslist": "4.27.0",
+    "browserslist": "4.28.0",
     "budoux": "0.7.0",
     "lightningcss": "1.30.2",
     "markuplint": "4.14.0",
