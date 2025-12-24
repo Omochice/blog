@@ -87,8 +87,8 @@ importers:
         specifier: 15.5.0
         version: 15.5.0
       textlint-rule-no-dead-link:
-        specifier: 6.0.1
-        version: 6.0.1(textlint@15.5.0)
+        specifier: 6.1.0
+        version: 6.1.0(textlint@15.5.0)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -2908,10 +2908,6 @@ packages:
     resolution: {integrity: sha512-jdZ10MCxavHoIHwJ5oweOtYy6ElPixEHaMkz0AuaEMovR1MRpVvYFzIEHRxgMEpXYzNpRVByFAniAzwmd1/uug==}
     engines: {node: '>=20'}
 
-  p-queue@8.1.0:
-    resolution: {integrity: sha512-mxLDbbGIBEXTJL0zEx8JIylaj3xQ7Z/7eEVjcF9fJX4DBiH9oqe+oahYnlKKxm0Ci9TlWTyhSHgygxMxjIB2jw==}
-    engines: {node: '>=18'}
-
   p-queue@8.1.1:
     resolution: {integrity: sha512-aNZ+VfjobsWryoiPnEApGGmf5WmNsCo9xu8dfaYamG5qaLP7ClhLN6NgsFe6SwJ2UbLEBK5dv9x8Mn5+RVhMWQ==}
     engines: {node: '>=18'}
@@ -3569,8 +3565,8 @@ packages:
   textlint-rule-helper@2.3.1:
     resolution: {integrity: sha512-b1bijvyiUmKinfFE5hkQMSXs3Ky8jyZ3Y6SOoTRJKV9HLL2LWUVFAUezO7z4FpAkVvYruDYWCwA5qWV8GmvyUw==}
 
-  textlint-rule-no-dead-link@6.0.1:
-    resolution: {integrity: sha512-AhzerfzP9DItUXcG5APFLp4Y+6bka2psb3DQ5u40uSmXhxW2pW1ZAukPq6S1I2dH6ypkJ0eB8YEskr0trd0YrA==}
+  textlint-rule-no-dead-link@6.1.0:
+    resolution: {integrity: sha512-d2I9V7ASJx5IyLyOJNgnxd4zMh2qAlv/1opMsSM0hkWYo37dglGHp1g56V57EqVx+2qZBBYUmiX9TgSXwZIAYg==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       textlint: '>= 12.2.0'
@@ -7719,11 +7715,6 @@ snapshots:
       mimic-function: 5.0.1
       type-fest: 4.41.0
 
-  p-queue@8.1.0:
-    dependencies:
-      eventemitter3: 5.0.1
-      p-timeout: 6.1.4
-
   p-queue@8.1.1:
     dependencies:
       eventemitter3: 5.0.1
@@ -8601,11 +8592,11 @@ snapshots:
       structured-source: 4.0.0
       unist-util-visit: 2.0.3
 
-  textlint-rule-no-dead-link@6.0.1(textlint@15.5.0):
+  textlint-rule-no-dead-link@6.1.0(textlint@15.5.0):
     dependencies:
-      minimatch: 10.0.3
+      minimatch: 10.1.1
       p-memoize: 8.0.0
-      p-queue: 8.1.0
+      p-queue: 8.1.1
       textlint-rule-helper: 2.3.1
     optionalDependencies:
       textlint: 15.5.0
