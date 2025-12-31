@@ -28,7 +28,6 @@ body {
   line-height: 1.7;
   color: rgb(var(--gray-dark));
   text-align: left;
-  word-wrap: break-word;
   overflow-wrap: break-word;
   background: linear-gradient(var(--gray-gradient)) no-repeat;
   background-size: 100% 600px;
@@ -155,12 +154,6 @@ hr {
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
   border: 0;
-
-  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-  clip: rect(1px 1px 1px 1px);
-
-  /* biome-ignore lint: maybe deprecated but we need to support legacy browsers */
-  clip: rect(1px, 1px, 1px, 1px);
 
   /* modern browsers, clip-path works inwards from each corner */
   clip-path: inset(50%);
