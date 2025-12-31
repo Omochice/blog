@@ -9,6 +9,7 @@ interface Props {
 }
 
 const posts = (await getCollection("post"))
+  .filter((post) => post.data.type !== "poem")
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, Astro.props.size);
 ---

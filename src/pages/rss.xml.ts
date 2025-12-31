@@ -13,17 +13,19 @@ export async function GET(context: Context) {
   const posts = await getCollection("post");
   const container = await experimental_AstroContainer.create();
   const items = await Promise.all(
-    posts.map(async (post) => ({
-      ...post.data,
-      link: joinURL(import.meta.env.BASE_URL, "posts", post.slug),
-      pubDate: post.data.date,
-      content: sanitizeHtml(
-        await container.renderToString((await post.render()).Content),
-        {
-          allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
-        },
-      ),
-    })),
+    posts
+      .filter((post) => post.data.type !== "poem")
+      .map(async (post) => ({
+        ...post.data,
+        link: joinURL(import.meta.env.BASE_URL, "posts", post.slug),
+        pubDate: post.data.date,
+        content: sanitizeHtml(
+          await container.renderToString((await post.render()).Content),
+          {
+            allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
+          },
+        ),
+      })),
   );
 
   return rss({
