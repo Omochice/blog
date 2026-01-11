@@ -5,9 +5,9 @@ import OldPostWarning from "../components/OldPostWarning.astro";
 import { budouxfy } from "../lib/parse-with-budoux.ts";
 import BaseLayout from "./BaseLayout.astro";
 
-type Props = CollectionEntry<"post">["data"] & { slug: string };
+type Props = CollectionEntry<"post">["data"] & { slug: string; image?: string };
 
-const { title, description, date, updatedDate, slug } = Astro.props;
+const { title, description, date, updatedDate, slug, image } = Astro.props;
 
 const budouxed = budouxfy(title);
 const lastUpdatedOn: Date = updatedDate ?? date;
@@ -20,6 +20,7 @@ const postDescription =
 <BaseLayout
   title={title}
   description={postDescription}
+  image={image}
 >
   <Fragment slot="head">
     <style is:global>
