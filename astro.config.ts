@@ -21,6 +21,9 @@ export default defineConfig({
     build: {
       cssMinify: "lightningcss",
     },
+    optimizeDeps: {
+      exclude: ["@resvg/resvg-js"],
+    },
   },
   markdown: {
     rehypePlugins: [
