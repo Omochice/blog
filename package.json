@@ -48,7 +48,7 @@
     "stylelint": "16.26.1",
     "stylelint-config-astro": "2.0.0",
     "stylelint-config-recess-order": "7.4.0",
-    "stylelint-config-standard": "39.0.1",
+    "stylelint-config-standard": "40.0.0",
     "stylelint-order": "7.0.1",
     "textlint": "15.5.0",
     "textlint-rule-no-dead-link": "6.1.0",
