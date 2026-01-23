@@ -37,7 +37,7 @@
     "astro": "5.16.11",
     "browserslist": "4.28.1",
     "budoux": "0.7.0",
-    "lightningcss": "1.30.2",
+    "lightningcss": "1.31.0",
     "markuplint": "4.14.0",
     "npm-run-all2": "8.0.4",
     "rehype-autolink-headings": "7.1.0",
