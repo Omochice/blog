@@ -34,7 +34,7 @@
     "@markuplint/ml-config": "4.8.14",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@types/sanitize-html": "2.16.0",
-    "astro": "5.16.15",
+    "astro": "5.16.16",
     "browserslist": "4.28.1",
     "budoux": "0.7.0",
     "lightningcss": "1.31.1",
