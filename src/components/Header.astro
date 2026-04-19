@@ -14,7 +14,8 @@ import HeaderLink from "./HeaderLink.astro";
           ><input
             class="hidden-checkbox"
             type="checkbox"
-          />=</label
+          /><span class="hamburger-icon" aria-hidden="true"></span
+          ><span class="sr-only">Menu</span></label
         >
       </div>
       <div class="header-links">
@@ -104,14 +105,45 @@ import HeaderLink from "./HeaderLink.astro";
 
     .show-menu {
       position: relative;
-      display: inline-block;
-      width: 2em;
-      height: 2em;
-      vertical-align: middle;
-      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5em;
+      height: 2.5em;
       cursor: pointer;
       border: 1px solid rgb(var(--gray-light));
-      border-radius: 0.2em;
+      border-radius: 0.4em;
+      transition: background-color 0.2s;
+    }
+
+    .hamburger-icon,
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+      display: block;
+      width: 1.2em;
+      height: 2px;
+      background-color: rgb(var(--gray-dark));
+      border-radius: 1px;
+    }
+
+    .hamburger-icon {
+      position: relative;
+      pointer-events: none;
+    }
+
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+      position: absolute;
+      left: 0;
+      content: "";
+    }
+
+    .hamburger-icon::before {
+      top: -0.35em;
+    }
+
+    .hamburger-icon::after {
+      top: 0.35em;
     }
 
     .header-links {
