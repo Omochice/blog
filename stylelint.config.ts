@@ -1,6 +1,7 @@
 import type { Config } from "stylelint";
 
 export default {
+  ignoreFiles: ["dist/**"],
   extends: [
     "stylelint-config-standard",
     "stylelint-config-recess-order",
