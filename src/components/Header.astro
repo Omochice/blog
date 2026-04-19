@@ -122,8 +122,14 @@ import HeaderLink from "./HeaderLink.astro";
       border-radius: 0.4em;
       transition: background-color 0.2s;
 
-      &:hover {
+      &:hover,
+      &:focus-within {
         background-color: rgb(var(--gray-light));
+      }
+
+      &:has(.hidden-checkbox:focus-visible) {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
       }
     }
 
