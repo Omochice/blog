@@ -12,6 +12,7 @@
   --gray-light: 229, 233, 240;
   --gray-dark: 34, 41, 57;
   --gray-gradient: rgb(var(--gray-light), 50%), #fff;
+  --content-width: 720px;
   --box-shadow:
     0 2px 6px rgb(var(--gray), 25%), 0 8px 24px rgb(var(--gray), 33%),
     0 16px 32px rgb(var(--gray), 33%);
@@ -34,7 +35,7 @@ body {
 }
 
 main {
-  width: 720px;
+  width: var(--content-width);
   max-width: calc(100% - 2em);
   padding: 3em 1em;
   margin: auto;
