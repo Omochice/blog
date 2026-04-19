@@ -194,6 +194,10 @@ import HeaderLink from "./HeaderLink.astro";
       color: rgb(var(--black));
       border-left: 3px solid var(--accent);
     }
+
+    .header-links a + a {
+      border-top: 1px solid rgb(var(--gray-light));
+    }
   }
 
   @container (width >= 406px) {
