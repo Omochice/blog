@@ -188,6 +188,12 @@ import HeaderLink from "./HeaderLink.astro";
     .header-links a:hover {
       background-color: rgb(var(--gray-light));
     }
+
+    .header-links a.active {
+      padding-left: calc(1em - 3px);
+      color: rgb(var(--black));
+      border-left: 3px solid var(--accent);
+    }
   }
 
   @container (width >= 406px) {
