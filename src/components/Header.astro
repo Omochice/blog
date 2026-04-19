@@ -53,11 +53,11 @@ import HeaderLink from "./HeaderLink.astro";
   h2 {
     margin: 0;
     font-size: 1em;
-  }
 
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
+    & a,
+    & a.active {
+      text-decoration: none;
+    }
   }
 
   nav {
@@ -65,27 +65,30 @@ import HeaderLink from "./HeaderLink.astro";
     align-items: center;
     justify-content: space-between;
     padding: 0 1em;
+
+    & a {
+      padding: 1em 0.5em;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 4px solid transparent;
+
+      &.active {
+        text-decoration: none;
+        border-bottom-color: var(--accent);
+      }
+    }
+
+    & .internal-links {
+      flex: 1;
+    }
   }
 
-  nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    text-decoration: none;
-    border-bottom: 4px solid transparent;
-  }
-
-  nav a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
-  }
-
-  nav .internal-links {
-    flex: 1;
-  }
-
-  .social-links,
-  .social-links a {
+  .social-links {
     display: flex;
+
+    & a {
+      display: flex;
+    }
   }
 
   /* 720px: same as --content-width; CSS container size queries cannot use custom properties */
@@ -114,36 +117,40 @@ import HeaderLink from "./HeaderLink.astro";
       border: 1px solid rgb(var(--gray-light));
       border-radius: 0.4em;
       transition: background-color 0.2s;
-    }
 
-    .hamburger-icon,
-    .hamburger-icon::before,
-    .hamburger-icon::after {
-      display: block;
-      width: 1.2em;
-      height: 2px;
-      background-color: rgb(var(--gray-dark));
-      border-radius: 1px;
+      &:hover {
+        background-color: rgb(var(--gray-light));
+      }
     }
 
     .hamburger-icon {
       position: relative;
       pointer-events: none;
-    }
 
-    .hamburger-icon::before,
-    .hamburger-icon::after {
-      position: absolute;
-      left: 0;
-      content: "";
-    }
+      &,
+      &::before,
+      &::after {
+        display: block;
+        width: 1.2em;
+        height: 2px;
+        background-color: rgb(var(--gray-dark));
+        border-radius: 1px;
+      }
 
-    .hamburger-icon::before {
-      top: -0.35em;
-    }
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        content: "";
+      }
 
-    .hamburger-icon::after {
-      top: 0.35em;
+      &::before {
+        top: -0.35em;
+      }
+
+      &::after {
+        top: 0.35em;
+      }
     }
 
     .header-links {
@@ -156,47 +163,43 @@ import HeaderLink from "./HeaderLink.astro";
       border: 1px solid rgb(var(--gray-light));
       border-radius: 0.4em;
       box-shadow: 0 4px 12px rgb(var(--black), 8%);
-    }
 
-    .show-menu:hover {
-      background-color: rgb(var(--gray-light));
+      & a {
+        display: block;
+        padding: 0.6em 1em;
+        color: rgb(var(--gray-dark));
+        text-align: left;
+        border-bottom: none;
+        transition: background-color 0.15s;
+
+        &:hover {
+          background-color: rgb(var(--gray-light));
+        }
+
+        &.active {
+          padding-left: calc(1em - 3px);
+          color: rgb(var(--black));
+          border-left: 3px solid var(--accent);
+        }
+
+        & + a {
+          border-top: 1px solid rgb(var(--gray-light));
+        }
+      }
     }
 
     .internal-links {
       position: relative;
-    }
 
-    .internal-links:not(:has(.hidden-checkbox:checked)) > .header-links {
-      display: none;
-    }
+      &:not(:has(.hidden-checkbox:checked)) > .header-links {
+        display: none;
+      }
 
-    .internal-links:has(.hidden-checkbox:checked) > .header-links {
-      display: flex;
-      flex-direction: column;
-      background: white;
-    }
-
-    .header-links a {
-      display: block;
-      padding: 0.6em 1em;
-      color: rgb(var(--gray-dark));
-      text-align: left;
-      border-bottom: none;
-      transition: background-color 0.15s;
-    }
-
-    .header-links a:hover {
-      background-color: rgb(var(--gray-light));
-    }
-
-    .header-links a.active {
-      padding-left: calc(1em - 3px);
-      color: rgb(var(--black));
-      border-left: 3px solid var(--accent);
-    }
-
-    .header-links a + a {
-      border-top: 1px solid rgb(var(--gray-light));
+      &:has(.hidden-checkbox:checked) > .header-links {
+        display: flex;
+        flex-direction: column;
+        background: white;
+      }
     }
   }
 
