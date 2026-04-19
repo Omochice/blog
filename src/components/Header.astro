@@ -171,9 +171,22 @@ import HeaderLink from "./HeaderLink.astro";
     }
 
     .internal-links:has(.hidden-checkbox:checked) > .header-links {
-      display: block;
-      text-align: right;
+      display: flex;
+      flex-direction: column;
       background: white;
+    }
+
+    .header-links a {
+      display: block;
+      padding: 0.6em 1em;
+      color: rgb(var(--gray-dark));
+      text-align: left;
+      border-bottom: none;
+      transition: background-color 0.15s;
+    }
+
+    .header-links a:hover {
+      background-color: rgb(var(--gray-light));
     }
   }
 
