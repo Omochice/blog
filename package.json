@@ -6,7 +6,7 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
-    "check": "npm-run-all2 --parallel check:*",
+    "check": "npm-run-all2 --parallel --aggregate-output check:*",
     "check:astro": "astro check",
     "check:biome": "biome ci",
     "check:markuplint": "markuplint --config markuplint.config.ts **/*.astro",
