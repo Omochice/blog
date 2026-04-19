@@ -43,7 +43,6 @@ import HeaderLink from "./HeaderLink.astro";
 </header>
 <style>
   header {
-    padding: 0 1em;
     margin: 0;
     container-type: inline-size;
     background: white;
@@ -64,6 +63,7 @@ import HeaderLink from "./HeaderLink.astro";
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1em;
   }
 
   nav a {
@@ -87,13 +87,15 @@ import HeaderLink from "./HeaderLink.astro";
     display: flex;
   }
 
-  @container (width <= calc(720px - 2em)) {
+  /* 720px: same as --content-width; CSS container size queries cannot use custom properties */
+  @container (width <= 720px) {
     .social-links {
       display: none;
     }
   }
 
-  @container (width < calc(406px - 2em)) {
+  /* 406px: threshold where nav links no longer fit beside site title */
+  @container (width < 406px) {
     .align-right {
       padding: 0.1em;
       vertical-align: middle;
@@ -139,7 +141,7 @@ import HeaderLink from "./HeaderLink.astro";
     }
   }
 
-  @container (width >= calc(406px - 2em)) {
+  @container (width >= 406px) {
     .show-menu {
       display: none;
     }
