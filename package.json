@@ -33,7 +33,7 @@
     "@types/sanitize-html": "2.16.1",
     "astro": "5.17.2",
     "browserslist": "4.28.2",
-    "budoux": "0.7.0",
+    "budoux": "0.8.1",
     "lightningcss": "1.32.0",
     "markuplint": "4.14.1",
     "npm-run-all2": "8.0.4",
