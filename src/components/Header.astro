@@ -10,13 +10,17 @@ import HeaderLink from "./HeaderLink.astro";
     <h2><a href={import.meta.env.BASE_URL}>{SITE_TITLE}</a></h2>
     <div class="internal-links">
       <div class="align-right">
-        <label class="show-menu"
-          ><input
+        <label class="show-menu">
+          <input
             class="hidden-checkbox"
             type="checkbox"
-          /><span class="hamburger-icon" aria-hidden="true"></span
-          ><span class="sr-only">Menu</span></label
-        >
+          />
+          <span
+            class="hamburger-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Menu</span>
+        </label>
       </div>
       <div class="header-links">
         <HeaderLink href={import.meta.env.BASE_URL}>Home</HeaderLink>
