@@ -148,10 +148,14 @@ import HeaderLink from "./HeaderLink.astro";
 
     .header-links {
       position: absolute;
-
-      /* NOTE: DONT USE Z-INDEX */
+      top: 100%;
+      right: 0;
       z-index: 1;
-      border-radius: 0.2em;
+      min-width: 10em;
+      overflow: hidden;
+      border: 1px solid rgb(var(--gray-light));
+      border-radius: 0.4em;
+      box-shadow: 0 4px 12px rgb(var(--black), 8%);
     }
 
     .show-menu:hover {
