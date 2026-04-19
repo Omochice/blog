@@ -57,14 +57,23 @@
     "vitest": "4.0.18"
   },
   "packageManager": "pnpm@10.29.3",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "10.29.3",
+      "onFail": "download"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.13.1",
+      "onFail": "download"
+    }
+  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@biomejs/biome",
       "esbuild",
       "sharp"
-    ],
-    "executionEnv": {
-      "nodeVersion": "24.13.1"
-    }
+    ]
   }
 }
