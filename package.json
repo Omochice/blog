@@ -50,7 +50,7 @@
     "stylelint-order": "8.1.1",
     "textlint": "15.5.4",
     "textlint-rule-no-dead-link": "6.2.1",
-    "typescript": "6.0.2",
+    "typescript": "6.0.3",
     "ufo": "1.6.3",
     "vitest": "4.1.4"
   },
