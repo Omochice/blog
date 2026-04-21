@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.8",
-    "@astrojs/mdx": "4.3.14",
+    "@astrojs/mdx": "5.0.3",
     "@astrojs/rss": "4.0.18",
     "@astrojs/sitemap": "3.7.2",
     "@biomejs/biome": "2.4.12",
@@ -31,7 +31,7 @@
     "@markuplint/ml-config": "4.8.15",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@types/sanitize-html": "2.16.1",
-    "astro": "5.18.1",
+    "astro": "6.1.8",
     "browserslist": "4.28.2",
     "budoux": "0.8.1",
     "lightningcss": "1.32.0",
