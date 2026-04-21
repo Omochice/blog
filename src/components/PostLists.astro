@@ -20,17 +20,17 @@ const posts = (await getCollection("post"))
       <li>
         <a
           class="link-to-post"
-          href={joinURL(import.meta.env.BASE_URL, "posts", post.slug)}
+          href={joinURL(import.meta.env.BASE_URL, "posts", post.id)}
         >
           <h2
             class="title"
             set:html={budouxfy(post.data.title)}
-            transition:name={`transition-${post.slug}`}
+            transition:name={`transition-${post.id}`}
           />
           <p class="date">
             <FormattedDate
               date={post.data.date}
-              transition:name={`transition-${post.slug}-date`}
+              transition:name={`transition-${post.id}-date`}
             />
           </p>
         </a>

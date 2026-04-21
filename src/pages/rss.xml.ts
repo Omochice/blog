@@ -1,4 +1,4 @@
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import rss from "@astrojs/rss";
 import { experimental_AstroContainer } from "astro/container";
 import sanitizeHtml from "sanitize-html";
@@ -17,10 +17,10 @@ export async function GET(context: Context) {
       .filter((post) => post.data.type !== "poem")
       .map(async (post) => ({
         ...post.data,
-        link: joinURL(import.meta.env.BASE_URL, "posts", post.slug),
+        link: joinURL(import.meta.env.BASE_URL, "posts", post.id),
         pubDate: post.data.date,
         content: sanitizeHtml(
-          await container.renderToString((await post.render()).Content),
+          await container.renderToString((await render(post)).Content),
           {
             allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
           },
