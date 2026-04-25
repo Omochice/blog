@@ -27,8 +27,8 @@ importers:
         specifier: 4.18.0
         version: 4.18.0
       '@markuplint/ml-config':
-        specifier: 4.8.15
-        version: 4.8.15
+        specifier: 4.18.0
+        version: 4.18.0
       '@microsoft/eslint-formatter-sarif':
         specifier: 3.1.0
         version: 3.1.0
@@ -728,6 +728,9 @@ packages:
   '@markuplint/ml-ast@4.4.11':
     resolution: {integrity: sha512-XzKGGxVZ223mwE6oNj3ISddT5eaC0Sf8zeVMG9HTvdsS1YRnCXK2n1EwlZNmKlLWoQJTwxhkmGFvkpuZlbty1A==}
 
+  '@markuplint/ml-config@4.18.0':
+    resolution: {integrity: sha512-Dhx2CbdxVYdWX77NL7YPiT/KmqFSZY8sb2qUUvoDuZaTjA3//Tp6IrT0SeLoOd863FdCwjTLyJOPEReOkWknbw==}
+
   '@markuplint/ml-config@4.8.15':
     resolution: {integrity: sha512-DiydyJcPjRrRrFtkYRtUTUVFUkvgFdXwueqaE2r48ukJ3sAN0NMKDi+1Rbg2uoNn1847lURV7dQK6RW+dhZLcA==}
 
@@ -748,6 +751,9 @@ packages:
 
   '@markuplint/rules@4.12.0':
     resolution: {integrity: sha512-YYk2AypSvp98WIsIdqtveO4GyIUc/rO5daqkfpJvmgXEVg+ZzpIHXhNx9wdMaNUKBnQ7/mN1jRbwMC11TAp1Jg==}
+
+  '@markuplint/selector@4.18.0':
+    resolution: {integrity: sha512-znc75zS4z/HcsS2QK+ELXXqgf/p8MaLo1CIhJ/DfhfYTh7AvPso3BfZRe/kOpFuZLdXXDX287+ujJTk900lxwA==}
 
   '@markuplint/selector@4.7.8':
     resolution: {integrity: sha512-h8gUxecxJdLTKkiIab3KFaoOQEn+KUbJr3hjsDH/1MZiwHyyTx/7mnimmKVNxsfBy0sTx2lZgreDcqGhKyxhLw==}
@@ -4868,6 +4874,20 @@ snapshots:
 
   '@markuplint/ml-ast@4.4.11': {}
 
+  '@markuplint/ml-config@4.18.0':
+    dependencies:
+      '@markuplint/ml-ast': 4.18.0
+      '@markuplint/ml-spec': 4.18.0
+      '@markuplint/selector': 4.18.0
+      '@markuplint/shared': 4.18.0
+      '@types/mustache': 4.2.6
+      deepmerge: 4.3.1
+      is-plain-object: 5.0.0
+      mustache: 4.2.0
+      type-fest: 5.6.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@markuplint/ml-config@4.8.15':
     dependencies:
       '@markuplint/ml-ast': 4.4.11
@@ -4961,6 +4981,16 @@ snapshots:
       chrono-node: 2.9.0
       debug: 4.4.3
       type-fest: 4.41.0
+    transitivePeerDependencies:
+      - supports-color
+
+  '@markuplint/selector@4.18.0':
+    dependencies:
+      '@markuplint/ml-spec': 4.18.0
+      '@types/debug': 4.1.13
+      debug: 4.4.3
+      postcss-selector-parser: 7.1.1
+      type-fest: 5.6.0
     transitivePeerDependencies:
       - supports-color
 
