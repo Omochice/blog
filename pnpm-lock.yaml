@@ -75,20 +75,20 @@ importers:
         specifier: 3.6.1
         version: 3.6.1
       stylelint:
-        specifier: 17.9.0
-        version: 17.9.0(typescript@6.0.3)
+        specifier: 17.9.1
+        version: 17.9.1(typescript@6.0.3)
       stylelint-config-astro:
         specifier: 2.0.0
-        version: 2.0.0(postcss-html@1.8.1)(stylelint@17.9.0(typescript@6.0.3))
+        version: 2.0.0(postcss-html@1.8.1)(stylelint@17.9.1(typescript@6.0.3))
       stylelint-config-recess-order:
         specifier: 7.7.0
-        version: 7.7.0(stylelint-order@8.1.1(stylelint@17.9.0(typescript@6.0.3)))(stylelint@17.9.0(typescript@6.0.3))
+        version: 7.7.0(stylelint-order@8.1.1(stylelint@17.9.1(typescript@6.0.3)))(stylelint@17.9.1(typescript@6.0.3))
       stylelint-config-standard:
         specifier: 40.0.0
-        version: 40.0.0(stylelint@17.9.0(typescript@6.0.3))
+        version: 40.0.0(stylelint@17.9.1(typescript@6.0.3))
       stylelint-order:
         specifier: 8.1.1
-        version: 8.1.1(stylelint@17.9.0(typescript@6.0.3))
+        version: 8.1.1(stylelint@17.9.1(typescript@6.0.3))
       textlint:
         specifier: 15.6.0
         version: 15.6.0
@@ -3631,8 +3631,8 @@ packages:
     peerDependencies:
       stylelint: ^16.18.0 || ^17.0.0
 
-  stylelint@17.9.0:
-    resolution: {integrity: sha512-xO0jeY6z1/urFL5L/BZLmB1yYlbRiRMQnYH6ArZIDWJ+SZXGssOY7XoYb1JIv/L220+EBnwwJXJS4Mt/F96SvA==}
+  stylelint@17.9.1:
+    resolution: {integrity: sha512-THTmnAPJTrg/JhkTWZlSyrO+HUYMx6ELthIHeMyD2WOKqXIJUFQv2Yxn91bvUrZdbBJaW2dUuQdPST2wcQ6C3g==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -3940,6 +3940,7 @@ packages:
 
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   validate-npm-package-license@3.0.4:
@@ -8426,33 +8427,33 @@ snapshots:
     dependencies:
       inline-style-parser: 0.2.7
 
-  stylelint-config-astro@2.0.0(postcss-html@1.8.1)(stylelint@17.9.0(typescript@6.0.3)):
+  stylelint-config-astro@2.0.0(postcss-html@1.8.1)(stylelint@17.9.1(typescript@6.0.3)):
     dependencies:
       postcss-html: 1.8.1
-      stylelint: 17.9.0(typescript@6.0.3)
+      stylelint: 17.9.1(typescript@6.0.3)
       typescript: 5.9.3
 
-  stylelint-config-recess-order@7.7.0(stylelint-order@8.1.1(stylelint@17.9.0(typescript@6.0.3)))(stylelint@17.9.0(typescript@6.0.3)):
+  stylelint-config-recess-order@7.7.0(stylelint-order@8.1.1(stylelint@17.9.1(typescript@6.0.3)))(stylelint@17.9.1(typescript@6.0.3)):
     dependencies:
-      stylelint: 17.9.0(typescript@6.0.3)
-      stylelint-order: 8.1.1(stylelint@17.9.0(typescript@6.0.3))
+      stylelint: 17.9.1(typescript@6.0.3)
+      stylelint-order: 8.1.1(stylelint@17.9.1(typescript@6.0.3))
 
-  stylelint-config-recommended@18.0.0(stylelint@17.9.0(typescript@6.0.3)):
+  stylelint-config-recommended@18.0.0(stylelint@17.9.1(typescript@6.0.3)):
     dependencies:
-      stylelint: 17.9.0(typescript@6.0.3)
+      stylelint: 17.9.1(typescript@6.0.3)
 
-  stylelint-config-standard@40.0.0(stylelint@17.9.0(typescript@6.0.3)):
+  stylelint-config-standard@40.0.0(stylelint@17.9.1(typescript@6.0.3)):
     dependencies:
-      stylelint: 17.9.0(typescript@6.0.3)
-      stylelint-config-recommended: 18.0.0(stylelint@17.9.0(typescript@6.0.3))
+      stylelint: 17.9.1(typescript@6.0.3)
+      stylelint-config-recommended: 18.0.0(stylelint@17.9.1(typescript@6.0.3))
 
-  stylelint-order@8.1.1(stylelint@17.9.0(typescript@6.0.3)):
+  stylelint-order@8.1.1(stylelint@17.9.1(typescript@6.0.3)):
     dependencies:
       postcss: 8.5.10
       postcss-sorting: 10.0.0(postcss@8.5.10)
-      stylelint: 17.9.0(typescript@6.0.3)
+      stylelint: 17.9.1(typescript@6.0.3)
 
-  stylelint@17.9.0(typescript@6.0.3):
+  stylelint@17.9.1(typescript@6.0.3):
     dependencies:
       '@csstools/css-calc': 3.2.0(@csstools/css-parser-algorithms@4.0.0(@csstools/css-tokenizer@4.0.0))(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
