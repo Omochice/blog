@@ -105,8 +105,8 @@ importers:
         specifier: 4.1.5
         version: 4.1.5(@types/node@24.12.2)(vite@7.3.2(@types/node@24.12.2)(lightningcss@1.32.0)(yaml@2.8.3))
       zod:
-        specifier: 4.4.1
-        version: 4.4.1
+        specifier: 4.4.2
+        version: 4.4.2
 
 packages:
 
@@ -4249,8 +4249,8 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.4.1:
-    resolution: {integrity: sha512-a6ENMBBGZBsnlSebQ/eKCguSBeGKSf4O7BPnqVPmYGtpBYI7VSqoVqw+QcB7kPRjbqPwhYTpFbVj/RqNz/CT0Q==}
+  zod@4.4.2:
+    resolution: {integrity: sha512-IynmDyxsEsb9RKzO3J9+4SxXnl2FTFSzNBaKKaMV6tsSk0rw9gYw9gs+JFCq/qk2LCZ78KDwyj+Z289TijSkUw==}
 
   zwitch@1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
@@ -4359,13 +4359,13 @@ snapshots:
     dependencies:
       fast-xml-parser: 5.7.2
       piccolore: 0.1.3
-      zod: 4.4.1
+      zod: 4.4.2
 
   '@astrojs/sitemap@3.7.2':
     dependencies:
       sitemap: 9.0.1
       stream-replace-string: 2.0.0
-      zod: 4.4.1
+      zod: 4.4.2
 
   '@astrojs/telemetry@3.3.1':
     dependencies:
@@ -5549,7 +5549,7 @@ snapshots:
       vitefu: 1.1.3(vite@7.3.2(@types/node@24.12.2)(lightningcss@1.32.0)(yaml@2.8.3))
       xxhash-wasm: 1.1.0
       yargs-parser: 22.0.0
-      zod: 4.4.1
+      zod: 4.4.2
     optionalDependencies:
       sharp: 0.34.5
     transitivePeerDependencies:
@@ -9048,7 +9048,7 @@ snapshots:
 
   zod@3.25.76: {}
 
-  zod@4.4.1: {}
+  zod@4.4.2: {}
 
   zwitch@1.0.5: {}
 
