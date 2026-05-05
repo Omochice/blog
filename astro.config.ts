@@ -21,6 +21,9 @@ export default defineConfig({
     build: {
       cssMinify: "lightningcss",
     },
+    ssr: {
+      external: ["@takumi-rs/core"],
+    },
   },
   markdown: {
     rehypePlugins: [

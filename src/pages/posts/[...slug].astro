@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
+import { joinURL } from "ufo";
 import LinkToGitHub from "../../components/LinkToGitHub.astro";
 import BlogPost from "../../layouts/BlogPost.astro";
 
@@ -19,6 +20,7 @@ const { Content } = await render(post);
 <BlogPost
   {...post.data}
   slug={`transition-${post.id}`}
+  image={joinURL(import.meta.env.BASE_URL, "og", `${post.id}.png`)}
 >
   <Content />
   {

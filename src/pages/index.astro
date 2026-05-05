@@ -1,9 +1,10 @@
 ---
+import { joinURL } from "ufo";
 import PostLists from "../components/PostLists.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout>
+<BaseLayout image={joinURL(import.meta.env.BASE_URL, "og", "index.png")}>
   <style slot="head">
     @view-transition {
       navigation: auto;
