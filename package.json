@@ -29,7 +29,7 @@
     "@biomejs/biome": "2.4.15",
     "@fontsource/jetbrains-mono": "5.2.8",
     "@fontsource/noto-sans-jp": "5.2.9",
-    "@markuplint/astro-parser": "4.18.0",
+    "@markuplint/astro-parser": "4.18.3",
     "@markuplint/ml-config": "4.18.1",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@takumi-rs/core": "1.1.2",
