@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
-    "@astrojs/mdx": "5.0.4",
+    "@astrojs/mdx": "5.0.5",
     "@astrojs/rss": "4.0.18",
     "@astrojs/sitemap": "3.7.2",
     "@biomejs/biome": "2.4.15",
@@ -35,7 +35,7 @@
     "@takumi-rs/core": "1.1.2",
     "@takumi-rs/helpers": "1.1.2",
     "@types/sanitize-html": "2.16.1",
-    "astro": "6.3.1",
+    "astro": "6.3.2",
     "browserslist": "4.28.2",
     "budoux": "0.8.3",
     "lightningcss": "1.32.0",
