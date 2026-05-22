@@ -307,8 +307,8 @@ importers:
         specifier: 15.7.1
         version: 15.7.1
       textlint-rule-no-dead-link:
-        specifier: 6.2.1
-        version: 6.2.1(textlint@15.7.1)
+        specifier: 6.2.2
+        version: 6.2.2(textlint@15.7.1)
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -1255,9 +1255,6 @@ packages:
 
   '@takumi-rs/wasm@1.2.1':
     resolution: {integrity: sha512-lBTMgN0KYYCIShZe/VHQBoTTxJuU3qbHn8Z4qE08nkeCBX5t54BV2FMRsD3W4mLtf066xv8nBc7LZUzZh0dEXA==}
-
-  '@textlint/ast-node-types@15.6.0':
-    resolution: {integrity: sha512-CxZHFbYAU7J0A4izz31wV2ZZfySR6aVj2OSR6/3tppZm7VV6hM7nA7sutsLwIiBL/v4lsB1RM79l4Dc/VrH4qw==}
 
   '@textlint/ast-node-types@15.7.1':
     resolution: {integrity: sha512-Wii5UgUKFEh9Uv6wbq1zr4/Kf+dtjiUuzPrrXzKp8H+ifkvKNzi23V4Nz+6wVyHQn5T28AFuc8VH8OtzvGYecA==}
@@ -3965,8 +3962,8 @@ packages:
   textlint-rule-helper@2.5.0:
     resolution: {integrity: sha512-QIbFPtyqLy0g5BJn8mryk9iHzGYicNaFIpLFPiEnb4RXxrEGeQ2W2aARQ9yEXLIAqo+OwK4ndWBAWkbgJEPzTQ==}
 
-  textlint-rule-no-dead-link@6.2.1:
-    resolution: {integrity: sha512-HcEQ5gjrzVlHW6R2ERwEbJ2tKwNnhTl6KqAhZcEqRXqmj6fZuzP9D7knzxuPlCZ/wA609tifARlhRLLTCa5tQQ==}
+  textlint-rule-no-dead-link@6.2.2:
+    resolution: {integrity: sha512-Xy3v2HglY4u73O5j8er+JKUUMuXC4NGIpQL1nKzWNgEFEx3azuhkwWgYginQ2idxPGM8cSCHe27sSEDV6GgQsQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       textlint: '>= 12.2.0'
@@ -5443,8 +5440,6 @@ snapshots:
     transitivePeerDependencies:
       - react
       - react-dom
-
-  '@textlint/ast-node-types@15.6.0': {}
 
   '@textlint/ast-node-types@15.7.1': {}
 
@@ -8870,11 +8865,11 @@ snapshots:
 
   textlint-rule-helper@2.5.0:
     dependencies:
-      '@textlint/ast-node-types': 15.6.0
+      '@textlint/ast-node-types': 15.7.1
       structured-source: 4.0.0
       unist-util-visit: 2.0.3
 
-  textlint-rule-no-dead-link@6.2.1(textlint@15.7.1):
+  textlint-rule-no-dead-link@6.2.2(textlint@15.7.1):
     dependencies:
       minimatch: 10.2.5
       p-memoize: 8.0.0
