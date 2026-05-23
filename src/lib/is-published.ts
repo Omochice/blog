@@ -6,6 +6,20 @@ const jstDateFormatter = new Intl.DateTimeFormat("en-CA", {
 });
 
 /**
+ * Build a zero-padded `YYYYMMDD` key for a date in Asia/Tokyo.
+ *
+ * Parts are picked by `type` rather than read from `format()` output, so the
+ * key does not depend on the locale's date order or separators, which keeps the
+ * lexicographic comparison correct even where the ICU data differs.
+ */
+const jstDateKey = (date: Date): string => {
+  const parts = jstDateFormatter.formatToParts(date);
+  const pick = (type: Intl.DateTimeFormatPartTypes): string =>
+    parts.find((part) => part.type === type)?.value ?? "";
+  return `${pick("year")}${pick("month")}${pick("day")}`;
+};
+
+/**
  * Check whether a post should be published as of the given moment.
  *
  * Both dates are reduced to their calendar date in Asia/Tokyo before being
@@ -18,5 +32,5 @@ const jstDateFormatter = new Intl.DateTimeFormat("en-CA", {
  * @returns Whether the post is published.
  */
 export const isPublished = (postDate: Date, now: Date): boolean => {
-  return jstDateFormatter.format(postDate) <= jstDateFormatter.format(now);
+  return jstDateKey(postDate) <= jstDateKey(now);
 };
