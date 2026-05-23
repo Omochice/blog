@@ -1,16 +1,17 @@
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
 import rss from "@astrojs/rss";
 import { experimental_AstroContainer } from "astro/container";
 import sanitizeHtml from "sanitize-html";
 import { joinURL } from "ufo";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { getPosts } from "../lib/get-posts";
 
 type Context = {
   site: string;
 };
 
 export async function GET(context: Context) {
-  const posts = await getCollection("post");
+  const posts = await getPosts();
   const container = await experimental_AstroContainer.create();
   const items = await Promise.all(
     posts

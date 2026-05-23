@@ -1,9 +1,9 @@
-import { getCollection } from "astro:content";
 import { container, text } from "@takumi-rs/helpers";
 import type { APIRoute, GetStaticPaths } from "astro";
 import { loadDefaultJapaneseParser } from "budoux";
 import { ImageResponse } from "takumi-js/response";
 import { SITE_TITLE } from "../../consts";
+import { getPosts } from "../../lib/get-posts";
 import { ogFonts } from "../../lib/og-fonts";
 
 const parser = loadDefaultJapaneseParser();
@@ -16,7 +16,7 @@ const titleStyle = {
 } as const;
 
 export const getStaticPaths = (async () => {
-  const posts = await getCollection("post");
+  const posts = await getPosts();
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { title: post.data.title },
