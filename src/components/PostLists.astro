@@ -1,14 +1,14 @@
 ---
-import { getCollection } from "astro:content";
 import { joinURL } from "ufo";
 import FormattedDate from "../components/FormattedDate.astro";
+import { getPosts } from "../lib/get-posts";
 import { budouxfy } from "../lib/parse-with-budoux";
 
 interface Props {
   size?: number;
 }
 
-const posts = (await getCollection("post"))
+const posts = (await getPosts())
   .filter((post) => post.data.type !== "poem")
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, Astro.props.size);
