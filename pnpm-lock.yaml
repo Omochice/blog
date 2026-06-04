@@ -307,8 +307,8 @@ importers:
         specifier: 15.7.1
         version: 15.7.1
       textlint-rule-no-dead-link:
-        specifier: 6.2.2
-        version: 6.2.2(textlint@15.7.1)
+        specifier: 6.2.3
+        version: 6.2.3(textlint@15.7.1)
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -3968,8 +3968,8 @@ packages:
   textlint-rule-helper@2.5.0:
     resolution: {integrity: sha512-QIbFPtyqLy0g5BJn8mryk9iHzGYicNaFIpLFPiEnb4RXxrEGeQ2W2aARQ9yEXLIAqo+OwK4ndWBAWkbgJEPzTQ==}
 
-  textlint-rule-no-dead-link@6.2.2:
-    resolution: {integrity: sha512-Xy3v2HglY4u73O5j8er+JKUUMuXC4NGIpQL1nKzWNgEFEx3azuhkwWgYginQ2idxPGM8cSCHe27sSEDV6GgQsQ==}
+  textlint-rule-no-dead-link@6.2.3:
+    resolution: {integrity: sha512-gctG7VnpMY6OZUdo8pk6SEV/yP0xPMtI3QWg1/+G7KtpYgujM8WalTz+TAvbJGbHTTfkhbZXbuIoFeTGM+/1hg==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       textlint: '>= 12.2.0'
@@ -8908,7 +8908,7 @@ snapshots:
       structured-source: 4.0.0
       unist-util-visit: 2.0.3
 
-  textlint-rule-no-dead-link@6.2.2(textlint@15.7.1):
+  textlint-rule-no-dead-link@6.2.3(textlint@15.7.1):
     dependencies:
       minimatch: 10.2.5
       p-memoize: 8.0.0
