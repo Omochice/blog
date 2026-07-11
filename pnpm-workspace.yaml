@@ -1,2 +1,6 @@
 allowBuilds:
   esbuild: true
+onlyBuiltDependencies:
+  - "@biomejs/biome"
+  - esbuild
+  - sharp
