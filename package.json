@@ -26,7 +26,7 @@
     "@astrojs/mdx": "7.0.2",
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.3",
-    "@biomejs/biome": "2.5.2",
+    "@biomejs/biome": "2.5.3",
     "@fontsource/jetbrains-mono": "5.2.8",
     "@fontsource/noto-sans-jp": "5.2.9",
     "@markuplint/astro-parser": "4.18.3",
