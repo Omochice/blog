@@ -72,12 +72,5 @@
       "version": "24.13.1",
       "onFail": "download"
     }
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@biomejs/biome",
-      "esbuild",
-      "sharp"
-    ]
   }
 }
