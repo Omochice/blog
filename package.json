@@ -55,7 +55,7 @@
     "takumi-js": "2.4.0",
     "textlint": "15.7.1",
     "textlint-rule-no-dead-link": "6.2.3",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "ufo": "1.6.4",
     "vitest": "4.1.10",
     "zod": "4.4.3"
