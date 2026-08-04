@@ -23,7 +23,7 @@ jobs:
           standalone: true
       - run: pnpm exec textlint src/content/post/*.md --rule no-dead-link -f @microsoft/eslint-formatter-sarif -o textlint.sarif
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@d1ba80a13dd99fba24a470575428917156a28b43 # v4.37.5
+        uses: github/codeql-action/upload-sarif@5595ccaf912efad79be6eef63a5619ff05969be3 # v4.37.6
         with:
           sarif_file: textlint.sarif
           category: textlint
