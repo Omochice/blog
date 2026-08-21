@@ -253,8 +253,8 @@ importers:
         specifier: 4.28.8
         version: 4.28.8
       budoux:
-        specifier: 0.8.4
-        version: 0.8.4(supports-color@10.2.2)
+        specifier: 0.9.0
+        version: 0.9.0(supports-color@10.2.2)
       lightningcss:
         specifier: 1.33.0
         version: 1.33.0
@@ -1863,8 +1863,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  budoux@0.8.4:
-    resolution: {integrity: sha512-EogZewMIXDePuJeBetf2hQphKsTWup3oTaf4q4ibc3NPPW+wAvfpk5AsC71BxcfowGeO/5cHvzGd/d0x8bIYXQ==}
+  budoux@0.9.0:
+    resolution: {integrity: sha512-gdRJmZ2/NIiyIM3clPIaV7Ny8wfOSBiJBRC0BYnHpZif+HuGL/CiiL31pCudgOt8cmQDYoTNIemecKjzoy+IIQ==}
     hasBin: true
 
   buffer-equal-constant-time@1.0.1:
@@ -1962,9 +1962,9 @@ packages:
     resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
     engines: {node: '>=16'}
 
-  commander@14.0.3:
-    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
-    engines: {node: '>=20'}
+  commander@15.0.0:
+    resolution: {integrity: sha512-z67u4ZhzCL/Tydu1lJARtEZYWbWaN7oYLHbsuzocr6y4N6WZAagG3RQ4FW61V1/0+jImpj293XfrcYnd1qxtPg==}
+    engines: {node: '>=22.12.0'}
 
   common-ancestor-path@2.0.0:
     resolution: {integrity: sha512-dnN3ibLeoRf2HNC+OlCiNc5d2zxbLJXOtiZUudNFSXZrNSydxcCsSpRzXwfu7BBWCIfHPw+xTayeBvJCP/D8Ng==}
@@ -5049,7 +5049,7 @@ snapshots:
       globals: 13.24.0
       ignore: 5.3.2
       import-fresh: 3.3.1
-      js-yaml: 4.1.1
+      js-yaml: 4.3.1
       minimatch: 3.1.5
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
@@ -6179,9 +6179,9 @@ snapshots:
       node-releases: 2.0.53
       update-browserslist-db: 1.3.1(browserslist@4.28.8)
 
-  budoux@0.8.4(supports-color@10.2.2):
+  budoux@0.9.0(supports-color@10.2.2):
     dependencies:
-      commander: 14.0.3
+      commander: 15.0.0
       google-artifactregistry-auth: 3.5.0(supports-color@10.2.2)
       linkedom: 0.18.12
     transitivePeerDependencies:
@@ -6264,7 +6264,7 @@ snapshots:
 
   commander@11.1.0: {}
 
-  commander@14.0.3: {}
+  commander@15.0.0: {}
 
   common-ancestor-path@2.0.0: {}
 
@@ -6849,7 +6849,7 @@ snapshots:
   google-artifactregistry-auth@3.5.0(supports-color@10.2.2):
     dependencies:
       google-auth-library: 9.15.1(supports-color@10.2.2)
-      js-yaml: 4.1.1
+      js-yaml: 4.3.1
       yargs: 17.7.2
     transitivePeerDependencies:
       - encoding
