@@ -4,4 +4,10 @@
     "github>Omochice/personal-renovate-config#v1.17.0",
     "github>aquaproj/aqua-renovate-config#2.13.0",
   ],
+  packageRules: [
+    {
+      matchDepNames: ["aquaproj/aqua-registry"],
+      extends: ["schedule:weekly"],
+    },
+  ],
 }
