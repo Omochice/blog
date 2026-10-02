@@ -34,7 +34,7 @@
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@takumi-rs/core": "2.14.0",
     "@takumi-rs/helpers": "2.14.0",
-    "@types/sanitize-html": "2.16.1",
+    "@types/sanitize-html": "2.16.2",
     "astro": "7.3.5",
     "browserslist": "4.29.2",
     "budoux": "0.9.3",
