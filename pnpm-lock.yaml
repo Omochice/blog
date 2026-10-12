@@ -222,8 +222,8 @@ importers:
         specifier: 5.1.0
         version: 5.1.0(supports-color@10.2.2)
       '@markuplint/ml-config':
-        specifier: 5.0.1
-        version: 5.0.1(supports-color@10.2.2)
+        specifier: 5.1.0
+        version: 5.1.0(supports-color@10.2.2)
       '@microsoft/eslint-formatter-sarif':
         specifier: 3.1.0
         version: 3.1.0(supports-color@10.2.2)
@@ -1152,16 +1152,8 @@ packages:
     resolution: {integrity: sha512-zTN2XbrjgeLRF2bdTmPH+FMAIG93nG/1ZmgUauoSLzkqJCyoNj+GRN94CkpfhVHIZe+Nf18P+mKOkOsrYm6dnQ==}
     engines: {node: '>=24'}
 
-  '@markuplint/ml-ast@5.0.1':
-    resolution: {integrity: sha512-vUZQ79mDDsIebTlWd42pza0sM7UqgSKgLn8tjfBhV3Xfimx8TgeVOnepr5p+8UCYmGAqzD+2GXbCL31sWmSXjg==}
-    engines: {node: '>=24'}
-
   '@markuplint/ml-ast@5.1.0':
     resolution: {integrity: sha512-liIRjRrU6nZNwyxaH07ZXpG7U45GNaAzEuK67knt9HVd646k0k1019JUq09+v/m2YWJGEUB4M2iSndhSWKQXMg==}
-    engines: {node: '>=24'}
-
-  '@markuplint/ml-config@5.0.1':
-    resolution: {integrity: sha512-Rix56Xgo62OSW2CgmunESuyT0rUjDbvrXB+yx2oCS1TkIJTKo17a70RMFXyd+gTJ1q4eMLyNTP5l6yPjLAIDUA==}
     engines: {node: '>=24'}
 
   '@markuplint/ml-config@5.1.0':
@@ -1170,10 +1162,6 @@ packages:
 
   '@markuplint/ml-core@5.1.0':
     resolution: {integrity: sha512-W0J/nYTXZ5tPXPkIkFhdKWd9d19EU9PVBlAmIJRDV7euEkFiVbUHYU1dgHeEqWxxBrbeVw1bD5xA5MkIKUBHcw==}
-    engines: {node: '>=24'}
-
-  '@markuplint/ml-spec@5.0.1':
-    resolution: {integrity: sha512-/VoR+uDbr7LhrZ3Nr1Xs2IXPAJ3wEjJhXdrHj5N/KpTHwKIcMfD3YyFOXR1/C9xv4Q9MDIariIR5LYPXIfl2vQ==}
     engines: {node: '>=24'}
 
   '@markuplint/ml-spec@5.1.0':
@@ -1193,16 +1181,8 @@ packages:
     resolution: {integrity: sha512-Gb60D8H40vBoK/FkfFyvk72GBQnk2VwLM/3aJG6h7YC9bt8Cnc5ZVz4nBa1y/+LCorNP25zHYHIsZICANo1LZQ==}
     engines: {node: '>=24'}
 
-  '@markuplint/selector@5.0.1':
-    resolution: {integrity: sha512-dIMk4s96gxRwrCZFr7fTLT40nhajXGfFML9zV3g9KcIa+V29aLW8F0SIccXLVdRw2j+LeBlCI+W6tLY5nP9QEw==}
-    engines: {node: '>=24'}
-
   '@markuplint/selector@5.1.0':
     resolution: {integrity: sha512-uAwb6DTjjwPjoZm4jMM39uV3w5500fLDrpuf8fdw+yisFSu75PHo8FAKscOUjpyn/EL+jdELLZzrr8yGs+LnXA==}
-    engines: {node: '>=24'}
-
-  '@markuplint/shared@5.0.1':
-    resolution: {integrity: sha512-YHaeKoQSxA1rtBwJoETxHzMoLTcMh+033gcgp9uTpgVjkRmm8CShzZChDnoAVw52ufELGZ+69SwBBGC7Kt8wKg==}
     engines: {node: '>=24'}
 
   '@markuplint/shared@5.1.0':
@@ -1211,10 +1191,6 @@ packages:
 
   '@markuplint/svelte-parser@5.1.0':
     resolution: {integrity: sha512-435dmsZxkvuz/dxF9GxtbjZSERbx21wiF/fmXeIsprlxJQLGbi4LTR4SHhVuw+1X1Uho832Pe5/JW8Djw8LFzg==}
-    engines: {node: '>=24'}
-
-  '@markuplint/types@5.0.1':
-    resolution: {integrity: sha512-noQ+r8P2wV0OH9bCvZD0XhWX5eX2dO/yuVJ60633wooFwdmjWKlxszQRXcu3+26x07Ev7c9+cKseVou1GT7FiQ==}
     engines: {node: '>=24'}
 
   '@markuplint/types@5.1.0':
@@ -3631,10 +3607,6 @@ packages:
     peerDependencies:
       postcss: ^8.4.31
 
-  postcss-selector-parser@7.1.3:
-    resolution: {integrity: sha512-ajnd7iZnqjJDkyHNfznl/ZVO0lWqvBmQXfKKENx9/p/bEiF/L3eHwdydNUg9RXZx6xfZWOCmXmBa5oeB+YrAPQ==}
-    engines: {node: '>=4'}
-
   postcss-selector-parser@7.1.6:
     resolution: {integrity: sha512-7qASPzhKF2l2KLboRZux8CCTRMdGiV08vWmyKzPz22qZ7ZjQBOeY7rNzNoCLSUiftJ7HUq0GERHmxw/t0dCdMw==}
     engines: {node: '>=4'}
@@ -5413,22 +5385,7 @@ snapshots:
 
   '@markuplint/i18n@5.1.0': {}
 
-  '@markuplint/ml-ast@5.0.1': {}
-
   '@markuplint/ml-ast@5.1.0': {}
-
-  '@markuplint/ml-config@5.0.1(supports-color@10.2.2)':
-    dependencies:
-      '@markuplint/ml-ast': 5.0.1
-      '@markuplint/ml-spec': 5.0.1(supports-color@10.2.2)
-      '@markuplint/selector': 5.0.1(supports-color@10.2.2)
-      '@markuplint/shared': 5.0.1
-      '@types/mustache': 4.2.6
-      is-plain-object: 5.0.0
-      mustache: 4.2.0
-      type-fest: 5.6.0
-    transitivePeerDependencies:
-      - supports-color
 
   '@markuplint/ml-config@5.1.0(supports-color@10.2.2)':
     dependencies:
@@ -5457,15 +5414,6 @@ snapshots:
       '@markuplint/shared': 5.1.0
       '@types/debug': 4.1.13
       debug: 4.4.3(supports-color@10.2.2)
-      is-plain-object: 5.0.0
-      type-fest: 5.6.0
-    transitivePeerDependencies:
-      - supports-color
-
-  '@markuplint/ml-spec@5.0.1(supports-color@10.2.2)':
-    dependencies:
-      '@markuplint/ml-ast': 5.0.1
-      '@markuplint/types': 5.0.1(supports-color@10.2.2)
       is-plain-object: 5.0.0
       type-fest: 5.6.0
     transitivePeerDependencies:
@@ -5531,17 +5479,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@markuplint/selector@5.0.1(supports-color@10.2.2)':
-    dependencies:
-      '@markuplint/ml-spec': 5.0.1(supports-color@10.2.2)
-      '@markuplint/shared': 5.0.1
-      '@types/debug': 4.1.13
-      debug: 4.4.3(supports-color@10.2.2)
-      postcss-selector-parser: 7.1.3
-      type-fest: 5.6.0
-    transitivePeerDependencies:
-      - supports-color
-
   '@markuplint/selector@5.1.0(supports-color@10.2.2)':
     dependencies:
       '@markuplint/ml-spec': 5.1.0(supports-color@10.2.2)
@@ -5552,10 +5489,6 @@ snapshots:
       type-fest: 5.6.0
     transitivePeerDependencies:
       - supports-color
-
-  '@markuplint/shared@5.0.1':
-    dependencies:
-      html-entities: 2.6.0
 
   '@markuplint/shared@5.1.0':
     dependencies:
@@ -5571,21 +5504,6 @@ snapshots:
       - '@typescript-eslint/types'
       - supports-color
     optional: true
-
-  '@markuplint/types@5.0.1(supports-color@10.2.2)':
-    dependencies:
-      '@markuplint/shared': 5.0.1
-      '@types/css-tree': 2.3.11
-      '@types/debug': 4.1.13
-      bcp-47: 2.1.0
-      css-tree: 3.2.1
-      debug: 4.4.3(supports-color@10.2.2)
-      language-subtag-registry: 0.4.2
-      leven: 4.1.0
-      type-fest: 5.6.0
-      whatwg-mimetype: 5.0.0
-    transitivePeerDependencies:
-      - supports-color
 
   '@markuplint/types@5.1.0(supports-color@10.2.2)':
     dependencies:
@@ -8381,11 +8299,6 @@ snapshots:
   postcss-safe-parser@7.0.1(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
-
-  postcss-selector-parser@7.1.3:
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
 
   postcss-selector-parser@7.1.6:
     dependencies:
