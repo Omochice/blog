@@ -219,8 +219,8 @@ importers:
         specifier: 5.3.0
         version: 5.3.0
       '@markuplint/astro-parser':
-        specifier: 5.1.0
-        version: 5.1.0(supports-color@10.2.2)
+        specifier: 5.1.1
+        version: 5.1.1(supports-color@10.2.2)
       '@markuplint/ml-config':
         specifier: 5.1.1
         version: 5.1.1(supports-color@10.2.2)
@@ -1128,6 +1128,10 @@ packages:
     resolution: {integrity: sha512-Svo5M8vo403BmFjLzCLBNOp/dl+jk81dQJfBoCtO0jyCtwR+FI+E8F/hmLabFa/KGJ0cZ5A5NIcoVpcx2Z0vEA==}
     engines: {node: '>=24'}
 
+  '@markuplint/astro-parser@5.1.1':
+    resolution: {integrity: sha512-iz6z38GL96FeUacr+LbXXwF6RpdaJxizAho6E+YCpHImMoOJWfLWu1J79q9+tSIJSbYAVzzR8t4tk/dkmq4/ew==}
+    engines: {node: '>=24'}
+
   '@markuplint/cli-utils@5.1.0':
     resolution: {integrity: sha512-EKKc1NbzTHLC3qdgZNGg7xJqC2NqI86QwBkveCa4VUhKHJiAzz9cZmvolTB3kN1pqFBTSx31xMM5mrHrN5CEXg==}
     engines: {node: '>=24'}
@@ -1182,6 +1186,10 @@ packages:
 
   '@markuplint/parser-utils@5.1.0':
     resolution: {integrity: sha512-ZxMcYFClZbccqqU9LQD8gQ48pYbB9zRaM6ML4qYx3eChaWv6NdDeK+2cLqkDYBgfvwCp1+cbcgpDlfYz/BKS2w==}
+    engines: {node: '>=24'}
+
+  '@markuplint/parser-utils@5.1.1':
+    resolution: {integrity: sha512-zHLK06WcekuCjomcdERsWU1/bxji8qTZBrO5qZYbVW8fE1p9CuWOgMF4YlbN557mVn43wBo6ZD4lSP2sXts+UA==}
     engines: {node: '>=24'}
 
   '@markuplint/pretenders@5.1.0':
@@ -5359,6 +5367,15 @@ snapshots:
       astro-eslint-parser: 1.4.0(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
+    optional: true
+
+  '@markuplint/astro-parser@5.1.1(supports-color@10.2.2)':
+    dependencies:
+      '@markuplint/ml-ast': 5.1.1
+      '@markuplint/parser-utils': 5.1.1(supports-color@10.2.2)
+      astro-eslint-parser: 1.4.0(supports-color@10.2.2)
+    transitivePeerDependencies:
+      - supports-color
 
   '@markuplint/cli-utils@5.1.0':
     dependencies:
@@ -5485,6 +5502,18 @@ snapshots:
       '@markuplint/ml-spec': 5.1.0(supports-color@10.2.2)
       '@markuplint/shared': 5.1.0
       '@markuplint/types': 5.1.0(supports-color@10.2.2)
+      debug: 4.4.3(supports-color@10.2.2)
+      espree: 11.2.0
+      type-fest: 5.6.0
+    transitivePeerDependencies:
+      - supports-color
+
+  '@markuplint/parser-utils@5.1.1(supports-color@10.2.2)':
+    dependencies:
+      '@markuplint/ml-ast': 5.1.1
+      '@markuplint/ml-spec': 5.1.1(supports-color@10.2.2)
+      '@markuplint/shared': 5.1.1
+      '@markuplint/types': 5.1.1(supports-color@10.2.2)
       debug: 4.4.3(supports-color@10.2.2)
       espree: 11.2.0
       type-fest: 5.6.0
