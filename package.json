@@ -35,7 +35,7 @@
     "@takumi-rs/core": "2.19.0",
     "@takumi-rs/helpers": "2.19.0",
     "@types/sanitize-html": "2.16.2",
-    "astro": "7.4.4",
+    "astro": "7.4.5",
     "browserslist": "4.29.5",
     "budoux": "0.10.2",
     "lightningcss": "1.33.0",
