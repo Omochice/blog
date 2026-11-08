@@ -60,11 +60,11 @@
     "vitest": "5.1.0",
     "zod": "4.6.7"
   },
-  "packageManager": "pnpm@12.17.0",
+  "packageManager": "pnpm@12.18.0",
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.17.0",
+      "version": "12.18.0",
       "onFail": "download"
     },
     "runtime": {
