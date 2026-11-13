@@ -39,7 +39,7 @@
     "browserslist": "4.29.5",
     "budoux": "0.10.3",
     "lightningcss": "1.33.0",
-    "markuplint": "5.4.0",
+    "markuplint": "5.5.0",
     "npm-run-all2": "9.0.4",
     "rehype-autolink-headings": "7.1.0",
     "rehype-slug": "6.0.0",
