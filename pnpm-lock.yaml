@@ -191,8 +191,8 @@ importers:
         specifier: 5.5.0
         version: 5.5.0(supports-color@10.2.2)
       '@markuplint/ml-config':
-        specifier: 5.4.0
-        version: 5.4.0(supports-color@10.2.2)
+        specifier: 5.5.0
+        version: 5.5.0(supports-color@10.2.2)
       '@microsoft/eslint-formatter-sarif':
         specifier: 3.1.0
         version: 3.1.0(supports-color@10.2.2)
@@ -1161,6 +1161,10 @@ packages:
     resolution: {integrity: sha512-cpvwzgS+9ZlciRDZrdFp7z4D4Kciwo25lGoVTBTTMuQ8nSR5GgbfK2UN4U0PIgUdhRiLq3jg1kyMP3wpqSlz4w==}
     engines: {node: '>=24'}
 
+  '@markuplint/ml-config@5.5.0':
+    resolution: {integrity: sha512-LIEbmavpLCRhiSnNB5aj4fSPhPmMWlKKRJMsmluNa0p27kyCMdKixNkl6Dvx8U2ml5fM6+b/10ynMm/M5W7gYQ==}
+    engines: {node: '>=24'}
+
   '@markuplint/ml-core@5.4.0':
     resolution: {integrity: sha512-FP1jzk2g99fa2RUFytEsAtmYMyooOjSOo+7R4IWnq7YAhViWtPPRZu6IiJtBdGkj14vxuAu4rtu/fW3JKMmSxg==}
     engines: {node: '>=24'}
@@ -1192,6 +1196,10 @@ packages:
 
   '@markuplint/selector@5.4.0':
     resolution: {integrity: sha512-t75usnZ6S6KtMXMNcuOSMxHFJ4F6mT7K6kwazazmKwvk7A6rdsEpfEU9HpuwXtJb2OueqO4wJf1nSMbQo2U8VQ==}
+    engines: {node: '>=24'}
+
+  '@markuplint/selector@5.5.0':
+    resolution: {integrity: sha512-zxyyKP3IFVED7g86RQqHYo+yf3Gro08Ohgl/aCs/g7alzAS/t2GiMk6PoupKaXHTSJfTqaBvMXBnnkr1iR9ZNw==}
     engines: {node: '>=24'}
 
   '@markuplint/shared@5.4.0':
@@ -3633,6 +3641,10 @@ packages:
     resolution: {integrity: sha512-7qASPzhKF2l2KLboRZux8CCTRMdGiV08vWmyKzPz22qZ7ZjQBOeY7rNzNoCLSUiftJ7HUq0GERHmxw/t0dCdMw==}
     engines: {node: '>=4'}
 
+  postcss-selector-parser@7.2.1:
+    resolution: {integrity: sha512-GwxlMgTTXwIom+ebC7an3k6RaJDwklRQQnfiXsLPGicu8FYV/k/+1/9YY2OU2+r938H2t4X0TDxoif+HP2rjzQ==}
+    engines: {node: '>=4'}
+
   postcss-sorting@10.0.0:
     resolution: {integrity: sha512-TXbU+h6vVRW+86c/+ewhWq9k7pr7ijASTnepVhCQiC87zAOTkvB1v2dHyWP+ggstSTX/PNvjzS+IOqzejndz9w==}
     peerDependencies:
@@ -5471,6 +5483,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@markuplint/ml-config@5.5.0(supports-color@10.2.2)':
+    dependencies:
+      '@markuplint/ml-ast': 5.5.0
+      '@markuplint/ml-spec': 5.5.0(supports-color@10.2.2)
+      '@markuplint/selector': 5.5.0(supports-color@10.2.2)
+      '@markuplint/shared': 5.5.0
+      '@types/mustache': 4.2.6
+      is-plain-object: 5.1.0
+      mustache: 4.2.0
+      type-fest: 5.10.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@markuplint/ml-core@5.4.0(supports-color@10.2.2)':
     dependencies:
       '@markuplint/config-presets': 5.4.0
@@ -5581,6 +5606,17 @@ snapshots:
       '@types/debug': 4.1.13
       debug: 4.4.3(supports-color@10.2.2)
       postcss-selector-parser: 7.1.6
+      type-fest: 5.10.0
+    transitivePeerDependencies:
+      - supports-color
+
+  '@markuplint/selector@5.5.0(supports-color@10.2.2)':
+    dependencies:
+      '@markuplint/ml-spec': 5.5.0(supports-color@10.2.2)
+      '@markuplint/shared': 5.5.0
+      '@types/debug': 4.1.13
+      debug: 4.4.3(supports-color@10.2.2)
+      postcss-selector-parser: 7.2.1
       type-fest: 5.10.0
     transitivePeerDependencies:
       - supports-color
@@ -8483,6 +8519,10 @@ snapshots:
   postcss-selector-parser@7.1.6:
     dependencies:
       cssesc: 3.0.0
+      util-deprecate: 1.0.2
+
+  postcss-selector-parser@7.2.1:
+    dependencies:
       util-deprecate: 1.0.2
 
   postcss-sorting@10.0.0(postcss@8.5.32):
